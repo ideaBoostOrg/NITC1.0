@@ -1,4 +1,3 @@
-
 function Hero() {
     return (
         <div id="hero-area" className="hero-area-bg" style={{ height: "100vh" }}>
