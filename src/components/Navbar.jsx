@@ -1,5 +1,5 @@
 import logo from "../assets/img/logo-crop.png";
-
+import { Link as SLink } from "react-scroll";
 /*icon */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -29,20 +29,15 @@ function Navbar() {
 
         >
           <ul className="navbar-nav mr-auto w-100 justify-content-end">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                Home
-              </a>
+            <li className="nav-item">
+              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="hero-area" duration={300} smooth={true}>Home</SLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about">
-                About
-              </a>
+
+              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="about" duration={300} smooth={true}>About</SLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#schedules">
-                Schedules
-              </a>
+              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="schedules" duration={300} smooth={true}>Schedules</SLink>
             </li>
             {/* <li className="nav-item active">
               <a className="nav-link" href="#team">
@@ -50,19 +45,14 @@ function Navbar() {
               </a>
             </li> */}
             <li className="nav-item">
-              <a className="nav-link" href="#gallery">
-                Gallery
-              </a>
+              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="gallery" duration={300} smooth={true}>Gallery</SLink>
+
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#pricing">
-                Pricing
-              </a>
+              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="pricing" duration={300} smooth={true}>Pricing</SLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#sponsors">
-                Sponsors
-              </a>
+              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="sponsors" duration={300} smooth={true}>Sponsors</SLink>
             </li>
             {/* <li className="nav-item">
               <a className="nav-link" href="#google-map-area">
