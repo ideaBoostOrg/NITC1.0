@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/img/logo-crop.png";
 
 /*icon */
@@ -9,7 +8,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse">
       <div className="container">
-        <a href="index.html" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           <script data-pagespeed-no-defer="">(function(){/* ... */})();</script>
           <img src={logo} alt="" />
         </a>
@@ -27,11 +26,11 @@ function Navbar() {
         <div
           className="navbar-collapse collapse show"
           id="navbarCollapse"
-          
+
         >
           <ul className="navbar-nav mr-auto w-100 justify-content-end">
             <li className="nav-item active">
-              <a className="nav-link" href="#header-wrap">
+              <a className="nav-link" href="/">
                 Home
               </a>
             </li>

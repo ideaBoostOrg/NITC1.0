@@ -1553,6 +1553,12 @@ h1 {
   -o-transform: scale(1, 1);
 }
 
+#gallery .grid-of-5-cols{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+}
+
 /* Team Item */
 .team-item:hover {
   box-shadow: 0 16px 48px #E2E8ED;
