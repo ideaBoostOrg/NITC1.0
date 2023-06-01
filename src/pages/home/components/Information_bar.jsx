@@ -32,7 +32,8 @@ function Information_bar (){
               <li>
                 <i className="lni-user"></i>
               </li>
-              <li><span><b>Seats</b>600 People</span></li>
+              <li><span><b>Seats</b>1000
+               People</span></li>
             </ul>
           </div>
         </div>

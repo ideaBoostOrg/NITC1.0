@@ -1,4 +1,11 @@
-import logo from '../../../assets/img/logo.png'
+import logo_NITC from '../../../assets/img/logo.png'
+import logo_IdeaBoost from "../../../assets/img/logo-IdeaBoost.png";
+
+/* icon */
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faPinterest } from "@fortawesome/free-brands-svg-icons";
 
 function Footer(){
     return (
@@ -6,21 +13,31 @@ function Footer(){
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-12 col-xs-12">
-              <div className="social-icons-footer">
+              <div className="NITC-logo" style={{ padding: "20px 0 0 0" }}>
+                <img
+                  src={logo_NITC}
+                  alt=""
+                  style={{ width: 150, height: 100 }}
+                />
+              </div>
+              <div
+                className="social-icons-footer"
+                style={{ padding: "20px 0 0 0" }}
+              >
                 <ul>
                   <li className="facebook">
                     <a target="_blank" href="3">
-                      <i className="lni-facebook-filled"></i>
+                      <FontAwesomeIcon icon={faFacebook} />
                     </a>
                   </li>
                   <li className="twitter">
                     <a target="_blank" href="3">
-                      <i className="lni-twitter-filled"></i>
+                      <FontAwesomeIcon icon={faTwitter} />
                     </a>
                   </li>
                   <li className="pinterest">
                     <a target="_blank" href="3">
-                      <i className="lni-pinterest"></i>
+                      <FontAwesomeIcon icon={faPinterest} />
                     </a>
                   </li>
                 </ul>
@@ -32,6 +49,11 @@ function Footer(){
                     ideaBoost.
                   </a>
                 </p>
+                <img
+                  src={logo_IdeaBoost}
+                  alt=""
+                  style={{ width: 150 }}
+                />
               </div>
             </div>
           </div>

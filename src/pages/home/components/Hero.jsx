@@ -15,7 +15,7 @@ function Hero() {
                                 The CSSL organises the National Information Technology Conference (NITC) annually, which is one of the flagship ICT
                                 events in Sri Lanka as well as the region.</p>
                             <div className="banner-btn">
-                                <a href="#" className="btn btn-common">Comming Soon</a>
+                                <a href="/register" className="btn btn-common">Register Now</a>
                             </div>
                         </div>
                     </div>

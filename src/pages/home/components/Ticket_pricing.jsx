@@ -11,13 +11,13 @@ function Ticket_pricing (){
             </div>
             </div>
             <div className="row">
-            <div className="col-lg-4 col-md-6 col-xa-12 mb-3">
+            <div className="col-lg-6 col-md-6 col-xa-12 mb-3">
                 <div className="price-block-wrapper wow fadeInLeft" data-wow-delay="0.2s">
                 <div className="colmun-title">
-                    <h5>Basic Pass</h5>
+                    <h5>Outsiders</h5>
                 </div>
                 <div className="price">
-                    <h2>$29</h2>
+                    <h2>Rs.1500.00</h2>
                     <span>Per Day</span>
                 </div>
                 <div className="pricing-list">
@@ -32,13 +32,13 @@ function Ticket_pricing (){
                 <a href="#" className="btn btn-common">Buy Ticket</a>
                 </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-xa-12 mb-3">
+            <div className="col-lg-6 col-md-6 col-xa-12 mb-3">
                 <div className="price-block-wrapper active wow fadeInUp" data-wow-delay="0.3s">
                 <div className="colmun-title">
-                    <h5>Standard Pass</h5>
+                    <h5>CSSL members</h5>
                 </div>
                 <div className="price">
-                    <h2>$40</h2>
+                    <h2>Rs.1350.00</h2>
                     <span>Per Day</span>
                 </div>
                 <div className="pricing-list">

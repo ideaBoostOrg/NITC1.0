@@ -583,7 +583,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .navbar-brand img {
-  width: 75%;
+  width: 120px;
+  padding:30px 0px 30px 0px;
 }
 
 .top-nav-collapse {
@@ -649,7 +650,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   position: relative;
 }
 
-.navbar-expand-lg .navbar-nav li > a:before {
+/* .navbar-expand-lg .navbar-nav li > a:before {
   content: '';
   position: absolute;
   top: 19px;
@@ -664,7 +665,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   -webkit-transition: -webkit-transform 0.1s;
   -moz-transition: -webkit-transform 0.1s;
   transition: transform 0.1s;
-}
+} */
 
 .navbar-expand-lg .navbar-nav .active a:before {
   -webkit-transform: scale3d(1, 1, 1);
@@ -1513,7 +1514,7 @@ h1 {
   transition: all 500ms ease;
 }
 
-#gallery .gallery-box .overlay-box i {
+#gallery .gallery-box .overlay-box .icon {
   background: #ffffff;
   color: #141466;
   font-size: 30px;
@@ -1535,7 +1536,8 @@ h1 {
 }
 
 #gallery .gallery-box:hover .overlay-box {
-  background: rgba(255, 74, 103, 0.69);
+  /* background: rgba(255, 74, 103, 0.69); */
+  background: rgba(74, 74, 255, 0.69);
   transform: scale(1, 1);
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -1544,7 +1546,7 @@ h1 {
   transition: all 500ms ease;
 }
 
-#gallery .gallery-box:hover .overlay-box i {
+#gallery .gallery-box:hover .overlay-box .icon {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
