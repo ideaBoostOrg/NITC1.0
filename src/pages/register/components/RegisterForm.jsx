@@ -6,6 +6,11 @@ const RegisterForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const[memberId, setMemberId] = useState("");
+  const[isChecked, setIsChecked] =  useState(false);
+
+  const toggleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,8 +46,6 @@ const RegisterForm = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-sm-12 col-lg-6 ">
-              
-
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="firstName">First Name</label>
@@ -82,22 +85,27 @@ const RegisterForm = () => {
                     type="checkbox"
                     className="form-check-input"
                     id="exampleCheck1"
+                    checked={isChecked}
+                    onChange={toggleCheckboxChange}
                   />
                   <label className="form-check-label" for="exampleCheck1">
                     Are you a CSSL member?
                   </label>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="memberId">Member ID</label>
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    id="memberId"
-                    value={memberId}
-                    onChange={(e) => setMemberId(e.target.value)}
-                    style={{ height: "36px" }}
-                  />
-                </div>
+
+                {isChecked && (
+                  <div className="form-group">
+                    <label htmlFor="memberId">Member ID</label>
+                    <input
+                      className="form-control form-control-sm"
+                      type="text"
+                      id="memberId"
+                      value={memberId}
+                      onChange={(e) => setMemberId(e.target.value)}
+                      style={{ height: "36px" }}
+                    />
+                  </div>
+                )}
                 {/* <button type="submit" className="btn btn-common">
                   Register
                 </button> */}
@@ -109,9 +117,16 @@ const RegisterForm = () => {
                 <div className="col">
                   <div className="card text-center">
                     <div className="card-body">
-                      <p className="h5 font-weight-bold">
-                        Total price: Rs 1500.00
-                      </p>
+                      {isChecked && (
+                        <p className="h5 font-weight-bold">
+                          Total price: Rs 1350.00
+                        </p>
+                      )}
+                      {!isChecked && (
+                        <p className="h5 font-weight-bold">
+                          Total price: Rs 1500.00
+                        </p>
+                      )}
                       <a href="#" className="btn btn-common mt-3">
                         Pay Now
                       </a>
