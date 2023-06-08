@@ -1,7 +1,10 @@
+import RegisterForm from "./components/RegisterForm";
 function index() {
-    return (
-        <div>Register</div>
-    )
+  return(
+    <>
+    <RegisterForm />
+    </>
+  );
 }
 
-export default index
+export default index;
