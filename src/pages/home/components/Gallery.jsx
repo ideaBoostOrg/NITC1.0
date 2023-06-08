@@ -1,23 +1,9 @@
-import image1 from "../../../assets/img/event/img_1.jpg";
-import image2 from "../../../assets/img/event/img_2.jpg";
-import image3 from "../../../assets/img/event/img_3.jpg";
-import image4 from "../../../assets/img/event/img_4.jpg";
-import image5 from "../../../assets/img/event/img_5.jpg";
-import image6 from "../../../assets/img/event/img_6.jpg";
-import image7 from "../../../assets/img/event/img_7.jpg";
-import image8 from "../../../assets/img/event/img_8.jpg";
-import image9 from "../../../assets/img/event/img_9.jpg";
-import image10 from "../../../assets/img/event/img_10.jpg";
-import image11 from "../../../assets/img/event/img_11.jpg";
-import image12 from "../../../assets/img/event/img_12.jpg";
-import image13 from "../../../assets/img/event/img_13.jpg";
-import image14 from "../../../assets/img/event/img_14.jpg";
-import image15 from "../../../assets/img/event/img_15.jpg";
 
 /*icon */
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
+import { eventImages } from '../../../assets/img'
 
 function Gallery() {
   return (
@@ -55,7 +41,26 @@ function Gallery() {
             </div>
           </div>
         </div>
-        <div className="row">
+
+        <div className="grid-of-5-cols">
+          {eventImages.map((image, index) => (
+            <div key={index} className="">
+              <img className="img-fluid" alt="" src={image} />
+              {/* <div className="overlay-box text-center">
+                <a className="lightbox" href={image}>
+                  <FontAwesomeIcon
+                    icon={faPlus}
+                    className="icon"
+                    style={{ fontSize: 10 }}
+                  />
+                </a>
+              </div> */}
+            </div>
+          ))}
+        </div>
+
+
+        {/* <div className="row">
           <div className="col-md-6 col-sm-6 col-lg-3">
             <div className="gallery-box">
               <div className="img-thumb">
@@ -303,7 +308,7 @@ function Gallery() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="row justify-content-center mt-3">
           <div className="col-xs-12">
             <a href="#" className="btn btn-common">
