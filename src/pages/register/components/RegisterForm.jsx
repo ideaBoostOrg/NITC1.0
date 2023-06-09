@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import logo from "../../../assets/img/logo-crop.png";
+import { useLocation } from "react-router-dom";
 
 const RegisterForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const[memberId, setMemberId] = useState("");
-  const[isChecked, setIsChecked] =  useState(false);
+
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const setTypeCSSL = searchParams.get("type");
+
+  // {setTypeCSSL ? (
+  //   const[isChecked, setIsChecked] =  useState(true);
+  // ):(
+  //   const[isChecked, setIsChecked] =  useState(false);
+  // )
+  // }
+
+  const initialState = setTypeCSSL ? true : false;
+  const [isChecked, setIsChecked] = useState(initialState);
+
+  
 
   const toggleCheckboxChange = () => {
     setIsChecked(!isChecked);

@@ -96,7 +96,7 @@ function Ticket_pricing (){
                     </li>
                   </ul>
                 </div>
-                <a href="/register" className="btn btn-common">
+                <a href="/register?type=CSSL" className="btn btn-common">
                   Buy Ticket
                 </a>
               </div>
