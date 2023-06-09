@@ -1,5 +1,5 @@
 import moment from "moment/moment";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Countbar() {
     const [days, setDays] = useState(0);
@@ -10,24 +10,31 @@ function Countbar() {
     const [isFinished, setIsFinished] = useState(false);
 
 
-    const countdown = () => {
-        const targetDate = moment("2023-10-11 00:00:00", "YYYY-MM-DD HH:mm:ss");
-        const now = moment();
+    useEffect(() => {
+        const countdownInterval = setInterval(() => {
+            const targetDate = moment("2023-10-11 00:00:00", "YYYY-MM-DD HH:mm:ss");
+            const now = moment();
+            const countdown = moment.duration(targetDate.diff(now));
 
-        const countdown = moment.duration(targetDate.diff(now));
+            if (countdown.asSeconds() <= 0) {
+                setIsFinished(true);
+                clearInterval(countdownInterval);
+            } else {
+                setDays(Math.floor(countdown.asDays()));
+                setHours(countdown.hours());
+                setMinutes(countdown.minutes());
+                setSeconds(countdown.seconds());
+            }
+        }, 1000);
 
-        if (countdown.asSeconds() <= 0) {
-            setIsFinished(true);
-            return;
-        }
+        return () => {
+            clearInterval(countdownInterval);
+        };
+    }, []);
 
-        setDays(countdown.days());
-        setHours(countdown.hours());
-        setMinutes(countdown.minutes());
-        setSeconds(countdown.seconds());
-    };
-
-    setInterval(countdown, 1000);
+    if (isFinished) {
+        return <div>Countdown has ended!</div>;
+    }
 
     return (
         // <section id="count">
