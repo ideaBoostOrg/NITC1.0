@@ -184,7 +184,7 @@ ul li, ol li {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  /* background: rgba(0, 0, 0, 0.8); */
 }
 
 .btn {
@@ -1419,20 +1419,22 @@ h1 {
 }
 
 .single-intro-text {
-  padding: 45px 50px 40px 60px;
-  -webkit-box-shadow: 0 8px 24px #E2E8ED;
-  box-shadow: 0 8px 24px #E2E8ED;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-  margin: 15px 0;
-  background: #fff;
-  z-index: 2;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+    height: 390px;
+    padding: 45px 50px 40px 60px;
+    -webkit-box-shadow: 0 8px 24px #E2E8ED;
+    box-shadow: 0 8px 24px #E2E8ED;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 0;
+    background: #fff;
+    z-index: 2;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
 }
 
 .single-intro-text:hover {
@@ -2271,7 +2273,7 @@ footer {
 }
 
 #pricing .price-block-wrapper .price h2 {
-  font-size: 38px;
+  font-size: 30px;
   background-image: linear-gradient(65deg, #141466 0, #2929cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

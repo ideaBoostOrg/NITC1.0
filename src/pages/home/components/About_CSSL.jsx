@@ -1,0 +1,158 @@
+import logo_CSSL from "../../../assets/img/CSSL_logo.png";
+import React, { useState } from "react";
+
+import CSSL_digital_investment_submit from "./CSSL_digital_investment_submit";
+import CSSL_colloquium from "./CSSL_colloquium";
+import CSSL_awards from "./CSSL_awards";
+
+
+
+function About_CSSL() {
+
+  const [toggleState, setToggleState] = useState(1);
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
+
+  return (
+    <section id="cssl" className="intro section-padding">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="section-title-header text-center">
+              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
+                About CSSL
+              </h2>
+              <img
+                className=""
+                src={logo_CSSL}
+                alt=""
+                style={{ marginBottom: "10px", height: "50px" }}
+              />
+              <p className="wow fadeInDown" data-wow-delay="0.2s">
+                Join us as we commemorate the extraordinary accomplishments of
+                the industry's brightest stars <br />
+                at the NITC Awards 2022.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+          The Computer Society of Sri Lanka (CSSL) is the premier professional
+          association for individuals and Organisations leading the Information
+          Communication Technology (ICT) industry in Sri Lanka.
+        </p>
+        <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+          It is a rallying point for ICT professionals throughout the country
+          and espouses the shared vision of over five thousand individuals
+          ranging from over 300 CXOs, ICT practitioners, academics and policy
+          makers to other professionals in diverse fields and members of the
+          business community. Today, the CSSL is widely regarded as both the
+          “voice” of this influential industry segment and a “key player in ICT
+          development, nationally.
+        </p>
+        <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+          The passion, vision and commitment of the CSSL founders, who foresaw
+          the pivotal role ICT would eventually have in shaping and advancing
+          human life, has left a lasting impression on the minds of Sri Lankan
+          ICT professionals. This has also led to the broad basing of the
+          society’s scope and activities, which has enabled CSSL to become the
+          fully-fledged and dynamic professional association that it is today.
+          It is also an active member of the South East Asia Regional Computer
+          Confederation (SEARCC) and the International Federation for
+          Information Processing (IFIP). CSSL is a provisional signatory to the
+          Seoul Accord, an internationally acclaimed degree accreditation
+          program through which CSSL brings international standards on ICT
+          related degrees to Sri Lanka.
+        </p>
+        <div className="schedule" style={{ marginTop: "60px" }}>
+          <div className="col-12 mb-5 text-center">
+            <ul className="nav nav-tabs" id="myTab" role="tablist">
+              <li className="nav-item">
+                <a
+                  // className="nav-link active"
+                  className={toggleState === 1 ? "nav-link active" : "nav-link"}
+                  id="monday-tab"
+                  data-toggle="tab"
+                  // href="#monday"
+                  role="tab"
+                  aria-controls="monday"
+                  aria-expanded="true"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "200px",
+                    height: "80px",
+                    color: "red",
+                  }}
+                  onClick={() => toggleTab(1)}
+                >
+                  <div className="item-text">
+                    <h5>
+                      CSSL Digital <br /> Investment Summit
+                    </h5>
+                  </div>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className={toggleState === 2 ? "nav-link active" : "nav-link"}
+                  id="tuesday-tab"
+                  data-toggle="tab"
+                  // href="#tuesday"
+                  role="tab"
+                  aria-controls="tuesday"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "200px",
+                    height: "80px",
+                    color: "red",
+                  }}
+                  onClick={() => toggleTab(2)}
+                >
+                  <div className="item-text">
+                    <h5>CSSL Awards</h5>
+                  </div>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className={toggleState === 3 ? "nav-link active" : "nav-link"}
+                  id="wednesday-tab"
+                  data-toggle="tab"
+                  // href="#wednesday"
+                  role="tab"
+                  aria-controls="wednesday"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "200px",
+                    height: "80px",
+                    color: "red",
+                  }}
+                  onClick={() => toggleTab(3)}
+                >
+                  <div className="item-text">
+                    {/* <h4>Day 03</h4>
+                    <h5>13th October 2023</h5> */}
+                    <h5>CSSL Colloquium</h5>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {toggleState === 1 && <CSSL_digital_investment_submit />}
+        {toggleState === 2 && <CSSL_colloquium />}
+        {toggleState === 3 && <CSSL_awards />}
+      </div>
+    </section>
+  );
+}
+
+export default About_CSSL;

@@ -23,21 +23,121 @@ function Navbar() {
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <div
-          className="navbar-collapse collapse show"
-          id="navbarCollapse"
-
-        >
+        <div className="navbar-collapse collapse show" id="navbarCollapse">
           <ul className="navbar-nav mr-auto w-100 justify-content-end">
             <li className="nav-item">
-              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="hero-area" duration={300} smooth={true}>Home</SLink>
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="hero-area"
+                duration={300}
+                smooth={true}
+              >
+                Home
+              </SLink>
             </li>
             <li className="nav-item">
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="about"
+                duration={300}
+                smooth={true}
+              >
+                About
+              </SLink>
+            </li>
+            <li className="nav-item">
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="schedules"
+                duration={300}
+                smooth={true}
+              >
+                Schedules
+              </SLink>
+            </li>
+            <li className="nav-item">
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="cssl"
+                duration={300}
+                smooth={true}
+              >
+                CSSL
+              </SLink>
+              {/* <div class="dropdown">
+                <button
+                  class="dropdown-toggle"
+                  className="nav-link"
+                  activeClass="active-link"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ background: "transparent", border: "none" }}
+                >
+                  CSSL
+                </button>
+                <div class="dropdown-menu">
+                  <SLink
+                    className="dropdown-item"
+                    activeClass="active-link"
+                    spy={true}
+                    offset={-80}
+                    to="cssl"
+                    duration={300}
+                    smooth={true}
+                  >
+                    CSSL
+                  </SLink>
 
-              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="about" duration={300} smooth={true}>About</SLink>
-            </li>
-            <li className="nav-item">
-              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="schedules" duration={300} smooth={true}>Schedules</SLink>
+                  <SLink
+                    className="dropdown-item"
+                    activeClass="active-link"
+                    spy={true}
+                    offset={-80}
+                    to="cssl-digita-investment-summit"
+                    duration={300}
+                    smooth={true}
+                  >
+                    CSSL Digital Investment Summit
+                  </SLink>
+
+                  <SLink
+                    className="dropdown-item"
+                    activeClass="active-link"
+                    spy={true}
+                    offset={-80}
+                    to="cssl-awards"
+                    duration={300}
+                    smooth={true}
+                  >
+                    CSSL Awards
+                  </SLink>
+
+                  <SLink
+                    className="dropdown-item"
+                    activeClass="active-link"
+                    spy={true}
+                    offset={-80}
+                    to="cssl-colloquium"
+                    duration={300}
+                    smooth={true}
+                  >
+                    CSSL Colloquium
+                  </SLink>
+                </div>
+              </div> */}
             </li>
             {/* <li className="nav-item active">
               <a className="nav-link" href="#team">
@@ -45,14 +145,56 @@ function Navbar() {
               </a>
             </li> */}
             <li className="nav-item">
-              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="gallery" duration={300} smooth={true}>Gallery</SLink>
-
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="award"
+                duration={300}
+                smooth={true}
+              >
+                Awards
+              </SLink>
             </li>
             <li className="nav-item">
-              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="pricing" duration={300} smooth={true}>Pricing</SLink>
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="gallery"
+                duration={300}
+                smooth={true}
+              >
+                Gallery
+              </SLink>
             </li>
             <li className="nav-item">
-              <SLink className="nav-link" activeClass="active-link" spy={true} offset={-80} to="sponsors" duration={300} smooth={true}>Sponsors</SLink>
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="pricing"
+                duration={300}
+                smooth={true}
+              >
+                Pricing
+              </SLink>
+            </li>
+            <li className="nav-item">
+              <SLink
+                className="nav-link"
+                activeClass="active-link"
+                spy={true}
+                offset={-80}
+                to="sponsors"
+                duration={300}
+                smooth={true}
+              >
+                Sponsors
+              </SLink>
             </li>
             {/* <li className="nav-item">
               <a className="nav-link" href="#google-map-area">

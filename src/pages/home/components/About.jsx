@@ -1,60 +1,116 @@
-import img1 from '../../../assets/img/about/img1.jpg'
+import img1 from "../../../assets/img/about/img1.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { CheckCircle } from "react-bootstrap-icons";
 
 function About() {
-    return (
-      <section id="about" className="section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-md-12 col-xs-12">
-              <div className="img-thumb">
-                <img className="img-fluid" src={img1} alt="" />
-              </div>
+  return (
+    <section id="about" className="section-padding" style={{paddingTop:"150px"}}>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-12 col-xs-12">
+            <div className="img-thumb">
+              <img className="img-fluid" src={img1} alt="" />
             </div>
-            <div className="col-lg-6 col-md-12 col-xs-12">
-              <div className="about-content">
-                <div>
-                  <div className="about-text">
-                    <h2>About The Conference</h2>
-                    <p>
-                      CSSL is an accrediated professional body by International
-                      Professional Practice Partnership(IP3). CSSL’s
-                      Professional Member Scheme and Associate Member Scheme
-                      have been examinated and are accredited as fullfilling the
-                      standards set down by (IP3).
-                    </p>
-                  </div>
-                  <ul className="stylish-list mb-3">
-                    <li>
-                      <i className="lni-check-mark-circle"></i>Networking
-                      Sessions
-                    </li>
-                    <li>
-                      <i className="lni-check-mark-circle"></i>Meet New
-                      Professional Faces
-                    </li>
-                    <li>
-                      <i className="lni-check-mark-circle"></i>Get Inspired by
-                      Amazing Speakers
-                    </li>
-                    <li>
-                      <i className="lni-check-mark-circle"></i>Lorem ipsum dolor
-                      sit ameterib
-                    </li>
-                    <li>
-                      <i className="lni-check-mark-circle"></i>Lorem ipsum dolor
-                      sit ameterib quodsi
-                    </li>
-                  </ul>
-                  <a className="btn btn-common" href="#">
-                    Learn More
-                  </a>
+          </div>
+          <div className="col-lg-6 col-md-12 col-xs-12">
+            <div className="about-content">
+              <div>
+                <div className="about-text">
+                  <h2>About The Conference</h2>
+                  <p>
+                    <b>NITC 2023 Conference</b> will feature 6 tracks and will
+                    have 30+ local and foreign high-profile Speakers and a
+                    series of prior events. This year, NITC 2023 will be held in
+                    conjunction with DIGIECON 2023, which was initiated by HE
+                    President Ranil Wickremesinghe and symbolizes a new chapter
+                    in Sri Lanka’s quest to create an inclusive digital economy.
+                  </p>
                 </div>
+                <ul className="stylish-list mb-3">
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    FinTech - Finantial Technology
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    eduTech - Education Technology
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    eHealth
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    Travel Tech - Travel Technology
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    Infosec - Information Security
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    AgriTech - Agriculture Technology
+                  </li>
+                </ul>
+                {/* <a className="btn btn-common" href="#">
+                  Learn More
+                </a> */}
               </div>
             </div>
           </div>
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 }
 
-export default About
+export default About;

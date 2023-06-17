@@ -18,14 +18,16 @@ function Sponsors(){
             <div className="col-12">
               <div className="section-title-header text-center">
                 <h2
-                  className="section-title wow fadeInUp"
+                  // className="section-title wow fadeInUp"
+                  style={{ color: "#212121" }}
                   data-wow-delay="0.2s"
                 >
                   Sponsors
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
                   A special thank you to our valued sponsors, whose support has
-                  <br />been instrumental in driving our success.
+                  <br />
+                  been instrumental in driving our success.
                 </p>
               </div>
             </div>
