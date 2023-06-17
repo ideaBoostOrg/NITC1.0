@@ -4,12 +4,17 @@ import { Link as SLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+import { useState } from "react";
+
 function Navbar() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse">
       <div className="container">
         <a href="/" className="navbar-brand">
-          <script data-pagespeed-no-defer="">(function(){/* ... */})();</script>
           <img src={logo} alt="" />
         </a>
         <button
@@ -139,11 +144,6 @@ function Navbar() {
                 </div>
               </div> */}
             </li>
-            {/* <li className="nav-item active">
-              <a className="nav-link" href="#team">
-                Speakers
-              </a>
-            </li> */}
             <li className="nav-item">
               <SLink
                 className="nav-link"

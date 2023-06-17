@@ -48,7 +48,7 @@ const RegisterForm = () => {
       <section>
         <nav className="navbar navbar-expand-lg bg-inverse scrolling-navbar top-nav-collapse">
           <div className="container">
-            <a href="index.html" className="navbar-brand">
+            <a href="/" className="navbar-brand">
               <script data-pagespeed-no-defer="">
                 (function(){/* ... */})();
               </script>
