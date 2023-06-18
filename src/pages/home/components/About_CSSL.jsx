@@ -148,8 +148,8 @@ function About_CSSL() {
         </div>
 
         {toggleState === 1 && <CSSL_digital_investment_submit />}
-        {toggleState === 2 && <CSSL_colloquium />}
-        {toggleState === 3 && <CSSL_awards />}
+        {toggleState === 2 && <CSSL_awards />}
+        {toggleState === 3 && <CSSL_colloquium />}
       </div>
     </section>
   );

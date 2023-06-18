@@ -4,6 +4,7 @@ function CSSL_digital_investment_submit() {
     <section
       id="cssl-colloquium"
       className="intro section-padding"
+      style={{ paddingTop: "40px" }}
     >
       <div className="container">
         <div className="row">
@@ -14,8 +15,12 @@ function CSSL_digital_investment_submit() {
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="section-title-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
+            <div className="section-title-header text-left">
+              <h2
+                className="section-title wow fadeInUp"
+                data-wow-delay="0.2s"
+                style={{ textAlign: "left" }}
+              >
                 CSSL Colloquium
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">

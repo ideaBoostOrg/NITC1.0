@@ -1287,7 +1287,7 @@ h1 {
   font-size: 14px;
   color: #848484;
   line-height: 16px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
@@ -2526,3 +2526,11 @@ footer {
   border-bottom: none;
 } */
 
+
+
+/* vedio section */
+
+.vedio-area-bg{
+  background: url(../img/vedio_image.jpg) no-repeat;
+    background-size: cover;
+}

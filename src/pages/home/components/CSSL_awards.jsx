@@ -1,7 +1,11 @@
 import img2 from "../../../assets/img/about/img1.jpg";
 function CSSL_awards() {
   return (
-    <section id="cssl-awards" className="section-padding">
+    <section
+      id="cssl-awards"
+      className="section-padding"
+      style={{ paddingTop: "40px" }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
@@ -11,11 +15,15 @@ function CSSL_awards() {
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="section-title-header text-center">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
+            <div className="section-title-header text-left">
+              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s" style={{textAlign:"left"}}>
                 CSSL Awards
               </h2>
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
+              <p
+                className="wow fadeInDown"
+                data-wow-delay="0.2s"
+                style={{ textAlign: "left" }}
+              >
                 Join us as we commemorate the extraordinary accomplishments of
                 <br />
                 the industry's brightest stars at the NITC Awards 2022.

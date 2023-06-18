@@ -1,6 +1,6 @@
-// import speacker1 from '../../../assets/img/speaker/speakers-1.jpg'
-// import speacker2 from '../../../assets/img/speaker/speakers-2.jpg'
-// import speacker3 from '../../../assets/img/speaker/speakers-3.jpg'
+import speacker1 from '../../../assets/img/speaker/speakers-1.jpg'
+import speacker2 from '../../../assets/img/speaker/speakers-2.jpg'
+import speacker3 from '../../../assets/img/speaker/speakers-3.jpg'
 
 import Shedule_day_01 from "./Shedule_day_01";
 
@@ -87,7 +87,7 @@ function Shedule() {
               </li>
             </ul>
           </div>
-          {/* <div className="col-12">
+          <div className="col-12">
             <div
               className="schedule-area row wow fadeInDown"
               data-wow-delay="0.3s"
@@ -828,9 +828,9 @@ function Shedule() {
                 </div>
               </div>
             </div> 
-          </div> */}
+          </div> 
 
-          <Shedule_day_01 />
+          {/* <Shedule_day_01 /> */}
         </div>
       </div>
     </section>
