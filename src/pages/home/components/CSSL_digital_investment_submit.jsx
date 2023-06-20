@@ -22,7 +22,7 @@ function CSSL_digital_investment_submit() {
               </p>
             </div>
 
-            <p style={{ marginTop: "20px", marginBottom: "20px" }}>
+            <p style={{ marginTop: "20px", marginBottom: "22px" }}>
               <b>CSSL Digital Investment Summit </b> is a special feature of
               40th Anniversary edition which is Organized to connect Sri Lankan
               startups and mature unicorn (USD 1 Billion Company) potential ICT
