@@ -1,4 +1,4 @@
-import img3 from "../../../assets/img/about/img1.jpg";
+import CSSL_colloquium from "../../../assets/img/CSSL Colloquium.jpg";
 function CSSL_digital_investment_submit() {
   return (
     <section
@@ -10,7 +10,7 @@ function CSSL_digital_investment_submit() {
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
-              <img className="img-fluid" src={img3} alt="" />
+              <img className="img-fluid" src={CSSL_colloquium} alt="" />
             </div>
           </div>
 

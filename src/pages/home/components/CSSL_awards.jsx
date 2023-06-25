@@ -1,4 +1,4 @@
-import img2 from "../../../assets/img/about/img1.jpg";
+import Awards from "../../../assets/img/Awards-1.jpg";
 function CSSL_awards() {
   return (
     <section
@@ -10,13 +10,17 @@ function CSSL_awards() {
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
-              <img className="img-fluid" src={img2} alt="" />
+              <img className="img-fluid" src={Awards} alt="" />
             </div>
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header text-left">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s" style={{textAlign:"left"}}>
+              <h2
+                className="section-title wow fadeInUp"
+                data-wow-delay="0.2s"
+                style={{ textAlign: "left" }}
+              >
                 CSSL Awards
               </h2>
               <p

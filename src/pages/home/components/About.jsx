@@ -5,7 +5,11 @@ import { CheckCircle } from "react-bootstrap-icons";
 
 function About() {
   return (
-    <section id="about" className="section-padding" style={{paddingTop:"150px"}}>
+    <section
+      id="about"
+      className="section-padding"
+      style={{ paddingTop: "150px" }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
@@ -50,7 +54,20 @@ function About() {
                     >
                       <CheckCircle />
                     </span>
-                    eduTech - Education Technology
+                    EduTech - Education Technology
+                  </li>
+
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    TravelTech - Travel Technology
                   </li>
                   <li>
                     <span
@@ -62,31 +79,7 @@ function About() {
                     >
                       <CheckCircle />
                     </span>
-                    eHealth
-                  </li>
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    Travel Tech - Travel Technology
-                  </li>
-                  <li>
-                    <span
-                      style={{
-                        paddingRight: "8px",
-                        color: "blue",
-                        size: "25px",
-                      }}
-                    >
-                      <CheckCircle />
-                    </span>
-                    Infosec - Information Security
+                    InfoSec - Information Security
                   </li>
                   <li>
                     <span
@@ -99,6 +92,18 @@ function About() {
                       <CheckCircle />
                     </span>
                     AgriTech - Agriculture Technology
+                  </li>
+                  <li>
+                    <span
+                      style={{
+                        paddingRight: "8px",
+                        color: "blue",
+                        size: "25px",
+                      }}
+                    >
+                      <CheckCircle />
+                    </span>
+                    eHealth - Electronic Health care
                   </li>
                 </ul>
                 {/* <a className="btn btn-common" href="#">

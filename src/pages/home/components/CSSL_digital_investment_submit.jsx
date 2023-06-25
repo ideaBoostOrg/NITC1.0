@@ -1,18 +1,30 @@
-import img1 from "../../../assets/img/about/img1.jpg";
+import Digital_investment_summit from "../../../assets/img/Digital_investment_summit.jpg";
 function CSSL_digital_investment_submit() {
   return (
-    <section id="cssl-digita-investment-summit" className="section-padding" style={{paddingTop:"40px"}}>
+    <section
+      id="cssl-digita-investment-summit"
+      className="section-padding"
+      style={{ paddingTop: "40px" }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
-              <img className="img-fluid" src={img1} alt="" />
+              <img
+                className="img-fluid"
+                src={Digital_investment_summit}
+                alt=""
+              />
             </div>
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header text-left">
-              <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s" style={{textAlign:"left"}}>
+              <h2
+                className="section-title wow fadeInUp"
+                data-wow-delay="0.2s"
+                style={{ textAlign: "left" }}
+              >
                 CSSL Digital Investment Summit
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">

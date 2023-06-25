@@ -14,7 +14,8 @@ function Ticket_pricing (){
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
                   Experience the NITC IT Conference like never before with our
                   affordable and flexible ticket pricing options, designed to
-                  <br />ensure accessibility for all technology enthusiasts.
+                  <br />
+                  ensure accessibility for all technology enthusiasts.
                 </p>
               </div>
             </div>
@@ -44,19 +45,22 @@ function Ticket_pricing (){
                     </li> */}
                     <li>
                       <i className="lni-check-mark-circle"></i>
-                      <span className="text">Refreshments</span>
+                      <span className="text">Keynote Speech</span>
                     </li>
                     <li>
                       <i className="lni-close"></i>
-                      <span className="text">Conference kit</span>
+                      <span className="text">CSSL National ICT Awards</span>
                     </li>
-                    {/* <li>
+                    <li>
                       <i className="lni-close"></i>
-                      <span className="text">Certificate</span>
-                    </li> */}
+                      <span className="text">Gala Dinner</span>
+                    </li>
                   </ul>
                 </div>
-                <a href="/register" className="btn btn-common">
+                <a
+                  href="/register?type=Inauguration"
+                  className="btn btn-common"
+                >
                   Buy Ticket
                 </a>
               </div>
@@ -78,27 +82,31 @@ function Ticket_pricing (){
                   <ul>
                     <li>
                       <i className="lni-check-mark-circle"></i>
-                      <span className="text">Cocktail</span>
+                      <span className="text">Entrance</span>
                     </li>
                     <li>
                       <i className="lni-check-mark-circle"></i>
-                      <span className="text">Refreshments</span>
+                      <span className="text">Keynote Presentations</span>
                     </li>
-                    {/* <li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Panel Discussion and Q&A</span>
+                    </li>
+                    <li>
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Lunch</span>
                     </li>
-                    <li>
+                    {/*<li>
                       <i className="lni-close"></i>
                       <span className="text">Refreshment</span>
                     </li> */}
                     <li>
                       <i className="lni-close"></i>
-                      <span className="text">Conference kit</span>
+                      <span className="text">Conference Tracks</span>
                     </li>
                   </ul>
                 </div>
-                <a href="/register" className="btn btn-common">
+                <a href="/register?type=Day_01" className="btn btn-common">
                   Buy Ticket
                 </a>
               </div>
@@ -134,19 +142,27 @@ function Ticket_pricing (){
                     </li> */}
                     <li>
                       <i className="lni-check-mark-circle"></i>
-                      <span className="text">Lunch on all days</span>
+                      <span className="text">Keynote Presentations</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Investment Summit</span>
                     </li>
                     <li>
                       <i className="lni-close"></i>
-                      <span className="text">Access to all areas</span>
+                      <span className="text">Lunch</span>
                     </li>
-                    {/* <li>
+                    <li>
                       <i className="lni-check-mark-circle"></i>
-                      <span className="text">Certificate</span>
-                    </li> */}
+                      <span className="text">Conference Tracks</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">CSSL Research Colloquium</span>
+                    </li>
                   </ul>
                 </div>
-                <a href="/register?type=CSSL" className="btn btn-common">
+                <a href="/register?type=Day_02" className="btn btn-common">
                   Buy Ticket
                 </a>
               </div>
@@ -176,30 +192,69 @@ function Ticket_pricing (){
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Entrance</span>
                     </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Keynote Speech</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Keynote Presentations</span>
+                    </li>
+                    <li>
+                      <i className="lni-close"></i>
+                      <span className="text">CSSL National ICT Awards</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Panel Discussion and Q&A</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Investment Summit</span>
+                    </li>
+                    <li>
+                      <i className="lni-close"></i>
+                      <span className="text">Lunch</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">Conference Tracks</span>
+                    </li>
+                    <li>
+                      <i className="lni-check-mark-circle"></i>
+                      <span className="text">CSSL Research Colloquium</span>
+                    </li>
+                    <li>
+                      <i className="lni-close"></i>
+                      <span className="text">Gala Dinner</span>
+                    </li>
                     {/* <li>
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Coffee Break</span>
                     </li> */}
-                    <li>
+                    {/* <li>
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Lunch on all days</span>
                     </li>
                     <li>
                       <i className="lni-close"></i>
                       <span className="text">Access to all areas</span>
-                    </li>
+                    </li> */}
                     {/* <li>
                       <i className="lni-check-mark-circle"></i>
                       <span className="text">Certificate</span>
                     </li> */}
                   </ul>
                 </div>
-                <a href="/register?type=CSSL" className="btn btn-common">
+                <a
+                  href="/register?type=Full_package"
+                  className="btn btn-common"
+                >
                   Buy Ticket
                 </a>
               </div>
 
-          {/* <div className="col-lg-4 col-md-6 col-xa-12 mb-3">
+              {/* <div className="col-lg-4 col-md-6 col-xa-12 mb-3">
                 <div className="price-block-wrapper wow fadeInRight" data-wow-delay="0.4s">
                 <div className="colmun-title">
                     <h5>Premium Pass</h5>
@@ -220,11 +275,11 @@ function Ticket_pricing (){
                 <a href="#" className="btn btn-common">Buy Ticket</a>
                 </div>
             </div> */}
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-    </section>
-  );
+      </section>
+    );
 }
 
 export default Ticket_pricing;
