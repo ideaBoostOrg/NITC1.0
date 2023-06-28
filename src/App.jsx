@@ -8,8 +8,7 @@ import './assets/css/responsive.css'
 // import Navbar from './components/Navbar'
 import Home from './pages/home'
 import Register from './pages/register'
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
