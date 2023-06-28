@@ -26,11 +26,11 @@ const RegisterForm = () => {
   let price;
 
   if (setTypeCSSL === "Inauguration") {
-    price = 15000;
-  } else if (setTypeCSSL === "Day_01") {
-    price = 14000;
-  } else if (setTypeCSSL === "Day_02") {
     price = 20000;
+  } else if (setTypeCSSL === "Day_01") {
+    price = 15000;
+  } else if (setTypeCSSL === "Day_02") {
+    price = 15000;
   } else {
     price = 35000;
   }
@@ -162,10 +162,10 @@ const RegisterForm = () => {
                             Discount :{" "}
                           </span>{" "}
                           <span style={{ color: "blue", fontSize: "30px" }}>
-                            10%
+                            20%
                           </span>
                           <br />
-                          Total price: Rs {price-((price * 10) / 100)}
+                          Total price: Rs {price-((price * 20) / 100)}
                         </p>
                       )}
                       {!isChecked && (

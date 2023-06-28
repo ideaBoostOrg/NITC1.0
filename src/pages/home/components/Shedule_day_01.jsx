@@ -102,12 +102,14 @@ function Shedule_day_01() {
                         >
                           <div className="card-body">
                             <span>
-                              Aistinguished invitees from State, Private Sector,
+                              Distinguished invitees from State, Private Sector,
                               Industry, Academia
                             </span>
                             <br />
                             <span>
-                              Address by the Chief Guest - State Minister of IT
+                              Conference Delegates (CXOs/ Heads IT/ IT
+                              Professionals/ Risk Management Professionals/
+                              Startup Founders)
                             </span>
                             {/* <div className="location">
                               <span>Location:</span> Hall 1 , Building A, Golden
