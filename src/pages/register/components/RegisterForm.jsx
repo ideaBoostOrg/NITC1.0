@@ -7,10 +7,11 @@ const RegisterForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const[memberId, setMemberId] = useState("");
+  
 
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const setTypeCSSL = searchParams.get("type");
+  // const location = useLocation();
+  // const searchParams = new URLSearchParams(location.search);
+  // const setTypeCSSL = searchParams.get("type");
 
   // {setTypeCSSL ? (
   //   const[isChecked, setIsChecked] =  useState(true);
@@ -19,7 +20,22 @@ const RegisterForm = () => {
   // )
   // }
 
-  const initialState = setTypeCSSL ? true : false;
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const setTypeCSSL = searchParams.get("type");
+  let price;
+
+  if (setTypeCSSL === "Inauguration") {
+    price = 15000;
+  } else if (setTypeCSSL === "Day_01") {
+    price = 14000;
+  } else if (setTypeCSSL === "Day_02") {
+    price = 20000;
+  } else {
+    price = 35000;
+  }
+
+  const initialState = false;
   const [isChecked, setIsChecked] = useState(initialState);
 
   
@@ -134,13 +150,27 @@ const RegisterForm = () => {
                   <div className="card text-center">
                     <div className="card-body">
                       {isChecked && (
-                        <p className="h5 font-weight-bold">
-                          Total price: Rs 1350.00
+                        <p
+                          className="h5 font-weight-bold"
+                          style={{ lineHeight: "40px" }}
+                        >
+                          <span className="" style={{ fontWeight: 100 }}>
+                            Ticket price: Rs {price}
+                          </span>
+                          <br />
+                          <span className="" style={{ fontWeight: 100 }}>
+                            Discount :{" "}
+                          </span>{" "}
+                          <span style={{ color: "blue", fontSize: "30px" }}>
+                            10%
+                          </span>
+                          <br />
+                          Total price: Rs {price-((price * 10) / 100)}
                         </p>
                       )}
                       {!isChecked && (
                         <p className="h5 font-weight-bold">
-                          Total price: Rs 1500.00
+                          Total price: Rs {price}
                         </p>
                       )}
                       <a href="#" className="btn btn-common mt-3">

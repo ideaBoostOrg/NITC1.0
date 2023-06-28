@@ -12,19 +12,22 @@ function Navbar() {
 
 
   return (
-    <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse">
+    <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse"
+      style={{ height: isOpen ? "fit-content" : "60px" }}
+    >
       <div className="container">
         <a href="/" className="navbar-brand">
           <img src={logo} alt="" />
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           data-toggle="collapse"
           data-target="#navbarCollapse"
           aria-controls="navbarCollapse"
           aria-expanded="true"
           aria-label="Toggle navigation"
+          onClick={() => setIsOpen(!isOpen)}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
@@ -35,10 +38,11 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={-50}
                 to="hero-area"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
               >
                 Home
               </SLink>
@@ -48,10 +52,12 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="about"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(!isOpen)}
+
               >
                 About
               </SLink>
@@ -61,7 +67,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="schedules"
                 duration={300}
                 smooth={true}
@@ -74,7 +80,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="cssl"
                 duration={300}
                 smooth={true}
@@ -98,7 +104,7 @@ function Navbar() {
                     className="dropdown-item"
                     activeClass="active-link"
                     spy={true}
-                    offset={-80}
+                    offset={0}
                     to="cssl"
                     duration={300}
                     smooth={true}
@@ -110,7 +116,7 @@ function Navbar() {
                     className="dropdown-item"
                     activeClass="active-link"
                     spy={true}
-                    offset={-80}
+                    offset={0}
                     to="cssl-digita-investment-summit"
                     duration={300}
                     smooth={true}
@@ -122,7 +128,7 @@ function Navbar() {
                     className="dropdown-item"
                     activeClass="active-link"
                     spy={true}
-                    offset={-80}
+                    offset={0}
                     to="cssl-awards"
                     duration={300}
                     smooth={true}
@@ -134,7 +140,7 @@ function Navbar() {
                     className="dropdown-item"
                     activeClass="active-link"
                     spy={true}
-                    offset={-80}
+                    offset={0}
                     to="cssl-colloquium"
                     duration={300}
                     smooth={true}
@@ -149,7 +155,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="award"
                 duration={300}
                 smooth={true}
@@ -162,7 +168,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="gallery"
                 duration={300}
                 smooth={true}
@@ -175,7 +181,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="pricing"
                 duration={300}
                 smooth={true}
@@ -188,7 +194,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-80}
+                offset={0}
                 to="sponsors"
                 duration={300}
                 smooth={true}

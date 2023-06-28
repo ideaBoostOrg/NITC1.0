@@ -1,8 +1,6 @@
-import speacker1 from '../../../assets/img/speaker/speakers-1.jpg'
-import speacker2 from '../../../assets/img/speaker/speakers-2.jpg'
-import speacker3 from '../../../assets/img/speaker/speakers-3.jpg'
-
 import Shedule_day_01 from "./Shedule_day_01";
+import Shedule_day_02 from "./Shedule_day_02";
+import Shedule_day_03 from "./Shedule_day_03";
 
 import React, { useState } from "react";
 
@@ -33,6 +31,7 @@ function Shedule() {
             </div>
           </div>
         </div>
+
         <div className="row">
           <div className="col-12 mb-5 text-center">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -50,6 +49,9 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Inaguration Ceremony</h4>
                     <h5>11th October 2023</h5>
+                    <h5 style={{ color: "white" }}>
+                      6.00 PM onwards
+                    </h5>
                   </div>
                 </a>
               </li>
@@ -66,6 +68,9 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Day 01</h4>
                     <h5>12th October 2023</h5>
+                    <h5>
+                      9.00 AM - 5.00 PM
+                    </h5>
                   </div>
                 </a>
               </li>
@@ -82,12 +87,16 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Day 02</h4>
                     <h5>13th October 2023</h5>
+                    <h5>
+                      9.00 AM - 5.00 PM
+                    </h5>
                   </div>
                 </a>
               </li>
             </ul>
           </div>
-          <div className="col-12">
+
+          {/*<div className="col-12">
             <div
               className="schedule-area row wow fadeInDown"
               data-wow-delay="0.3s"
@@ -827,11 +836,13 @@ function Shedule() {
                   </div>
                 </div>
               </div>
-            </div> 
-          </div> 
-
-          {/* <Shedule_day_01 /> */}
+            </div>
+          </div> */}
         </div>
+
+        {toggleState === 1 && <Shedule_day_01 />}
+        {toggleState === 2 && <Shedule_day_02 />}
+        {toggleState === 3 && <Shedule_day_03 />}
       </div>
     </section>
   );
