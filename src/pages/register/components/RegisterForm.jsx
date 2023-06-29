@@ -2,61 +2,23 @@ import React, { useState } from "react";
 import logo from "../../../assets/img/logo-crop.png";
 import { useLocation } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { CheckCircle } from "react-bootstrap-icons";
+
 const RegisterForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [cardInfo, setcardInfo] = useState("");
+  const [nameOnCard, setnameOnCard] = useState("");
   const [email, setEmail] = useState("");
-  const[memberId, setMemberId] = useState("");
+  const[countryOnRegion, setcountryOnRegion] = useState("");
   
-
-  // const location = useLocation();
-  // const searchParams = new URLSearchParams(location.search);
-  // const setTypeCSSL = searchParams.get("type");
-
-  // {setTypeCSSL ? (
-  //   const[isChecked, setIsChecked] =  useState(true);
-  // ):(
-  //   const[isChecked, setIsChecked] =  useState(false);
-  // )
-  // }
-
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const setTypeCSSL = searchParams.get("type");
-  let price;
-
-  if (setTypeCSSL === "Inauguration") {
-    price = 15000;
-  } else if (setTypeCSSL === "Day_01") {
-    price = 14000;
-  } else if (setTypeCSSL === "Day_02") {
-    price = 20000;
-  } else {
-    price = 35000;
-  }
-
-  const initialState = false;
-  const [isChecked, setIsChecked] = useState(initialState);
-
   
-
-  const toggleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform registration logic 
-    console.log("Registration form submitted");
-    console.log("First Name:", firstName);
-    console.log("Last Name:", lastName);
-    console.log("Email:", email);
-    console.log("MemberId", memberId);
     // Reset form fields
-    setFirstName("");
-    setLastName("");
+    setcardInfo("");
+    setnameOnCard("");
     setEmail("");
-    setMemberId("");
+    setcountryOnRegion("");
   };
 
   return (
@@ -77,30 +39,134 @@ const RegisterForm = () => {
       <section id="register-form" className="section-padding">
         <div className="container">
           <div className="row">
-            <div className="col-md-12 col-sm-12 col-lg-6 ">
+            <div
+              className="col-lg-6 col-md-12"
+              style={{
+                paddingLeft: "130px",
+                paddingRight: "70px",
+              }}
+            >
+              <div className="row">
+                <div className="col">
+                  <div className="" style={{ lineHeight: "35px" }}>
+                    <span className="" style={{ color: "gray" }}>
+                      Try Kipper Unlimited(save $60)
+                    </span>
+                    <br />
+                    <span
+                      className=""
+                      style={{ fontSize: "30px", fontWeight: "bold" }}
+                    >
+                      2 days free
+                    </span>
+                    <br />
+                    <span className="" style={{ color: "gray" }}>
+                      Then US$59.99 per year
+                    </span>
+                    <br />
+                  </div>
+
+                  <div
+                    className=""
+                    style={{ paddingTop: "70px", lineHeight: "30px" }}
+                  >
+                    <div className="price-section">
+                      <div className="row">
+                        <div className="col">
+                          <span className="label">
+                            Kipper Unlimited(Save $60)
+                          </span>
+                        </div>
+                        <div className="col">
+                          <span
+                            className="value"
+                            style={{ paddingLeft: "98px" }}
+                          >
+                            2 days free
+                          </span>
+                          <br />
+                          <span
+                            className="value"
+                            style={{
+                              color: "gray",
+                              paddingLeft: "55px",
+                              fontSize: "13px",
+                            }}
+                          >
+                            US$59.99/year after
+                          </span>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col">
+                          <span className="label">Subtotal</span>
+                        </div>
+                        <div className="col">
+                          <span
+                            className="value"
+                            style={{ paddingLeft: "98px" }}
+                          >
+                            US$59.99
+                          </span>
+                        </div>
+                      </div>
+                      <hr />
+                      <div className="row" style={{ color: "gray" }}>
+                        <div className="col">
+                          <span className="label">Tax</span>
+                        </div>
+                        <div className="col">
+                          <span
+                            className="value"
+                            style={{ paddingLeft: "98px" }}
+                          >
+                            US$0.00
+                          </span>
+                        </div>
+                      </div>
+                      <hr />
+                      <div className="row">
+                        <div className="col">
+                          <span className="label">Total after trail</span>
+                        </div>
+                        <div className="col">
+                          <span
+                            className="value"
+                            style={{ paddingLeft: "98px" }}
+                          >
+                            US$59.99
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="row">
+                        <div className="col">
+                          <span className="label">Total due today</span>
+                        </div>
+                        <div className="col">
+                          <span
+                            className="value"
+                            style={{ paddingLeft: "98px" }}
+                          >
+                            US$0.00
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-md-12 col-sm-12 col-lg-6 "
+              style={{
+                paddingLeft: "98px",
+                paddingRight: "130px",
+              }}
+            >
+              <h5 style={{ fontSize: "18px" }}>Enter payment details</h5>
               <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="firstName">First Name</label>
-                  <input
-                    className="form-control form-control-sm "
-                    type="text"
-                    id="firstName"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    style={{ height: "36px" }}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="lastName">Last Name</label>
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    id="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    style={{ height: "36px" }}
-                  />
-                </div>
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
                   <input
@@ -109,77 +175,121 @@ const RegisterForm = () => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    style={{ height: "36px" }}
+                    style={{
+                      height: "36px",
+                      borderRadius: "10px",
+                      border: "1px solid #f2eeee",
+                    }}
                   />
-                </div>
-                <div class="form-group form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    id="exampleCheck1"
-                    checked={isChecked}
-                    onChange={toggleCheckboxChange}
-                  />
-                  <label className="form-check-label" for="exampleCheck1">
-                    Are you a CSSL member?
-                  </label>
                 </div>
 
-                {isChecked && (
-                  <div className="form-group">
-                    <label htmlFor="memberId">Member ID</label>
+                <div className="form-group">
+                  <label htmlFor="nameOnCard">Card Information</label>
+                  <input
+                    className="form-control form-control-sm"
+                    type="text"
+                    id="cardInfo"
+                    value={cardInfo}
+                    onChange={(e) => setcardInfo(e.target.value)}
+                    style={{
+                      height: "36px",
+                      borderRadius: "10px",
+                      border: "1px solid #f2eeee",
+                      flex: "1",
+                      marginRight: "10px",
+                    }}
+                  />
+
+                  <br />
+
+                  <div style={{ display: "flex" }}>
                     <input
                       className="form-control form-control-sm"
                       type="text"
-                      id="memberId"
-                      value={memberId}
-                      onChange={(e) => setMemberId(e.target.value)}
-                      style={{ height: "36px" }}
+                      id="nameOnCard"
+                      value={cardInfo}
+                      onChange={(e) => setcardInfo(e.target.value)}
+                      style={{
+                        height: "36px",
+                        borderRadius: "10px",
+                        border: "1px solid #f2eeee",
+                        flex: "1",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <input
+                      className="form-control form-control-sm"
+                      type="text"
+                      id="cvv"
+                      placeholder="CVV"
+                      style={{
+                        height: "36px",
+                        borderRadius: "10px",
+                        border: "1px solid #f2eeee",
+                        flex: "1",
+                      }}
                     />
                   </div>
-                )}
-                {/* <button type="submit" className="btn btn-common">
-                  Register
-                </button> */}
-              </form>
-            </div>
-
-            <div className="col-lg-6 col-md-12">
-              <div className="row">
-                <div className="col">
-                  <div className="card text-center">
-                    <div className="card-body">
-                      {isChecked && (
-                        <p
-                          className="h5 font-weight-bold"
-                          style={{ lineHeight: "40px" }}
-                        >
-                          <span className="" style={{ fontWeight: 100 }}>
-                            Ticket price: Rs {price}
-                          </span>
-                          <br />
-                          <span className="" style={{ fontWeight: 100 }}>
-                            Discount :{" "}
-                          </span>{" "}
-                          <span style={{ color: "blue", fontSize: "30px" }}>
-                            10%
-                          </span>
-                          <br />
-                          Total price: Rs {price-((price * 10) / 100)}
-                        </p>
-                      )}
-                      {!isChecked && (
-                        <p className="h5 font-weight-bold">
-                          Total price: Rs {price}
-                        </p>
-                      )}
-                      <a href="#" className="btn btn-common mt-3">
-                        Pay Now
-                      </a>
-                    </div>
-                  </div>
                 </div>
-              </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">Name on card</label>
+                  <input
+                    className="form-control form-control-sm"
+                    type="email"
+                    id="email"
+                    value={nameOnCard}
+                    onChange={(e) => setnameOnCard(e.target.value)}
+                    style={{
+                      height: "36px",
+                      borderRadius: "10px",
+                      border: "1px solid #f2eeee",
+                    }}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">Coutry on region</label>
+                  <input
+                    className="form-control form-control-sm"
+                    type="email"
+                    id="email"
+                    value={countryOnRegion}
+                    onChange={(e) => setcountryOnRegion(e.target.value)}
+                    style={{
+                      height: "36px",
+                      borderRadius: "10px",
+                      border: "1px solid #f2eeee",
+                    }}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <input
+                    className="form-control form-control-sm"
+                    type="submit"
+                    style={{
+                      height: "36px",
+                      backgroundColor: "var(--teal)",
+                      borderRadius: "10px",
+                      border: "1px solid #f2eeee",
+                      color: "white",
+                    }}
+                    value={<CheckCircle />}
+                  />
+                  <p
+                    style={{
+                      color: "gray",
+                      fontSize: "12px",
+                      fontWeight: "600px",
+                      textAlign: "center",
+                    }}
+                  >
+                    After your trail end, you will be chanrged US$59.99 per year
+                    starting 1 July, 2023. You can cansel before then.
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
         </div>
