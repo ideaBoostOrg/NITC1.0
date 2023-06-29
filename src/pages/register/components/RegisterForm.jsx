@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../../assets/img/logo-crop.png";
 import { CheckCircle } from "react-bootstrap-icons";
 import { useSearchParams } from 'react-router-dom';
@@ -95,10 +95,14 @@ const RegisterForm = () => {
     };
   }
 
-  const handlePay = (e) => {
-    e.preventDefault();
-    loadPaycorpPayment(buildPayment())
-  }
+  // const handlePay = (e) => {
+  //   e.preventDefault();
+  //   loadPaycorpPayment(buildPayment())
+  // }
+
+  useEffect(() => {
+    loadPaycorpPayment(buildPayment(), 'paycorp-payment')
+  }, [])
 
   return (
     <>
@@ -270,6 +274,7 @@ const RegisterForm = () => {
                     }}
                   />
                 </div>
+                <div id="paycorp-payment"></div>
 
                 <div className="form-check">
                   <input
@@ -291,7 +296,7 @@ const RegisterForm = () => {
                 <div className="form-group">
                   <button
                     className="form-control form-control-sm submit-btn"
-                    onClick={handlePay}
+                  // onClick={handlePay}
                   >
                     {checking ? "checking..." : "Pay Now"}
                   </button>

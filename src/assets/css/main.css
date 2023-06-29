@@ -2617,16 +2617,16 @@ footer {
   filter: brightness(1);
 }
 
-.verify-btn{
+.verify-btn {
   background-color: var(--primary-blue);
-    border-radius: 10px;
-    border: 1px solid #f2eeee;
-    color: white;
-    padding: 6px 20px;
-    filter: brightness(0.9);
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #f2eeee;
+  color: white;
+  padding: 6px 20px;
+  filter: brightness(0.9);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
