@@ -1,4 +1,4 @@
-// import Awards from "../../../assets/img/Awards-1.jpg";
+import Awards from "../../../assets/img/Awards-2.png";
 
 
 function CSSL_awards() {
@@ -12,7 +12,7 @@ function CSSL_awards() {
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
-              {/* <img className="img-fluid" src={Awards} alt="" /> */}
+              <img className="img-fluid" src={Awards} alt="" />
             </div>
           </div>
 
