@@ -85,6 +85,7 @@ if (show) {
 }
 }
 
+
 function buildIframe(targetId, base64) {
 const ifrm = document.createElement('iframe');
 ifrm.onload = () => {
@@ -92,13 +93,25 @@ ifrm.onload = () => {
     toggleSpinner(targetId, false);
   }, 1000);
 }
+
+const style = `
+#paycorp-iframe html body {
+  background-color: red;
+  /* Add any additional custom styles here */
+}
+`;
+
 ifrm.setAttribute('id', 'paycorp-iframe');
 ifrm.setAttribute('class', 'paycorp-iframe');
 ifrm.setAttribute('frameBorder', '0');
 ifrm.setAttribute('scrolling', 'yes');
 ifrm.setAttribute('height', '500px');
-ifrm.setAttribute('width', '420px');
+ifrm.setAttribute('bgcolor', 'red');
+// ifrm.setAttribute('width', '420px');
+  ifrm.setAttribute('style', style);
+
 ifrm.setAttribute('src', HOST + base64);
+
 return ifrm;
 }
 
