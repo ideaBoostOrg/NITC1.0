@@ -2564,14 +2564,15 @@ footer {
   .pdt-50 {
     padding-top: 50px;
   }
+
 }
 
-/* 
+
 @media (max-width: 767px) {
   .pdt-50 {
-    padding-top: 100px;
+    padding-inline: 20px;
   }
-} */
+}
 
 .content {
   margin-top: 35px;
