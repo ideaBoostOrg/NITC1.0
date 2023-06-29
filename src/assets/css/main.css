@@ -2547,9 +2547,14 @@ footer {
 
 @media (max-width: 767px) {
   .pdr-50 {
-    padding-right: 0px;
+    padding: 0px 20px;
+  }
+
+  .section-padding {
+    margin-top: 25px;
   }
 }
+
 
 .pdt-50 {
   padding-top: 0px;
@@ -2591,4 +2596,19 @@ footer {
 
 .form-group {
   margin-bottom: 20px;
+}
+
+.submit-btn {
+  background-color: var(--teal);
+  border-radius: 10px;
+  border: 1px solid #f2eeee;
+  color: white;
+  padding: 6px 20px;
+  filter: brightness(0.9);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  filter: brightness(1);
 }

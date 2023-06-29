@@ -8,6 +8,7 @@ const RegisterForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [checking, setChecking] = useState(false);
 
   const [isMember, setisMember] = useState(false);
 
@@ -217,16 +218,10 @@ const RegisterForm = () => {
 
                 <div className="form-group">
                   <input
-                    className="form-control form-control-sm"
+                    className="form-control form-control-sm submit-btn"
                     type="submit"
-                    style={{
-                      height: "36px",
-                      backgroundColor: "var(--teal)",
-                      borderRadius: "10px",
-                      border: "1px solid #f2eeee",
-                      color: "white",
-                    }}
-                    value={<CheckCircle />}
+                    value={checking ? "checking..." : "Pay Now"}
+
                   />
                   <p
                     style={{
