@@ -87,7 +87,11 @@ const RegisterForm = () => {
                           <br />
                           <span
                             className="value"
-                            style={{ color: "gray", paddingLeft: "30px",  fontSize:"13px" }}
+                            style={{
+                              color: "gray",
+                              paddingLeft: "30px",
+                              fontSize: "13px",
+                            }}
                           >
                             US$59.99/year after
                           </span>
@@ -164,7 +168,7 @@ const RegisterForm = () => {
               <h5 style={{ fontSize: "18px" }}>Enter payment details</h5>
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="cardInfo">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input
                     className="form-control form-control-sm"
                     type="email"
@@ -174,37 +178,72 @@ const RegisterForm = () => {
                     style={{
                       height: "36px",
                       borderRadius: "10px",
-                      border: "none",
+                      border: "1px solid #f2eeee",
                     }}
                   />
                 </div>
+
                 <div className="form-group">
-                  <label htmlFor="nameOnCard">Card information</label>
+                  <label htmlFor="nameOnCard">Card Information</label>
                   <input
                     className="form-control form-control-sm"
                     type="text"
-                    id="nameOnCard"
-                    value={nameOnCard}
-                    onChange={(e) => setnameOnCard(e.target.value)}
+                    id="cardInfo"
+                    value={cardInfo}
+                    onChange={(e) => setcardInfo(e.target.value)}
                     style={{
                       height: "36px",
                       borderRadius: "10px",
-                      border: "none",
+                      border: "1px solid #f2eeee",
+                      flex: "1",
+                      marginRight: "10px",
                     }}
                   />
+
+                  <br />
+
+                  <div style={{ display: "flex" }}>
+                    <input
+                      className="form-control form-control-sm"
+                      type="text"
+                      id="nameOnCard"
+                      value={cardInfo}
+                      onChange={(e) => setcardInfo(e.target.value)}
+                      style={{
+                        height: "36px",
+                        borderRadius: "10px",
+                        border: "1px solid #f2eeee",
+                        flex: "1",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <input
+                      className="form-control form-control-sm"
+                      type="text"
+                      id="cvv"
+                      placeholder="CVV"
+                      style={{
+                        height: "36px",
+                        borderRadius: "10px",
+                        border: "1px solid #f2eeee",
+                        flex: "1",
+                      }}
+                    />
+                  </div>
                 </div>
+
                 <div className="form-group">
                   <label htmlFor="email">Name on card</label>
                   <input
                     className="form-control form-control-sm"
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={nameOnCard}
+                    onChange={(e) => setnameOnCard(e.target.value)}
                     style={{
                       height: "36px",
                       borderRadius: "10px",
-                      border: "none",
+                      border: "1px solid #f2eeee",
                     }}
                   />
                 </div>
@@ -215,12 +254,12 @@ const RegisterForm = () => {
                     className="form-control form-control-sm"
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={countryOnRegion}
+                    onChange={(e) => setcountryOnRegion(e.target.value)}
                     style={{
                       height: "36px",
                       borderRadius: "10px",
-                      border: "none",
+                      border: "1px solid #f2eeee",
                     }}
                   />
                 </div>
@@ -233,7 +272,7 @@ const RegisterForm = () => {
                       height: "36px",
                       backgroundColor: "var(--teal)",
                       borderRadius: "10px",
-                      border: "none",
+                      border: "1px solid #f2eeee",
                       color: "white",
                     }}
                     value={<CheckCircle />}
