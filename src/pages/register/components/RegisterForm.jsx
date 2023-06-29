@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../../assets/img/logo-crop.png";
 import { CheckCircle } from "react-bootstrap-icons";
 import { useSearchParams } from 'react-router-dom';
@@ -49,7 +49,9 @@ const RegisterForm = () => {
   const [email, setEmail] = useState("");
   const [checking, setChecking] = useState(false);
 
+
   const [isMember, setisMember] = useState(false);
+  const [acceptTerm, setAcceptTerm] = useState(true);
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -69,6 +71,15 @@ const RegisterForm = () => {
     }
   }
 
+  const handleAcceptTerms = (e) => {
+    const value = e.target.checked;
+    if (value == true) {
+      setAcceptTerm(true);
+    } else {
+      setAcceptTerm(false);
+    }
+  }
+
   const buildPayment = () => {
     return {
       // NOTE: this is the QuickWeb DEMO client ID.
@@ -84,10 +95,14 @@ const RegisterForm = () => {
     };
   }
 
-  const handlePay = (e) => {
-    e.preventDefault();
-    loadPaycorpPayment(buildPayment())
-  }
+  // const handlePay = (e) => {
+  //   e.preventDefault();
+  //   loadPaycorpPayment(buildPayment())
+  // }
+
+  useEffect(() => {
+    loadPaycorpPayment(buildPayment(), 'paycorp-payment')
+  }, [])
 
   return (
     <>
@@ -106,10 +121,10 @@ const RegisterForm = () => {
           <div className="row">
             <div className="col-lg-6 col-md-12 pdr-50">
               <div className="" style={{ lineHeight: "35px" }}>
-                <span className="" style={{ color: "gray" }}>
+                {/* <span className="" style={{ color: "gray" }}>
                   {pack.key}
                 </span>
-                <br />
+                <br /> */}
                 <span
                   className=""
                   style={{ fontSize: "25px", fontWeight: "bold" }}
@@ -117,53 +132,69 @@ const RegisterForm = () => {
                   {pack.name}
                 </span>
                 <br />
-                <span className="" style={{ fontSize: "20px", color: "gray" }}>
+                {/* <span className="" style={{ fontSize: "20px", color: "gray" }}>
                   {pack.currency} {pack.price}
                 </span>
-                <br />
+                <br /> */}
               </div>
 
               <div className="cssl-member-box">
-
                 <div className="form-check">
-                  <input className="form-check-input" type="checkbox" onChange={handleCheckbox} value="" id="flexCheckDefault" />
-                  <label className="form-check-label" htmlFor="flexCheckDefault">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    onChange={handleCheckbox}
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor="flexCheckDefault"
+                  >
                     I&apos;m a CSSL member.
                   </label>
                 </div>
                 <span className="" style={{ color: "gray" }}>
-                  If you are a CSSL member, you will receive 15% off.
+                  If you are a CSSL member, you will receive a 10% discount.
                 </span>
                 <br></br>
-                {isMember &&
+                {isMember && (
                   <>
                     <br></br>
                     <div className="memberid">
                       <label htmlFor="memberId">CSSL Member ID</label>
-                      <input
-                        autoFocus={isMember}
-                        className="form-control form-control-sm"
-                        type="text"
-                        id="memberId"
-                        value={memberId}
-                        onChange={(e) => setMemberId(e.target.value)}
-                        style={{
-                          height: "36px",
-                          borderRadius: "10px",
-                          border: "1px solid #f2eeee",
-                          flex: "1",
-                          marginRight: "10px",
-                        }}
-                      />
+                      <div className="" style={{ display: "flex" }}>
+                        <input
+                          autoFocus={isMember}
+                          className="form-control form-control-sm"
+                          type="text"
+                          id="memberId"
+                          value={memberId}
+                          onChange={(e) => setMemberId(e.target.value)}
+                          style={{
+                            height: "36px",
+                            borderRadius: "10px",
+                            border: "1px solid #f2eeee",
+                            flex: "1",
+                            marginRight: "10px",
+                          }}
+                        />
+                        <input
+                          type="submit"
+                          value="verify"
+                          className="verify-btn"
+                        ></input>
+                      </div>
                     </div>
                   </>
-                }
+                )}
               </div>
 
               <div className="content">
                 <div className="content-row">
                   <span className="label">
-                    {pack.key} package
+                    {/* {pack.key} package */}
+                    Amount
                   </span>
                   <span className="value">
                     {pack.currency} {pack.price}
@@ -173,13 +204,17 @@ const RegisterForm = () => {
                 <div className="content-row">
                   <span className="label">Discount</span>
                   <span className="value">
-                    15%
+                    {/* 15% */}
+                    10%
                   </span>
                 </div>
 
                 <hr />
                 <div className="content-row">
-                  <span className="label">Subtotal</span>
+                  <span className="label">
+                    {/* Subtotal */}
+                    Net total
+                  </span>
                   <span className="value">
                     {pack.currency} {pack.price}
                   </span>
@@ -187,10 +222,10 @@ const RegisterForm = () => {
               </div>
             </div>
             <hr />
-            <div
-              className="col-md-12 col-sm-12 col-lg-6 pdt-50"
-            >
-              <h5 style={{ fontSize: "22px", marginBottom: "20px" }}>Billing details</h5>
+            <div className="col-md-12 col-sm-12 col-lg-6 pdt-50">
+              <h5 style={{ fontSize: "22px", marginBottom: "20px" }}>
+                Billing details
+              </h5>
               <form>
                 <div className="form-group">
                   <label htmlFor="firstName">First Name</label>
@@ -239,11 +274,29 @@ const RegisterForm = () => {
                     }}
                   />
                 </div>
+                <div id="paycorp-payment"></div>
+
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    onChange={handleAcceptTerms}
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label
+                    className="form-check-label"
+                  // htmlFor="flexCheckDefault"
+                  >
+                    Accept all terms & conditions.
+                  </label>
+                </div>
+                <br />
 
                 <div className="form-group">
                   <button
                     className="form-control form-control-sm submit-btn"
-                    onClick={handlePay}
+                  // onClick={handlePay}
                   >
                     {checking ? "checking..." : "Pay Now"}
                   </button>
@@ -255,7 +308,9 @@ const RegisterForm = () => {
                       textAlign: "center",
                     }}
                   >
-                    lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    After completing the transaction, we will promptly send you
+                    an email containing the reference number and invoice, along
+                    with the payment confirmation.
                   </p>
                 </div>
               </form>

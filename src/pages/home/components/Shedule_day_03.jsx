@@ -1,7 +1,7 @@
 function Shedule_day_03() {
   return (
     <section
-      id="sponsors"
+      id="shedule_day_03"
       className="section-padding"
       style={{ backgroundColor: "#f3f4f3" }}
     >
