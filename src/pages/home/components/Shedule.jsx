@@ -49,7 +49,7 @@ function Shedule() {
                   <div className="item-text">
                     <h4>Inaguration Ceremony</h4>
                     <h5>11th October 2023</h5>
-                    <h5 style={{ color: "white" }}>
+                    <h5>
                       6.00 PM onwards
                     </h5>
                   </div>

@@ -25,7 +25,7 @@ function Shedule_day_02() {
                       <div className="card">
                         <div id="headingOne1">
                           <div className="schedule-slot-time">
-                            <span> 1.30 - 2.30 AM</span>
+                            <span> 9.00 - 12.30 AM</span>
                             {/* Workshop */}
                           </div>
                           <div
