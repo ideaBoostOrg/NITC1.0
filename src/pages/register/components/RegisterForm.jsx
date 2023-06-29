@@ -80,7 +80,7 @@ const RegisterForm = () => {
                         <div className="col">
                           <span
                             className="value"
-                            style={{ paddingLeft: "70px" }}
+                            style={{ paddingLeft: "98px" }}
                           >
                             2 days free
                           </span>
@@ -89,7 +89,7 @@ const RegisterForm = () => {
                             className="value"
                             style={{
                               color: "gray",
-                              paddingLeft: "30px",
+                              paddingLeft: "55px",
                               fontSize: "13px",
                             }}
                           >
@@ -104,7 +104,7 @@ const RegisterForm = () => {
                         <div className="col">
                           <span
                             className="value"
-                            style={{ paddingLeft: "70px" }}
+                            style={{ paddingLeft: "98px" }}
                           >
                             US$59.99
                           </span>
@@ -118,7 +118,7 @@ const RegisterForm = () => {
                         <div className="col">
                           <span
                             className="value"
-                            style={{ paddingLeft: "70px" }}
+                            style={{ paddingLeft: "98px" }}
                           >
                             US$0.00
                           </span>
@@ -132,7 +132,7 @@ const RegisterForm = () => {
                         <div className="col">
                           <span
                             className="value"
-                            style={{ paddingLeft: "70px" }}
+                            style={{ paddingLeft: "98px" }}
                           >
                             US$59.99
                           </span>
@@ -146,7 +146,7 @@ const RegisterForm = () => {
                         <div className="col">
                           <span
                             className="value"
-                            style={{ paddingLeft: "70px" }}
+                            style={{ paddingLeft: "98px" }}
                           >
                             US$0.00
                           </span>
@@ -161,7 +161,7 @@ const RegisterForm = () => {
             <div
               className="col-md-12 col-sm-12 col-lg-6 "
               style={{
-                paddingLeft: "70px",
+                paddingLeft: "98px",
                 paddingRight: "130px",
               }}
             >
