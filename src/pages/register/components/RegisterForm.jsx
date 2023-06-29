@@ -48,7 +48,7 @@ const RegisterForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [checking, setChecking] = useState(false);
-  
+
 
   const [isMember, setisMember] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(true);
@@ -71,11 +71,11 @@ const RegisterForm = () => {
     }
   }
 
-  const handleAcceptTerms = (e) =>{
-    const value=e.target.checked;
-    if(value==true){
+  const handleAcceptTerms = (e) => {
+    const value = e.target.checked;
+    if (value == true) {
       setAcceptTerm(true);
-    }else{
+    } else {
       setAcceptTerm(false);
     }
   }
@@ -209,7 +209,7 @@ const RegisterForm = () => {
                 <div className="content-row">
                   <span className="label">
                     {/* Subtotal */}
-                    Netprice
+                    Net total
                   </span>
                   <span className="value">
                     {pack.currency} {pack.price}
@@ -281,7 +281,7 @@ const RegisterForm = () => {
                   />
                   <label
                     className="form-check-label"
-                    // htmlFor="flexCheckDefault"
+                  // htmlFor="flexCheckDefault"
                   >
                     Accept all terms & conditions.
                   </label>
