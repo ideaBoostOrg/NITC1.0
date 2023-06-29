@@ -2606,6 +2606,9 @@ footer {
   color: white;
   padding: 6px 20px;
   filter: brightness(0.9);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }

@@ -1,16 +1,12 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import logo from "../../../assets/img/logo-crop.png";
 import { CheckCircle } from "react-bootstrap-icons";
 import { useSearchParams } from 'react-router-dom';
 
-const RegisterForm = () => {
-  const [memberId, setMemberId] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [checking, setChecking] = useState(false);
+import { loadPaycorpPayment } from '../../../pay';
 
-  const [isMember, setisMember] = useState(false);
+const RegisterForm = () => {
 
   const packages = {
     Inauguration: {
@@ -43,14 +39,26 @@ const RegisterForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Reset form fields
-    // setcardInfo("");
-    // setnameOnCard("");
-    // setEmail("");
-    // setcountryOnRegion("");
-  };
+  const [searchParams] = useSearchParams();
+  const type = searchParams.get('type');
+  const pack = packages[type];
+
+  const [memberId, setMemberId] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [checking, setChecking] = useState(false);
+
+  const [isMember, setisMember] = useState(false);
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Reset form fields
+  //   // setcardInfo("");
+  //   // setnameOnCard("");
+  //   // setEmail("");
+  //   // setcountryOnRegion("");
+  // };
 
   const handleCheckbox = (e) => {
     const value = e.target.checked;
@@ -61,9 +69,25 @@ const RegisterForm = () => {
     }
   }
 
-  const [searchParams] = useSearchParams();
-  const type = searchParams.get('type');
-  const pack = packages[type];
+  const buildPayment = () => {
+    return {
+      // NOTE: this is the QuickWeb DEMO client ID.
+      // You may use it for initial setup
+      // but replace with the Client ID
+      // provided by Paycorp for final testing.
+      clientId: 14002582,
+      paymentAmount: 1010,
+      currency: 'LKR',
+      returnUrl: `${window.location.hostname}/payment-success`,
+      clientRef: 'CREF-12345',
+      comment: 'This is a demo payment'
+    };
+  }
+
+  const handlePay = (e) => {
+    e.preventDefault();
+    loadPaycorpPayment(buildPayment())
+  }
 
   return (
     <>
@@ -167,7 +191,7 @@ const RegisterForm = () => {
               className="col-md-12 col-sm-12 col-lg-6 pdt-50"
             >
               <h5 style={{ fontSize: "22px", marginBottom: "20px" }}>Billing details</h5>
-              <form onSubmit={handleSubmit}>
+              <form>
                 <div className="form-group">
                   <label htmlFor="firstName">First Name</label>
                   <input
@@ -217,12 +241,12 @@ const RegisterForm = () => {
                 </div>
 
                 <div className="form-group">
-                  <input
+                  <button
                     className="form-control form-control-sm submit-btn"
-                    type="submit"
-                    value={checking ? "checking..." : "Pay Now"}
-
-                  />
+                    onClick={handlePay}
+                  >
+                    {checking ? "checking..." : "Pay Now"}
+                  </button>
                   <p
                     style={{
                       color: "gray",
