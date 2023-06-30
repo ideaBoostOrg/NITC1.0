@@ -2785,6 +2785,24 @@ footer {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 1024px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 370px;
+  }
+}
+
 .modal h5 {
   font-size: 18px;
   font-weight: 600;
