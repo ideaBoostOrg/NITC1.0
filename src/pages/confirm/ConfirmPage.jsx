@@ -1,6 +1,8 @@
 import logo from "../../assets/img/logo-crop.png";
 import { CheckCircleFill } from "react-bootstrap-icons";
 
+import { Link } from "react-router-dom";
+
 function ConfirmPage() {
     return (
         <>
@@ -20,7 +22,7 @@ function ConfirmPage() {
                     <h2>Payment Confirmed</h2>
                     <p>You will receive an email containing the reference number and invoice, along with the payment confirmation.</p>
                     <p>Thank you!</p>
-                    <button>Go Back</button>
+                    <Link className="back-btn" to="/">Go Back</Link>
                 </div>
             </section>
 

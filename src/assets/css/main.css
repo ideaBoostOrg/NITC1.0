@@ -542,7 +542,7 @@ a.back-to-top:focus {
 }
 
 .section-padding {
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 .no-padding {
@@ -2546,6 +2546,8 @@ footer {
   padding-right: 50px;
 }
 
+
+
 @media (max-width: 767px) {
   .pdr-50 {
     padding: 0px 20px;
@@ -2564,6 +2566,10 @@ footer {
 @media (max-width: 1024px) {
   .pdt-50 {
     padding-top: 50px;
+  }
+
+  .section-padding {
+    margin-top: 50px;
   }
 
 }
@@ -2614,9 +2620,20 @@ footer {
   cursor: pointer;
 }
 
+
 .submit-btn:hover {
   filter: brightness(1);
 }
+
+.submit-btn:disabled {
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+  border: 1px solid #f2eeee;
+  color: white;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 
 .verify-btn {
   width: 75px;
@@ -2736,7 +2753,7 @@ footer {
 .f-input {
   height: 36px;
   border-radius: 5px;
-  border: 1px solid #f2eeee;
+  border: 1px solid #ccc;
   flex: 1;
   margin-right: 10px;
 }
@@ -2765,8 +2782,8 @@ footer {
   bottom: 0;
   right: 0;
   width: 100%;
-  min-height: 130%;
-  height: 130%;
+  min-height: 100%;
+  height: 100%;
   z-index: 10000;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px) contrast(0.9) grayscale(0.3);
@@ -2777,8 +2794,8 @@ footer {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 480px;
-  height: fit-content;
+  min-width: 480px;
+  min-height: 500px;
   border: none;
   border-radius: 5px;
   background-color: white;
@@ -2876,11 +2893,11 @@ footer {
   font-size: 1rem;
   max-width: 500px;
   text-align: center;
-  color: #505050;
-  font-weight: 600;
+  color: #494848;
+  font-weight: 500;
 }
 
-.confirm-container button {
+.confirm-container .back-btn {
   margin-top: 1rem;
   width: 200px;
   height: 40px;
@@ -2891,9 +2908,154 @@ footer {
   font-weight: 600;
   filter: brightness(0.9);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
 }
 
-.confirm-container button:hover {
+.confirm-container .back-btn:hover {
+  filter: brightness(1);
+}
+
+.flexCheckDefault {
+  margin: 1.25rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+
+.terms-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  padding-top: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  user-select: none;
+}
+
+.terms-heading button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.terms-wrapper {
+  user-select: none;
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  height: 75%;
+  overflow-y: scroll;
+  counter-reset: section;
+
+}
+
+.terms-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.terms-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.terms-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.terms-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.terms-wrapper .section {
+  margin-bottom: 1.2rem;
+}
+
+.terms-wrapper .section h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.terms-wrapper .section h5::before {
+  counter-increment: section;
+  content: counter(section) ". ";
+}
+
+
+.section-ol {
+  counter-reset: numberList;
+}
+
+.section-ol li {
+  counter-increment: numberList;
+  font-size: 0.95rem;
+  margin-bottom: 0rem;
+  margin-left: 1.5rem;
+}
+
+.section-ol li::before {
+  content: counter(numberList) ". ";
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 0;
+}
+
+.term-footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.term-footer .radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.term-footer .action-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.term-footer .action-btns button {
+
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+
+.term-footer .action-btns .next {
+  background-color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  color: #fff;
+  filter: brightness(1);
+  filter: brightness(0.9);
+}
+
+.term-footer .action-btns .next:hover {
+  filter: brightness(1);
+}
+
+.term-footer .action-btns .back {
+  background-color: #fff;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+.term-footer .action-btns button:hover {
   filter: brightness(1);
 }

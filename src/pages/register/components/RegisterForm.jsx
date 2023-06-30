@@ -9,6 +9,7 @@ import Modal from "./Modal";
 import logo from "../../../assets/img/logo-crop.png";
 
 import { loadPaycorpPayment } from '../../../pay';
+import TermsModal from "./TermsModal";
 
 
 
@@ -54,12 +55,14 @@ const RegisterForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [btnState, setBtnState] = useState("verify");
+
   const [errorMsg, setErrorMsg] = useState("");
-  const [isNotVerified, setIsNotVerified] = useState(false);
+  const [inputError, setInputError] = useState(false);
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [isMember, setisMember] = useState(false);
-  const [acceptTerm, setAcceptTerm] = useState(true);
+  const [acceptTerm, setAcceptTerm] = useState(false);
   const [discount, setDiscount] = useState(0);
   const [netTotal, setNetTotal] = useState(parseFloat(pack.price));
 
@@ -182,7 +185,13 @@ const RegisterForm = () => {
   }
 
   const handlePay = () => {
-    loadPaycorpPayment(buildPayment())
+    if (firstName && lastName && email) {
+      setInputError(false);
+      loadPaycorpPayment(buildPayment())
+    } else {
+      setInputError(true);
+    }
+
   }
 
 
@@ -199,6 +208,7 @@ const RegisterForm = () => {
         </nav>
       </section>
       <Modal isOpen={modalOpen} onClose={setModalOpen} />
+      <TermsModal isOpen={termsModalOpen} onClose={setTermsModalOpen} setAcceptTerm={setAcceptTerm} />
       <section id="register-form" className="section-padding">
         <div className="container">
           <div className="row">
@@ -220,11 +230,11 @@ const RegisterForm = () => {
                     type="checkbox"
                     onChange={handleCheckbox}
                     value=""
-                    id="flexCheckDefault"
+                    id="csslMemberCheck"
                   />
                   <label
                     className="form-check-label"
-                    htmlFor="flexCheckDefault"
+                    htmlFor="csslMemberCheck"
                   >
                     I&apos;m a CSSL member.
                   </label>
@@ -320,6 +330,7 @@ const RegisterForm = () => {
                     id="firstName"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
+                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
                   />
                 </div>
 
@@ -331,6 +342,8 @@ const RegisterForm = () => {
                     id="lastName"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
+                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
+
                   />
                 </div>
 
@@ -342,23 +355,39 @@ const RegisterForm = () => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc !important" }}
+
                   />
+
                 </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    onChange={handleAcceptTerms}
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label
-                    className="form-check-label"
-                  >
-                    Accept all terms & conditions.
-                  </label>
+                <div className="form-check flexCheckDefault" style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+
+                }}>
+                  <div className="">
+                    <input
+                      className="form-check-input terms-check-box"
+                      type="checkbox"
+                      onChange={handleAcceptTerms}
+                      value=""
+                      id="flexCheckDefault"
+                      checked={acceptTerm}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setTermsModalOpen(true)
+                      }}
+                    />
+                    <label
+                      className="form-check-label"
+                      onClick={() => setTermsModalOpen(true)}
+                    >
+                      Accept all terms & conditions.
+                    </label>
+                  </div>
+                  {inputError && <p style={{ color: '#db1e1e' }}>All Fields are required</p>}
                 </div>
-                <br />
                 <div className="form-group">
                   <button
                     className="form-control form-control-sm submit-btn"
@@ -367,6 +396,8 @@ const RegisterForm = () => {
                       // setModalOpen(true)
                       handlePay()
                     }}
+
+                    disabled={!acceptTerm}
 
                   >
                     Pay Now
@@ -377,6 +408,8 @@ const RegisterForm = () => {
                       fontSize: "12px",
                       fontWeight: "600px",
                       textAlign: "center",
+                      marginTop: "10px",
+                      lineHeight: "1.5",
                     }}
                   >
                     After completing the transaction, we will promptly send you
