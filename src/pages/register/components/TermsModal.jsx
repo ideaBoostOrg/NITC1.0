@@ -352,10 +352,10 @@ const TermsModal = (props) => {
               </li>
             </ol>
           </div>
-          <div className="section">
+          {/* <div className="section">
             <h5>Product and Services sold</h5>
             <p>This is an academic institution.</p>
-          </div>
+          </div> */}
         </div>
         <div className="term-footer">
           <div className="radio-group">
