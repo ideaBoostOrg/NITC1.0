@@ -56,7 +56,7 @@ const RegisterForm = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [isNotVerified, setIsNotVerified] = useState(false);
 
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [isMember, setisMember] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(true);
 
