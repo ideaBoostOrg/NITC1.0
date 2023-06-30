@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import logo from "../../../assets/img/logo-crop.png";
-import { CheckCircle } from "react-bootstrap-icons";
 import { useSearchParams } from 'react-router-dom';
-import { XCircleFill } from "react-bootstrap-icons";
-import { CheckCircleFill } from "react-bootstrap-icons";
-import Modal from "./Modal";
 import { firestore } from "../../../firebase";
 import { collection, getDocs, query, where, getDoc, doc } from "firebase/firestore";
+import { CheckCircleFill } from "react-bootstrap-icons";
+import { XCircleFill } from "react-bootstrap-icons";
+import Modal from "./Modal";
+import logo from "../../../assets/img/logo-crop.png";
+
 import { loadPaycorpPayment } from '../../../pay';
+
+
 
 const RegisterForm = () => {
 
@@ -51,15 +53,13 @@ const RegisterForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-
   const [btnState, setBtnState] = useState("verify");
   const [errorMsg, setErrorMsg] = useState("");
   const [isNotVerified, setIsNotVerified] = useState(false);
 
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [isMember, setisMember] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(true);
-
   const [discount, setDiscount] = useState(0);
   const [netTotal, setNetTotal] = useState(parseFloat(pack.price));
 
@@ -84,7 +84,6 @@ const RegisterForm = () => {
       setAcceptTerm(false);
     }
   }
-
 
   const handleVerify = async () => {
     setBtnState("verifing");
@@ -116,66 +115,6 @@ const RegisterForm = () => {
     }
 
   }
-
-
-  // useEffect(() => {
-  //   loadPaycorpPayment(buildPayment(), 'paycorp-payment')
-  // }, [])
-
-  // // console.log("netTotal : ", netTotal);
-
-  // const buildPayment = () => {
-  //   return {
-  //     // NOTE: this is the QuickWeb DEMO client ID.
-  //     // You may use it for initial setup
-  //     // but replace with the Client ID
-  //     // provided by Paycorp for final testing.
-  //     clientId: 14002582,
-  //     paymentAmount: 100.00,
-  //     currency: 'LKR',
-  //     returnUrl: `https://${window.location.hostname}/payment-success`,
-  //     clientRef: 'CREF-12345',
-  //     comment: 'This is a demo payment'
-  //   };
-  // }
-
-  const Checking = () => {
-    const [dots, setDots] = useState("..");
-
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setDots((prev) => (prev === "..." ? "" : prev + "."));
-      }, 500);
-      return () => {
-        clearInterval(interval);
-      };
-    }, [])
-
-    return (
-      <div className=" checking">
-        <div className="loading-spinner-container">
-          <div className="spinner"></div>
-        </div>
-      </div>
-    )
-  }
-
-  const Verified = () => {
-    return (
-      <div className="verified">
-        <CheckCircleFill />
-      </div>
-    )
-  }
-
-  const NotVerified = () => {
-    return (
-      <div className="not-verified">
-        <XCircleFill />
-      </div>
-    )
-  }
-
   const showBtn = () => {
     if (btnState === "verify") {
       return (
@@ -205,12 +144,6 @@ const RegisterForm = () => {
     }
     else if (btnState === "not-verified") {
       return (
-        // <button
-        //   className="verify-btn"
-        //   onClick={handleVerify}
-        // >
-        //   Verify
-        // </button>
         <NotVerified />
       )
     }
@@ -229,6 +162,31 @@ const RegisterForm = () => {
     }
   }
 
+
+  // console.log("netTotal : ", netTotal);
+
+  const buildPayment = () => {
+    return {
+      // NOTE: this is the QuickWeb DEMO client ID.
+      // You may use it for initial setup
+      // but replace with the Client ID
+      // provided by Paycorp for final testing.
+      clientId: 14002582,
+      paymentAmount: 100.00,
+      currency: 'LKR',
+      // returnUrl: `https://${window.location.hostname}/payment-confirm?success=true`,
+      returnUrl: `http://127.0.0.1:5173/payment-confirm?success=true`,
+      clientRef: 'CREF-12345',
+      comment: 'This is a demo payment'
+    };
+  }
+
+  const handlePay = () => {
+    loadPaycorpPayment(buildPayment())
+  }
+
+
+
   return (
     <>
       <section>
@@ -237,13 +195,6 @@ const RegisterForm = () => {
             <a href="/" className="navbar-brand">
               <img src={logo} alt="" />
             </a>
-            {/* <button className="btn btn-primary" onClick={addMembers}>add</button> */}
-            {/* <button
-              className="form-control form-control-sm submit-btn"
-              onClick={() => { setModalOpen(true) }}
-            >
-              Pay Now
-            </button> */}
           </div>
         </nav>
       </section>
@@ -253,10 +204,6 @@ const RegisterForm = () => {
           <div className="row">
             <div className="col-lg-6 col-md-12 pdr-50">
               <div className="" style={{ lineHeight: "35px" }}>
-                {/* <span className="" style={{ color: "gray" }}>
-                  {pack.key}
-                </span>
-                <br /> */}
                 <span
                   className=""
                   style={{ fontSize: "25px", fontWeight: "bold" }}
@@ -264,10 +211,6 @@ const RegisterForm = () => {
                   {pack.name}
                 </span>
                 <br />
-                {/* <span className="" style={{ fontSize: "20px", color: "gray" }}>
-                  {pack.currency} {pack.price}
-                </span>
-                <br /> */}
               </div>
 
               <div className="cssl-member-box">
@@ -322,13 +265,7 @@ const RegisterForm = () => {
                               }
                             }
                           }}
-
                           style={{ borderColor: inputBorderColor() }}
-                        // onFocus={() => {
-                        //   setBtnState("verify")
-                        //   setDiscount(0);
-                        //   setNetTotal(parseFloat(pack.price));
-                        // }}
                         />
 
                         {showBtn()}
@@ -343,7 +280,6 @@ const RegisterForm = () => {
               <div className="content">
                 <div className="content-row">
                   <span className="label">
-                    {/* {pack.key} package */}
                     Amount
                   </span>
                   <span className="value">
@@ -418,21 +354,20 @@ const RegisterForm = () => {
                   />
                   <label
                     className="form-check-label"
-                  // htmlFor="flexCheckDefault"
                   >
                     Accept all terms & conditions.
                   </label>
                 </div>
                 <br />
-
-                {/* <div className="payment-wrapper">
-                  <div id="paycorp-payment"></div>
-                </div> */}
-
                 <div className="form-group">
                   <button
                     className="form-control form-control-sm submit-btn"
-                    onClick={() => { setModalOpen(true) }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // setModalOpen(true)
+                      handlePay()
+                    }}
+
                   >
                     Pay Now
                   </button>
@@ -459,3 +394,42 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
+
+
+const Checking = () => {
+  const [dots, setDots] = useState("..");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots((prev) => (prev === "..." ? "" : prev + "."));
+    }, 500);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [])
+
+  return (
+    <div className=" checking">
+      <div className="loading-spinner-container">
+        <div className="spinner"></div>
+      </div>
+    </div>
+  )
+}
+
+const Verified = () => {
+  return (
+    <div className="verified">
+      <CheckCircleFill />
+    </div>
+  )
+}
+
+const NotVerified = () => {
+  return (
+    <div className="not-verified">
+      <XCircleFill />
+    </div>
+  )
+}
