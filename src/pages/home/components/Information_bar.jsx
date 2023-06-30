@@ -1,9 +1,9 @@
-function Information_bar (){
-    return (
-        <section id="information-bar">
+function Information_bar() {
+  return (
+    <section id="information-bar">
       <div className="container">
         <div className="row inforation-wrapper">
-          <div className="col-lg-3 col-md-6 col-xs-12">
+          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
             <ul>
               <li>
                 <i className="lni-map-marker"></i>
@@ -11,7 +11,7 @@ function Information_bar (){
               <li><span><b>Location</b>Shangri-La Hotel, Colombo 02</span></li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 col-xs-12">
+          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
             <ul>
               <li>
                 <i className="lni-calendar"></i>
@@ -19,7 +19,7 @@ function Information_bar (){
               <li><span><b>Date</b>11th October - 13th October</span></li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 col-xs-12">
+          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
             <ul>
               <li>
                 <i className="lni-mic"></i>
@@ -27,19 +27,19 @@ function Information_bar (){
               <li><span><b>Speakers</b>25 Professionals</span></li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 col-xs-12">
+          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
             <ul>
               <li>
                 <i className="lni-user"></i>
               </li>
               <li><span><b>Seats</b>1000
-               People</span></li>
+                People</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    )
+  )
 }
 
 export default Information_bar;
