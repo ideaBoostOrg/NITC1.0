@@ -52,7 +52,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={-110}
+                offset={-100}
                 to="about"
                 duration={300}
                 smooth={true}
@@ -71,6 +71,8 @@ function Navbar() {
                 to="schedules"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
+
               >
                 Schedules
               </SLink>
@@ -84,6 +86,8 @@ function Navbar() {
                 to="cssl"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
+
               >
                 CSSL
               </SLink>
@@ -159,6 +163,8 @@ function Navbar() {
                 to="award"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
+
               >
                 Awards
               </SLink>
@@ -172,6 +178,8 @@ function Navbar() {
                 to="gallery"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
+
               >
                 Gallery
               </SLink>
@@ -185,6 +193,8 @@ function Navbar() {
                 to="pricing"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
+
               >
                 Pricing
               </SLink>
@@ -198,6 +208,8 @@ function Navbar() {
                 to="sponsors"
                 duration={300}
                 smooth={true}
+                onClick={() => setIsOpen(false)}
+
               >
                 Sponsors
               </SLink>
