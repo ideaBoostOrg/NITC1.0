@@ -174,8 +174,8 @@ const RegisterForm = () => {
       clientId: 14002582,
       paymentAmount: 100.00,
       currency: 'LKR',
-      // returnUrl: `https://${window.location.hostname}/payment-confirm?success=true`,
-      returnUrl: `http://127.0.0.1:5173/payment-confirm?success=true`,
+      returnUrl: `https://${window.location.hostname}/payment-confirm?success=true`,
+      // returnUrl: `http://127.0.0.1:5173/payment-confirm?success=true`,
       clientRef: 'CREF-12345',
       comment: 'This is a demo payment'
     };
