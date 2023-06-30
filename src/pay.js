@@ -106,9 +106,9 @@ ifrm.setAttribute('id', 'paycorp-iframe');
 ifrm.setAttribute('class', 'paycorp-iframe');
 ifrm.setAttribute('frameBorder', '0');
 ifrm.setAttribute('scrolling', 'yes');
-ifrm.setAttribute('height', '450px');
+ifrm.setAttribute('height', '500px');
 ifrm.setAttribute('bgcolor', 'red');
-ifrm.setAttribute('width', '450px');
+ifrm.setAttribute('width', '100%');
   ifrm.setAttribute('style', style);
 
 ifrm.setAttribute('src', HOST + base64);
@@ -127,7 +127,7 @@ loadPollyfills();
 validate(payment);
 loadDefaults(payment);
 
-// console.log('loading payment: ', JSON.stringify(payment));
+console.log('loading payment: ', JSON.stringify(payment));
 
 if (targetId) {
 payment.redirect.returnMethod = 'SIMPLE_CLOSEGET'; //client side redirect

@@ -5,10 +5,10 @@ import { CheckCircle } from "react-bootstrap-icons";
 import { useSearchParams } from 'react-router-dom';
 import { XCircleFill } from "react-bootstrap-icons";
 import { CheckCircleFill } from "react-bootstrap-icons";
-import { loadPaycorpPayment } from '../../../pay';
-
+import Modal from "./Modal";
 import { firestore } from "../../../firebase";
 import { collection, getDocs, query, where, getDoc, doc } from "firebase/firestore";
+import { loadPaycorpPayment } from '../../../pay';
 
 const RegisterForm = () => {
 
@@ -56,7 +56,7 @@ const RegisterForm = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [isNotVerified, setIsNotVerified] = useState(false);
 
-
+  const [modalOpen, setModalOpen] = useState(true);
   const [isMember, setisMember] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(true);
 
@@ -117,27 +117,27 @@ const RegisterForm = () => {
 
   }
 
-  useEffect(() => {
-    loadPaycorpPayment(buildPayment(), 'paycorp-payment')
-  }, [netTotal])
 
-  // console.log("netTotal : ", netTotal);
+  // useEffect(() => {
+  //   loadPaycorpPayment(buildPayment(), 'paycorp-payment')
+  // }, [])
 
-  const buildPayment = () => {
-    return {
-      // NOTE: this is the QuickWeb DEMO client ID.
-      // You may use it for initial setup
-      // but replace with the Client ID
-      // provided by Paycorp for final testing.
-      clientId: 14002582,
-      paymentAmount: netTotal,
-      currency: 'LKR',
-      returnUrl: `https://${window.location.hostname}/payment-success`,
-      clientRef: 'CREF-12345',
-      comment: 'This is a demo payment'
-    };
-  }
+  // // console.log("netTotal : ", netTotal);
 
+  // const buildPayment = () => {
+  //   return {
+  //     // NOTE: this is the QuickWeb DEMO client ID.
+  //     // You may use it for initial setup
+  //     // but replace with the Client ID
+  //     // provided by Paycorp for final testing.
+  //     clientId: 14002582,
+  //     paymentAmount: 100.00,
+  //     currency: 'LKR',
+  //     returnUrl: `https://${window.location.hostname}/payment-success`,
+  //     clientRef: 'CREF-12345',
+  //     comment: 'This is a demo payment'
+  //   };
+  // }
 
   const Checking = () => {
     const [dots, setDots] = useState("..");
@@ -238,10 +238,16 @@ const RegisterForm = () => {
               <img src={logo} alt="" />
             </a>
             {/* <button className="btn btn-primary" onClick={addMembers}>add</button> */}
+            {/* <button
+              className="form-control form-control-sm submit-btn"
+              onClick={() => { setModalOpen(true) }}
+            >
+              Pay Now
+            </button> */}
           </div>
         </nav>
       </section>
-
+      <Modal isOpen={modalOpen} onClose={setModalOpen} />
       <section id="register-form" className="section-padding">
         <div className="container">
           <div className="row">
@@ -402,8 +408,6 @@ const RegisterForm = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-                <div id="paycorp-payment"></div>
-
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -421,10 +425,14 @@ const RegisterForm = () => {
                 </div>
                 <br />
 
+                {/* <div className="payment-wrapper">
+                  <div id="paycorp-payment"></div>
+                </div> */}
+
                 <div className="form-group">
                   <button
                     className="form-control form-control-sm submit-btn"
-                  // onClick={handlePay}
+                    onClick={() => { setModalOpen(true) }}
                   >
                     Pay Now
                   </button>
@@ -444,8 +452,8 @@ const RegisterForm = () => {
               </form>
             </div>
           </div>
-        </div>
-      </section>
+        </div >
+      </section >
     </>
   );
 };
