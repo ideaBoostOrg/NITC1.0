@@ -8,6 +8,8 @@ import './assets/css/responsive.css'
 // import Navbar from './components/Navbar'
 import Home from './pages/home'
 import Register from './pages/register'
+import PaymentConfirm from './pages/confirm/ConfirmPage'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -21,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/payment-confirm" element={<PaymentConfirm />} />
         </Routes>
       </Router>
     </>

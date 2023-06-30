@@ -2850,3 +2850,50 @@ footer {
   padding: 0;
   transform: translateX(-50%) translateY(-65%);
 }
+
+.confirm-container {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.confirm-container .icon {
+  font-size: 5rem;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+}
+
+.confirm-container h2 {
+  font-size: 2rem;
+  color: #29292b;
+  font-weight: 600;
+}
+
+.confirm-container p {
+  font-size: 1rem;
+  max-width: 500px;
+  text-align: center;
+  color: #505050;
+  font-weight: 600;
+}
+
+.confirm-container button {
+  margin-top: 1rem;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-blue);
+  color: #fff;
+  font-weight: 600;
+  filter: brightness(0.9);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.confirm-container button:hover {
+  filter: brightness(1);
+}
