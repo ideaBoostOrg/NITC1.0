@@ -1,9 +1,34 @@
 import { Link } from "react-scroll";
+import { useEffect } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 function Hero() {
 
+  // useEffect(() => {
+  //   const t1 = gsap.timeline({ defaults: { ease: "power1.out" } })
+
+  //   t1.from('.banner-info', { y: 10, opacity: 0, duration: 0.5 })
+  //     .from('.head-title', { y: 10, opacity: 0, duration: 0.5 })
+  //     .from('.banner-btn', { y: 10, opacity: 0, duration: 0.5 })
+
+  //     t1.play();
+  //   // const scrollTrigger = ScrollTrigger.create({
+  //   //   trigger: '#hero-area',
+  //   //   scrub: true,
+  //   //   onEnter: () => {
+  //   //     t1.play();
+  //   //   }
+
+  //   // return () => {
+  //   //   scrollTrigger.kill();
+  //   // }
+
+  // }, [])
 
   return (
     <div id="hero-area" className="hero-area-bg" >

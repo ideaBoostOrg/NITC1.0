@@ -2,49 +2,45 @@ import img1 from "../../../assets/img/about/img1.jpg";
 
 import { CheckCircle } from "react-bootstrap-icons";
 
-import { useEffect, useRef } from "react";
+// import { useEffect } from "react";
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 function About() {
 
+  // const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
+  // const t2 = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-  const elementRef = useRef(null);
+  // useEffect(() => {
+  //   const scrollTrigger = ScrollTrigger.create({
+  //     trigger: '.about-text',
+  //     scrub: true,
+  //     onEnter: () => {
+  //       t1.from('.about-text', { x: 10, opacity: 0, duration: 0.5 })
+  //         .from('.about-text p', { x: 10, opacity: 0, duration: 0.5 })
+  //         .from('#stylish-list', { x: 10, opacity: 0, duration: 0.5 })
 
-  const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
-  const t2 = gsap.timeline({ defaults: { ease: "power1.out" } });
+  //       t2.from('.img-thumb', { x: -10, opacity: 0, duration: 1 })
+  //     },
+  //     onLeave: () => {
+  //       t1.reverse();
+  //       t2.reverse();
+  //     },
 
-  const element = elementRef.current;
+  //     onEnterBack: () => {
+  //       t1.play();
+  //       t2.play();
+  //     }
 
-  useEffect(() => {
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: '.about-text',
-      scrub: true,
-      onEnter: () => {
-        t1.from('.about-text', { x: 30, opacity: 0, duration: 0.5 })
-          .from('.about-text p', { x: 30, opacity: 0, duration: 0.5 })
-          .from('#stylish-list', { x: 30, opacity: 0, duration: 0.5 })
+  //   })
 
-        t2.from('.img-thumb', { x: -30, opacity: 0, duration: 1 })
-      },
-      onLeave: () => {
-        t1.reverse();
-        t2.reverse();
-      },
-      onEnterBack: () => {
-        t1.play();
-        t2.play();
-      }
-
-    })
-
-    return () => {
-      scrollTrigger.kill();
-    }
-  }, []);
+  //   return () => {
+  //     scrollTrigger.kill();
+  //   }
+  // }, []);
 
   return (
     <section
@@ -63,7 +59,7 @@ function About() {
             <div className="about-content">
               <div>
                 <div className="about-text">
-                  <h2 ref={elementRef}>About The Conference</h2>
+                  <h2>About The Conference</h2>
                   <p>
                     <b>NITC 2023 Conference</b> will feature 6 tracks and will
                     have 30+ local and foreign high-profile Speakers and a
