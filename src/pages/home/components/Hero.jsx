@@ -2,8 +2,7 @@ import { Link } from "react-scroll";
 
 function Hero() {
   return (
-    <div id="hero-area" className="hero-area-bg" style={{ height: "80dvh" }}>
-      <div className="overlay"></div>
+    <div id="hero-area" className="hero-area-bg" >
       <div className="container ">
         <div className="row justify-content-center">
           <div className="col-lg-9 col-sm-12">

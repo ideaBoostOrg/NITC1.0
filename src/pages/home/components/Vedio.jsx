@@ -1,9 +1,7 @@
-import { Link } from "react-scroll";
 
 function Vedio() {
   return (
-    <div id="hero-area" className="vedio-area-bg" style={{ height: "70vh" }}>
-      <div className="overlay"></div>
+    <div id="hero-area" className="vedio-area-bg" style={{ height: "50vh" }}>
       <div className="container ">
         <div className="row justify-content-center">
           <div className="col-lg-9 col-sm-12">

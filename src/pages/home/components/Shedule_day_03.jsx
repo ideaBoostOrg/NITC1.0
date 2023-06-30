@@ -2,10 +2,9 @@ function Shedule_day_03() {
   return (
     <section
       id="shedule_day_03"
-      className="section-padding"
+      className=""
       style={{ backgroundColor: "#f3f4f3" }}
     >
-      <div className="overlay"></div>
       <div className="container">
         <div className="row">
           <div className="col-12">

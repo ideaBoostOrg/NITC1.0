@@ -37,56 +37,34 @@ function Countbar() {
     }
 
     return (
-        // <section id="count">
-        //     <div className="container">
-        //         <div className="justify-content-center">
-        //             {/* <div className="col-10">
-        //         <div className="count-wrapper text-center">
-        //         <div className="time-countdown wow fadeInUp" data-wow-delay="0.2s">
-        //             <div id="clock" className="time-count"></div>
-        //         </div>
-        //         </div>
-        //     </div> */}
-
-        //             <div className="count-wrapper text-center">
-        //                 <div className="row time-countdown wow fadeInUp">
-        //                     <div className="col-md-3">1</div>
-        //                     <div className="col-md-3">1</div>
-        //                     <div className="col-md-3">1</div>
-        //                     <div className="col-md-3">1</div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </section>
         <>
             {
                 !isFinished && (
                     <section id="information-bar" >
                         <div className="container">
                             <div className="row inforation-wrapper">
-                                <div className="col-lg-3 col-md-6 col-xs-12">
+                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{days}</li>
                                         <li className="h5 font-weight-normal">Days</li>
                                     </ul>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-xs-12">
+                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{hours}</li>
                                         <li className="h5 font-weight-normal">Hours</li>
                                     </ul>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-xs-12">
+                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{minutes}</li>
                                         <li className="h5 font-weight-normal">Minutes</li>
                                     </ul>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-xs-12">
+                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{seconds}</li>
-                                        <li className="h5 font-weight-normal">Seconds</li>
+                                        <li className="font-weight-normal">Seconds</li>
                                     </ul>
                                 </div>
                             </div>

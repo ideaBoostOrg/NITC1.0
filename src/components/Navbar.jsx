@@ -52,7 +52,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-110}
                 to="about"
                 duration={300}
                 smooth={true}
@@ -67,7 +67,7 @@ function Navbar() {
                 className="nav-link"
                 activeClass="active-link"
                 spy={true}
-                offset={0}
+                offset={-40}
                 to="schedules"
                 duration={300}
                 smooth={true}

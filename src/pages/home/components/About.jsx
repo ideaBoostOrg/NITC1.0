@@ -1,5 +1,4 @@
 import img1 from "../../../assets/img/about/img1.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { CheckCircle } from "react-bootstrap-icons";
 
@@ -8,7 +7,7 @@ function About() {
     <section
       id="about"
       className="section-padding"
-      style={{ paddingTop: "150px" }}
+      style={{ marginBottom: "100px", marginTop: "50px" }}
     >
       <div className="container">
         <div className="row">
