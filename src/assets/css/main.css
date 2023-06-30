@@ -2765,8 +2765,8 @@ footer {
   bottom: 0;
   right: 0;
   width: 100%;
-  min-height: 100dvh;
-  height: 100dvh;
+  min-height: 100%;
+  height: 100%;
   z-index: 10000;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px) contrast(0.9) grayscale(0.3);
