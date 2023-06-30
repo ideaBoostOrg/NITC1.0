@@ -207,7 +207,7 @@ const RegisterForm = () => {
           </div>
         </nav>
       </section>
-      <Modal isOpen={modalOpen} onClose={setModalOpen} />
+      {/* <Modal isOpen={modalOpen} onClose={setModalOpen} /> */}
       <TermsModal isOpen={termsModalOpen} onClose={setTermsModalOpen} setAcceptTerm={setAcceptTerm} />
       <section id="register-form" className="section-padding">
         <div className="container">
@@ -360,7 +360,7 @@ const RegisterForm = () => {
                   />
 
                 </div>
-                <div className="form-check flexCheckDefault" style={{
+                <div className="form-check flexCheckDefault flex-row-col" style={{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
