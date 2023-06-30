@@ -2499,8 +2499,8 @@ footer {
 .hero-area-bg {
   background: url(../img/hero-area.jpg) no-repeat;
   background-size: cover;
-  /* background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: overlay; */
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
   min-height: 85dvh;
 }
 
@@ -2597,9 +2597,9 @@ footer {
 
 .vedio-area-bg {
   background: url(../img/vedio_image.jpg) no-repeat;
-  /* background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: overlay; */
-  /* background-size: cover; */
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  background-size: cover;
 }
 
 
