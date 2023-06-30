@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { CheckCircleFill } from "react-bootstrap-icons";

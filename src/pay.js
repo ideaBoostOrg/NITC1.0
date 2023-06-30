@@ -126,7 +126,7 @@ loadPollyfills();
 validate(payment);
 loadDefaults(payment);
 
-console.log('loading payment: ', JSON.stringify(payment));
+// console.log('loading payment: ', JSON.stringify(payment));
 
 if (targetId) {
 payment.redirect.returnMethod = 'SIMPLE_CLOSEGET'; //client side redirect
