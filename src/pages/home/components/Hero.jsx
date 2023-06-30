@@ -1,6 +1,10 @@
 import { Link } from "react-scroll";
 
+
+
 function Hero() {
+
+
   return (
     <div id="hero-area" className="hero-area-bg" >
       <div className="container ">
@@ -10,7 +14,7 @@ function Hero() {
               <div className="icon">
                 <i className="lni-mic"></i>
               </div>
-              <p className="banner-info">
+              <p className="banner-info" >
                 11th - 13th of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
               </p>
               <h2 className="head-title">National IT Conference</h2>

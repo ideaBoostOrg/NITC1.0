@@ -51,11 +51,11 @@ function Navbar() {
               <SLink
                 className="nav-link"
                 activeClass="active-link"
-                spy={true}
+                // spy={true}
                 offset={-100}
                 to="about"
                 duration={300}
-                smooth={true}
+                // smooth={true}
                 onClick={() => setIsOpen(!isOpen)}
 
               >
