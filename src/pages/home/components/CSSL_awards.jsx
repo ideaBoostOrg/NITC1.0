@@ -1,4 +1,6 @@
-import Awards from "../../../assets/img/Awards-1.jpg";
+import Awards from "../../../assets/img/Awards-2.png";
+
+
 function CSSL_awards() {
   return (
     <section
@@ -30,7 +32,7 @@ function CSSL_awards() {
               >
                 Join us as we commemorate the extraordinary accomplishments of
                 <br />
-                the industry's brightest stars at the NITC Awards 2022.
+                the industry&apos;s brightest stars at the NITC Awards 2022.
               </p>
             </div>
 

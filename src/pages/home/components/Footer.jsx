@@ -55,7 +55,7 @@ function Footer(){
                     ideaBoost.
                   </a>
                 </p>
-                <img src={logo_IdeaBoost} alt="" style={{ width: 150 }} />
+                {/* <img src={logo_IdeaBoost} alt="" style={{ width: 150 }} /> */}
               </div>
             </div>
           </div>
