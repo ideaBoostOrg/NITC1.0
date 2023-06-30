@@ -49,6 +49,7 @@ function initPaycorpFrame(targetId, base64) {
 addStyle();
 toggleSpinner(targetId, true);
 const targetElement = document.getElementById(targetId);
+targetElement.innerHTML = '';
 targetElement.appendChild(buildIframe(targetId, base64));
 }
 

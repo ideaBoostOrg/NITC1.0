@@ -347,9 +347,9 @@ const RegisterForm = () => {
 
                 {btnState === 'verified' &&
                   <div className="content-row">
-                    <span className="label">Discount</span>
+                    <span className="label">Discount (10%)</span>
                     <span className="value">
-                      10%
+                      - {discount.toFixed(2)} <span className="lkr">{pack.currency}</span>
                     </span>
                   </div>}
 
