@@ -2775,15 +2775,18 @@ footer {
   color: #3e3e3e;
 }
 
+#root {
+  min-height: 100dvh;
+  position: relative;
+}
+
 .backdrop {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
   /* min-height: 100%; */
-  height: 105dvh;
   z-index: 10000;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2px) contrast(0.9) grayscale(0.3);
@@ -2791,7 +2794,7 @@ footer {
 
 .modal {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   /* min-width: 480px; */
@@ -2811,19 +2814,19 @@ footer {
 
 @media screen and (max-width: 768px) {
   .modal {
-    width: 400px;
+    width: 420px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .modal {
-    width: 370px;
+    width: 390px;
   }
 }
 
 @media screen and (max-width: 420px) {
   .modal {
-    width: 320px;
+    width: 340px;
   }
 }
 
