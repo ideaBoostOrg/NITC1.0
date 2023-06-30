@@ -2852,7 +2852,7 @@ footer {
 }
 
 .confirm-container {
-  min-height: 400px;
+  min-height: calc(100dvh - 200px);
   display: flex;
   flex-direction: column;
   justify-content: center;
