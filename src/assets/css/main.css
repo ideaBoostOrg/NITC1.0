@@ -2952,9 +2952,13 @@ footer {
     padding: 0px 20px;
   }
 
+  #about {
+    text-align: center;
+  }
+
   .section-padding {
     margin-top: 25px;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 
