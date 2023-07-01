@@ -5,7 +5,6 @@ import Countbar from "./components/Countbar";
 import Vedio from "./components/Vedio";
 import Shedule from "./components/Shedule";
 // import Vedio_section from "./components/Vedio_section";
-import Information_bar from "./components/Information_bar";
 // import Introduction from "./components/Introduction";
 import Awards from "./components/Awards";
 import About_CSSL from "./components/About_CSSL";
@@ -29,7 +28,6 @@ function index() {
       <About />
       {/* <Vedio_section /> */}
       <Vedio />
-      <Information_bar />
       <Shedule />
       {/* <Introduction /> */}
       <About_CSSL />

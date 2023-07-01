@@ -1,44 +1,49 @@
+import { GeoAlt, Calendar3, Mic, Person } from "react-bootstrap-icons";
+
 function Information_bar() {
   return (
-    <section id="information-bar">
-      <div className="container">
-        <div className="row inforation-wrapper">
-          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
-            <ul>
-              <li>
-                <i className="lni-map-marker"></i>
-              </li>
-              <li><span><b>Location</b>Shangri-La Hotel, Colombo 02</span></li>
-            </ul>
-          </div>
-          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
-            <ul>
-              <li>
-                <i className="lni-calendar"></i>
-              </li>
-              <li><span><b>Date</b>11th October - 13th October</span></li>
-            </ul>
-          </div>
-          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
-            <ul>
-              <li>
-                <i className="lni-mic"></i>
-              </li>
-              <li><span><b>Speakers</b>25 Professionals</span></li>
-            </ul>
-          </div>
-          <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
-            <ul>
-              <li>
-                <i className="lni-user"></i>
-              </li>
-              <li><span><b>Seats</b>1000
-                People</span></li>
-            </ul>
+    <div className="info-wrapper">
+      <div className="border-info">
+        <div className="info-card">
+          <GeoAlt className="info-card__icon" />
+          <div className="info-card__content">
+            <h3>Location</h3>
+            <p>Shangri-La Hotel, Colombo 02</p>
           </div>
         </div>
       </div>
-    </section>
+      <div className="border-info">
+
+        <div className="info-card">
+          <Calendar3 className="info-card__icon" />
+          <div className="info-card__content">
+            <h3>Date</h3>
+            <p>11th October - 13th October</p>
+          </div>
+        </div>
+      </div>
+      <div className="border-info">
+
+        <div className="info-card">
+          <Mic className="info-card__icon" />
+          <div className="info-card__content">
+            <h3>Speakers</h3>
+            <p>25 Professionals</p>
+          </div>
+        </div>
+
+      </div>
+      <div className="border-info">
+
+        <div className="info-card">
+          <Person className="info-card__icon" />
+          <div className="info-card__content">
+            <h3>Seats</h3>
+            <p>1000 People</p>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -1,12 +1,10 @@
+import Information_bar from "./Information_bar";
 
 function Vedio() {
   return (
-    <div id="hero-area" className="vedio-area-bg" style={{ height: "50vh" }}>
-      <div className="container ">
-        <div className="row justify-content-center">
-          <div className="col-lg-9 col-sm-12">
-          </div>
-        </div>
+    <div className="vedio-area-bg">
+      <div className="info-container ">
+        <Information_bar />
       </div>
     </div>
   );
