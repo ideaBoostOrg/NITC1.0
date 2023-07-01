@@ -1294,6 +1294,61 @@ h1 {
   transition: all 0.2s linear;
 }
 
+.moblie-title {
+  display: none;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .schedule .nav-tabs .nav-link {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .schedule .nav-tabs .nav-link {
+    width: 120px;
+  }
+
+  .schedule .nav-tabs .nav-link h4 {
+    font-size: 12px;
+  }
+
+  .schedule .nav-tabs .nav-link h5 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .schedule .nav-tabs .nav-link {
+    width: 100px;
+  }
+
+  .schedule .nav-tabs .nav-link h4 {
+    font-size: 12px;
+  }
+
+  .schedule .nav-tabs .nav-link h5 {
+    font-size: 10px;
+  }
+
+  .schedule .item-text h4 {
+    display: none;
+  }
+
+  .moblie-title {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .schedule .nav-tabs .nav-link {
+    width: 80px;
+  }
+}
+
 .schedule .nav-tabs .nav-item.show .nav-link,
 .schedule .nav-tabs .nav-link.active,
 .schedule .nav-tabs .nav-item .nav-link:hover {
@@ -1323,7 +1378,7 @@ h1 {
   bottom: -24px;
   border-width: 12px;
   border-style: solid;
-  border-color: #141466 transparent transparent transparent;
+  border-color: var(--primary-blue) transparent transparent transparent;
 }
 
 .schedule .item-text {
@@ -1335,32 +1390,33 @@ h1 {
   font-size: 15px;
   color: #2f323c;
   line-height: 22px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 .schedule .item-text h5 {
-  font-size: 14px;
+  font-size: 13px;
   color: #848484;
   line-height: 16px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: capitalize;
 }
 
 .schedule .schedule-tab-content .tab-content {
-  box-shadow: 0 8px 24px #E2E8ED;
+  /* box-shadow: 0 8px 24px #E2E8ED; */
 }
 
 .schedule .schedule-tab-content .card {
   border: none;
 }
 
-.schedule .show .card-body {
+/* .schedule .show .card-body {
   background: #f3f4f3;
-}
+} */
 
 .schedule .card .schedule-slot-time {
-  background-image: linear-gradient(65deg, #141466 0, #2929cc 100%);
+  background-color: var(--primary-blue);
+  /* background-image: linear-gradient(65deg, #141466 0, #2929cc 100%); */
   color: #fff;
   padding: 38px 28px;
   float: left;

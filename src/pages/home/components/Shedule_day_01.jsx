@@ -3,9 +3,12 @@ function Shedule_day_01() {
     <section
       id="shedule_day_01"
       className=""
-      style={{ backgroundColor: "#f3f4f3" }}
     >
       <div className="container">
+        <div className="moblie-title">
+          <h4>Inaguration</h4>
+        </div>
+
         <div className="row">
           <div className="col-12">
             <div
