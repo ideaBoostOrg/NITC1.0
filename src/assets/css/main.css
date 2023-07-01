@@ -922,12 +922,26 @@ a.back-to-top:focus {
 }
 
 .border-coutndown {
-  border-right: 2px solid #ccc;
+  min-width: 225px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0px 24px #1e1e1e3c;
+  border-bottom: 1px solid var(--primary-blue);
+
 }
 
-.border-coutndown:last-child {
-  border-right: none;
+/* .border-coutndown:first-child {
+  background-color: var(--primary-blue);
+  color: #fff !important;
 }
+
+.border-coutndown:first-child li {
+  color: #fff !important;
+} */
 
 .border-coutndown .font-weight-bold {
   color: #1e1e1e;
@@ -1535,23 +1549,73 @@ h1 {
 
 /* Inforamation Bar */
 #information-bar {
+  max-height: 120px;
   background: #fff;
   position: relative;
 }
 
+
+
 #information-bar .inforation-wrapper {
-  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  /* background: #fff; */
   border-radius: 4px;
-  box-shadow: 0 0px 24px #1e1e1e3c;
   margin: 0;
   margin-bottom: -35px;
   margin-top: -35px;
   padding: 30px 0;
   position: relative;
-  top: -70px;
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
+}
+
+
+@media screen and (max-width: 1024px) {
+  #information-bar {
+    max-height: 150px;
+  }
+
+  #information-bar .border-coutndown {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #information-bar {
+    max-height: 210px;
+  }
+
+  #information-bar .inforation-wrapper {
+    top: -150px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #information-bar .border-coutndown {
+    min-width: 250px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #information-bar {
+    max-height: 420px;
+  }
+
+  #information-bar .inforation-wrapper {
+    top: -250px;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #information-bar .border-coutndown {
+    min-width: 250px;
+  }
 }
 
 #information-bar ul {
@@ -2560,12 +2624,19 @@ footer {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
-  min-height: 85dvh;
+  min-height: 80dvh;
 }
+
 
 @media screen and (max-width: 767px) {
   .hero-area-bg {
-    min-height: 70dvh;
+    min-height: 85dvh;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .hero-area-bg {
+    min-height: 95dvh;
   }
 }
 
@@ -2675,6 +2746,7 @@ footer {
 
   .section-padding {
     margin-top: 25px;
+    text-align: center;
   }
 }
 

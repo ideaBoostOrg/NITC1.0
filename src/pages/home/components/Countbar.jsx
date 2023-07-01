@@ -42,26 +42,26 @@ function Countbar() {
                 !isFinished && (
                     <section id="information-bar" >
                         <div className="container">
-                            <div className="row inforation-wrapper">
-                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
+                            <div className="inforation-wrapper">
+                                <div className="border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{days}</li>
                                         <li className="h5 font-weight-normal">Days</li>
                                     </ul>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
+                                <div className="border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{hours}</li>
                                         <li className="h5 font-weight-normal">Hours</li>
                                     </ul>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
+                                <div className="border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{minutes}</li>
                                         <li className="h5 font-weight-normal">Minutes</li>
                                     </ul>
                                 </div>
-                                <div className="col-lg-3 col-md-6 col-xs-12 border-coutndown">
+                                <div className="border-coutndown">
                                     <ul className="d-flex flex-column">
                                         <li className="h1 font-weight-bold">{seconds}</li>
                                         <li className="font-weight-normal">Seconds</li>

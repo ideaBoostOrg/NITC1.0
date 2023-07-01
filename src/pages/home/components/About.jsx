@@ -46,7 +46,7 @@ function About() {
     <section
       id="about"
       className="section-padding"
-      style={{ marginBottom: "100px", marginTop: "50px" }}
+      style={{ marginBottom: "75px", marginTop: "50px" }}
     >
       <div className="container">
         <div className="row">
