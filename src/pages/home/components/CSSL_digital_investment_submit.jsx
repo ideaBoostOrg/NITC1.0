@@ -3,8 +3,7 @@ function CSSL_digital_investment_submit() {
   return (
     <section
       id="cssl-digita-investment-summit"
-      className="section-padding"
-      style={{ paddingTop: "40px" }}
+      style={{ paddingTop: "10px" }}
     >
       <div className="container">
         <div className="row">
@@ -19,18 +18,17 @@ function CSSL_digital_investment_submit() {
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="section-title-header text-left">
+            <div className="section-title-header mt-4 text-left">
               <h2
                 className="section-title wow fadeInUp"
                 data-wow-delay="0.2s"
-                style={{ textAlign: "left" }}
               >
                 CSSL Digital Investment Summit
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Join us as we commemorate the extraordinary accomplishments of
                 <br />
-                the industry's brightest stars at the NITC Awards 2022.
+                the industry&apso;s brightest stars at the NITC Awards 2022.
               </p>
             </div>
 

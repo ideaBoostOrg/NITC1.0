@@ -37,7 +37,7 @@ function index() {
       <Awards />
       {/* <Counter_area />
       <Event_gallery /> */}
-      <Gallery />
+      {/* <Gallery /> */}
       <Ticket_pricing />
       <Sponsors />
       <Map />

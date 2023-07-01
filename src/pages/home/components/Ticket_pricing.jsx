@@ -6,9 +6,9 @@ import { XCircle } from "react-bootstrap-icons";
 
 function Ticket_pricing() {
   return (
-    <section id="pricing" className="section-padding">
+    <section id="pricing" className="" style={{ paddingBottom: "50px", paddingTop: "50px" }}>
       <div className="container">
-        <div className="row">
+        <div className="row mb-5">
           <div className="col-12">
             <div className="section-title-header text-center">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
@@ -24,7 +24,7 @@ function Ticket_pricing() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-3 col-xa-6 mb-33">
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 px-1">
             <div
               className="price-block-wrapper wow fadeInLeft"
               data-wow-delay="0.2s"
@@ -167,13 +167,13 @@ function Ticket_pricing() {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-3 col-xa-6 mb-3">
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 px-1">
             <div
               className="price-block-wrapper wow fadeInLeft"
               data-wow-delay="0.2s"
             >
               <div className="colmun-title">
-                <h5>NITC Conference Day 01 </h5>
+                <h5>NITC Conference Day 01  </h5>
               </div>
               <div className="price">
                 <h2>Rs.15000.00</h2>
@@ -310,7 +310,7 @@ function Ticket_pricing() {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-3 col-xa-6 mb-3">
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 px-1 rounded">
             <div
               className="price-block-wrapper wow fadeInRight"
               data-wow-delay="0.3s"
@@ -453,7 +453,7 @@ function Ticket_pricing() {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-3 col-xa-6 mb-3">
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-3 px-1">
             <div
               className="price-block-wrapper active wow fadeInUp"
               data-wow-delay="0.3s"

@@ -1,5 +1,5 @@
 import logo_CSSL from "../../../assets/img/CSSL_logo.png";
-import React, { useState } from "react";
+import { useState } from "react";
 
 import CSSL_digital_investment_submit from "./CSSL_digital_investment_submit";
 import CSSL_colloquium from "./CSSL_colloquium";
@@ -15,7 +15,7 @@ function About_CSSL() {
   };
 
   return (
-    <section id="cssl" className="intro section-padding">
+    <section id="cssl" className="intro" style={{ backgroundColor: 'rgb(0 85 255 / 8%)', padding: "50px 0 75px 0" }}>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -29,11 +29,11 @@ function About_CSSL() {
                 alt=""
                 style={{ marginBottom: "10px", height: "50px" }}
               />
-              <p className="wow fadeInDown" data-wow-delay="0.2s">
+              {/* <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Join us as we commemorate the extraordinary accomplishments of
                 the industry's brightest stars <br />
                 at the NITC Awards 2022.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -66,71 +66,52 @@ function About_CSSL() {
           related degrees to Sri Lanka.
         </p>
         <div className="schedule" style={{ marginTop: "60px" }}>
-          <div className="col-12 mb-5 text-center">
+          <div className="col-12 mb-4 text-center">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
               <li className="nav-item">
                 <a
                   // className="nav-link active"
                   className={toggleState === 1 ? "nav-link active" : "nav-link"}
-                  id="monday-tab"
-                  data-toggle="tab"
-                  // href="#monday"
-                  role="tab"
-                  aria-controls="monday"
-                  aria-expanded="true"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "200px",
                     height: "80px",
                     color: "red",
                   }}
                   onClick={() => toggleTab(1)}
                 >
                   <div className="item-text">
-                    <h5>
+                    <h4>
                       CSSL Digital <br /> Investment Summit
-                    </h5>
+                    </h4>
                   </div>
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className={toggleState === 2 ? "nav-link active" : "nav-link"}
-                  id="tuesday-tab"
-                  data-toggle="tab"
-                  // href="#tuesday"
-                  role="tab"
-                  aria-controls="tuesday"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "200px",
                     height: "80px",
                     color: "red",
                   }}
                   onClick={() => toggleTab(2)}
                 >
                   <div className="item-text">
-                    <h5>CSSL Awards</h5>
+                    <h4>CSSL Awards</h4>
                   </div>
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className={toggleState === 3 ? "nav-link active" : "nav-link"}
-                  id="wednesday-tab"
-                  data-toggle="tab"
-                  // href="#wednesday"
-                  role="tab"
-                  aria-controls="wednesday"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "200px",
                     height: "80px",
                     color: "red",
                   }}
@@ -139,7 +120,7 @@ function About_CSSL() {
                   <div className="item-text">
                     {/* <h4>Day 03</h4>
                     <h5>13th October 2023</h5> */}
-                    <h5>CSSL Colloquium</h5>
+                    <h4>CSSL Colloquium</h4>
                   </div>
                 </a>
               </li>

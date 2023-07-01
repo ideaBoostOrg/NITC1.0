@@ -14,7 +14,7 @@ function Shedule() {
     <section
       id="schedules"
       className="schedule section-padding"
-      style={{ marginTop: "0", paddingTop: "50px" }}
+      style={{ marginTop: "0", padding: "50px 0" }}
     >
       <div className="container">
         <div className="row">

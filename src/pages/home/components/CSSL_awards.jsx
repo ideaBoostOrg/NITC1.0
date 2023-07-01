@@ -5,8 +5,7 @@ function CSSL_awards() {
   return (
     <section
       id="cssl-awards"
-      className="section-padding"
-      style={{ paddingTop: "40px" }}
+      style={{ paddingTop: "10px" }}
     >
       <div className="container">
         <div className="row">
@@ -17,11 +16,10 @@ function CSSL_awards() {
           </div>
 
           <div className="col-lg-6 col-md-12 col-xs-12">
-            <div className="section-title-header text-left">
+            <div className="section-title-header mt-4 text-left">
               <h2
                 className="section-title wow fadeInUp"
                 data-wow-delay="0.2s"
-                style={{ textAlign: "left" }}
               >
                 CSSL Awards
               </h2>
