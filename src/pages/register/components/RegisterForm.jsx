@@ -174,13 +174,13 @@ const RegisterForm = () => {
       // You may use it for initial setup
       // but replace with the Client ID
       // provided by Paycorp for final testing.
-      clientId: 14002582,
-      paymentAmount: 100.00,
+      clientId: 14002485,
+      paymentAmount: 1000,
       currency: 'LKR',
-      returnUrl: `https://${window.location.hostname}/payment-confirm?success=true`,
-      // returnUrl: `http://127.0.0.1:5173/payment-confirm?success=true`,
-      clientRef: 'CREF-12345',
-      comment: 'This is a demo payment'
+      returnUrl: `https://${window.location.hostname}/payment-confirm`,
+      // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+      clientRef: 'CREFT2-12345',
+      comment: 'This is a demo payment 2'
     };
   }
 
