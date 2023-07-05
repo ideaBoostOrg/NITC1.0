@@ -308,7 +308,7 @@ const RegisterForm = () => {
                 <hr />
                 <div className="content-row net-total">
                   <span className="label">
-                    Net Total
+                    Net Amount
                   </span>
                   <span className="value">
                     {netTotal.toFixed(2)} <span className="lkr">{pack.currency}</span>
