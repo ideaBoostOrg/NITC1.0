@@ -1,5 +1,8 @@
 import RegisterForm from "./components/RegisterForm";
+
+
 function index() {
+
   return(
     <>
     <RegisterForm />
