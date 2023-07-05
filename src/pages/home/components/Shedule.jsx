@@ -47,7 +47,7 @@ function Shedule() {
                   onClick={() => toggleTab(1)}
                 >
                   <div className="item-text">
-                    <h4>Inaguration</h4>
+                    <h4>Inauguration</h4>
                     <h5>11th October 2023</h5>
                     <h5>
                       6.00 PM onwards

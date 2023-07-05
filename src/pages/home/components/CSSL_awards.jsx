@@ -30,7 +30,7 @@ function CSSL_awards() {
               >
                 Join us as we commemorate the extraordinary accomplishments of
                 <br />
-                the industry&apos;s brightest stars at the NITC Awards 2022.
+                the industry's brightest stars at the NITC Awards 2022.
               </p>
             </div>
 

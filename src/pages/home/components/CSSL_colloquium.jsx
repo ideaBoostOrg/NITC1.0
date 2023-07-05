@@ -1,10 +1,7 @@
 import CSSL_colloquium from "../../../assets/img/CSSL Colloquium.jpg";
 function CSSL_digital_investment_submit() {
   return (
-    <section
-      id="cssl-colloquium"
-      style={{ paddingTop: "10px" }}
-    >
+    <section id="cssl-colloquium" style={{ paddingTop: "10px" }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-12 col-xs-12">
@@ -18,14 +15,13 @@ function CSSL_digital_investment_submit() {
               <h2
                 className="section-title wow fadeInUp"
                 data-wow-delay="0.2s"
-              // style={{ textAlign: "left" }}
+                // style={{ textAlign: "left" }}
               >
                 CSSL Colloquium
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Join us as we commemorate the extraordinary accomplishments of
-                <br />
-                the industry&apso;s brightest stars at the NITC Awards 2022.
+                Explore innovative ideas and collaborate with industry experts
+                at the CSSL Colloquium, driving forward the digital landscape.
               </p>
             </div>
 

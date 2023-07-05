@@ -33,7 +33,7 @@ function Ticket_pricing() {
                 <h5>Inauguration Ceremony</h5>
               </div>
               <div className="price">
-                <h2>Rs.20000.00</h2>
+                <h2>Rs.15000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -176,7 +176,7 @@ function Ticket_pricing() {
                 <h5>NITC Conference Day 01  </h5>
               </div>
               <div className="price">
-                <h2>Rs.15000.00</h2>
+                <h2>Rs.14000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -319,7 +319,7 @@ function Ticket_pricing() {
                 <h5>NITC Conference Day 02</h5>
               </div>
               <div className="price">
-                <h2>Rs.15000.00</h2>
+                <h2>Rs.20000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
