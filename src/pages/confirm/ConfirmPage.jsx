@@ -1,6 +1,6 @@
 import logo from "../../assets/img/logo-crop.png";
 import { useEffect, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import { CheckCircleFill } from "react-bootstrap-icons";
 import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -17,23 +17,16 @@ function ConfirmPage() {
 
     const getPayment = async () => {
         try {
-            // const response = await axios.post(
-            //     `https://sampath.paycorp.lk/webinterface/qw/confirm?csrfToken=${reqid}&authToken=${import.meta.env.VITE_PG_AUTH_TOKEN}&clientRef=${clientRef}`,
-            //     {},
-            //     {
-            //         headers: {
-            //             'Content-Type': 'application/json',
-            //             'Access-Control-Allow-Origin': '*',
-            //         }
-            //     });
+            const response = await axios.post(
+                `https://sampath.paycorp.lk/webinterface/qw/confirm?csrfToken=${reqid}&authToken=${import.meta.env.VITE_PG_AUTH_TOKEN}&clientRef=${clientRef}`,
+                {},
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                    }
+                });
 
-            const response = await fetch(`https://sampath.paycorp.lk/webinterface/qw/confirm?csrfToken=${reqid}&authToken=${import.meta.env.VITE_PG_AUTH_TOKEN}&clientRef=${clientRef}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                }
-            })
             setData(response.data)
         } catch (error) {
             console.log(error)
