@@ -17,7 +17,12 @@ function ConfirmPage() {
 
     const getPayment = async () => {
         try {
-            const response = await axios.post(`https://sampath.paycorp.lk/webinterface/qw/confirm?csrfToken=${reqid}&authToken=${import.meta.env.VITE_PG_AUTH_TOKEN}&clientRef=${clientRef}`)
+            const response = await axios.post(`https://sampath.paycorp.lk/webinterface/qw/confirm?csrfToken=${reqid}&authToken=${import.meta.env.VITE_PG_AUTH_TOKEN}&clientRef=${clientRef}`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                }
+            })
             setData(response.data)
         } catch (error) {
             console.log(error)
