@@ -17,22 +17,17 @@ function CSSL_digital_investment_submit() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header mt-4 text-left">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                CSSL Digital Investment Summit
+                DIGI-ECON Inauguration
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Explore innovative ideas and collaborate with industry experts
-                at the CSSL Colloquium, driving forward the digital landscape.
+                Witness the transformative launch of DIGI-ECON, the esteemed
+                NITC IT conference that fuels revolutionary discussions,
+                insights, and innovations in the digital economy.
               </p>
             </div>
 
             <p style={{ marginTop: "20px", marginBottom: "22px" }}>
-              <b>CSSL Digital Investment Summit </b> is a special feature of
-              40th Anniversary edition which is Organized to connect Sri Lankan
-              startups and mature unicorn (USD 1 Billion Company) potential ICT
-              companies with the potential to become with the prospective
-              investors to support their next level of growth in order to
-              contribute to national objective of achieving ICT exports of 3
-              billion US dollars by 2024.
+              ====content====
             </p>
           </div>
         </div>

@@ -31,7 +31,7 @@ function Hero() {
   // }, [])
 
   return (
-    <div id="hero-area" className="hero-area-bg" >
+    <div id="hero-area" className="hero-area-bg">
       <div className="container ">
         <div className="row justify-content-center">
           <div className="col-lg-9 col-sm-12">
@@ -39,16 +39,14 @@ function Hero() {
               <div className="icon">
                 <i className="lni-mic"></i>
               </div>
-              <p className="banner-info" >
-                11th - 13th of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
+              <p className="banner-info">
+                11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
               </p>
               <h2 className="head-title">National IT Conference</h2>
-              {/* <p className="banner-desc">
-                NITC 2023 - Towards a Sustainable Digital Society is a
-                multi-faceted business conference which features series of
-                activities namely NITC Conference, CSSL Awards, CSSL Colloquium
-                and a Digital Investment Summit.
-              </p> */}
+              <p className="banner-desc">
+                Unlock the Early Bird Discount and save 10% until the 25<sup>th</sup> of
+                August!
+              </p>
               <div className="banner-btn">
                 <Link
                   className="btn btn-common"

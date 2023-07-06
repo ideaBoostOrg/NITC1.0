@@ -1,8 +1,8 @@
 import logo_CSSL from "../../../assets/img/CSSL_logo.png";
 import { useState } from "react";
 
-import CSSL_digital_investment_submit from "./CSSL_digital_investment_submit";
-import CSSL_colloquium from "./CSSL_colloquium";
+import CSSL_digital_investment_summit from "./CSSL_digital_investment_summit";
+import DIGI_ECON_Inauguration from "./DIGI-ECON_Inauguration";
 import CSSL_awards from "./CSSL_awards";
 
 
@@ -15,7 +15,14 @@ function About_CSSL() {
   };
 
   return (
-    <section id="cssl" className="intro" style={{ backgroundColor: 'rgb(0 85 255 / 8%)', padding: "50px 0 75px 0" }}>
+    <section
+      id="cssl"
+      className="intro"
+      style={{
+        backgroundColor: "rgb(0 85 255 / 8%)",
+        padding: "50px 0 75px 0",
+      }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -83,7 +90,7 @@ function About_CSSL() {
                 >
                   <div className="item-text">
                     <h4>
-                      CSSL Digital <br /> Investment Summit
+                      DIGI-ECON <br /> Inauguration
                     </h4>
                   </div>
                 </a>
@@ -101,7 +108,7 @@ function About_CSSL() {
                   onClick={() => toggleTab(2)}
                 >
                   <div className="item-text">
-                    <h4>CSSL Awards</h4>
+                    <h4>CSSL NITC Award</h4>
                   </div>
                 </a>
               </li>
@@ -120,7 +127,9 @@ function About_CSSL() {
                   <div className="item-text">
                     {/* <h4>Day 03</h4>
                     <h5>13th October 2023</h5> */}
-                    <h4>CSSL Colloquium</h4>
+                    <h4>
+                      Sri Lanka Digital <br /> Investment Summit
+                    </h4>
                   </div>
                 </a>
               </li>
@@ -128,9 +137,9 @@ function About_CSSL() {
           </div>
         </div>
 
-        {toggleState === 1 && <CSSL_digital_investment_submit />}
+        {toggleState === 1 && <DIGI_ECON_Inauguration />}
         {toggleState === 2 && <CSSL_awards />}
-        {toggleState === 3 && <CSSL_colloquium />}
+        {toggleState === 3 && <CSSL_digital_investment_summit />}
       </div>
     </section>
   );

@@ -33,7 +33,7 @@ function Ticket_pricing() {
                 <h5>Inauguration Ceremony</h5>
               </div>
               <div className="price">
-                <h2>Rs.15000.00</h2>
+                <h2>Rs.20000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -176,7 +176,7 @@ function Ticket_pricing() {
                 <h5>NITC Conference Day 01  </h5>
               </div>
               <div className="price">
-                <h2>Rs.14000.00</h2>
+                <h2>Rs.15000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -462,7 +462,7 @@ function Ticket_pricing() {
                 <h5>Full Conference with Inauguration</h5>
               </div>
               <div className="price">
-                <h2>Rs.35000.00</h2>
+                <h2>Rs.50000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -541,7 +541,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch</span>
+                    <span className="text">Lunch - 3 Days</span>
                   </li>
                   <li>
                     <span
@@ -577,7 +577,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Gala Dinner</span>
+                    <span className="text">Gala Dinner - Day 1</span>
                   </li>
                 </ul>
               </div>

@@ -18,7 +18,7 @@ function Information_bar() {
           <Calendar3 className="info-card__icon" />
           <div className="info-card__content">
             <h3>Date</h3>
-            <p>11th October - 13th October</p>
+            <p>11<sup>th</sup> October - 13<sup>th</sup> October</p>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ function Information_bar() {
           <Person className="info-card__icon" />
           <div className="info-card__content">
             <h3>Seats</h3>
-            <p>1000 People</p>
+            <p>500 People</p>
           </div>
         </div>
       </div>
