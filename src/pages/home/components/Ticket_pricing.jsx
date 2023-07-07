@@ -66,7 +66,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Keynote Presentations</span>
+                    <span className="text"><strike>Keynote Presentations</strike></span>
                   </li>
                   <li>
                     <span
@@ -92,7 +92,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Panel Discussion and Q&A</span>
+                    <span className="text"><strike>Panel Discussion and Q&A</strike></span>
                   </li>
                   <li>
                     <span
@@ -105,7 +105,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Investment Summit</span>
+                    <span className="text"><strike>Investment Summit</strike></span>
                   </li>
                   <li>
                     <span
@@ -118,7 +118,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Lunch</span>
+                    <span className="text"><strike>Lunch</strike></span>
                   </li>
                   <li>
                     <span
@@ -131,7 +131,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Conference Tracks</span>
+                    <span className="text"><strike>Conference Tracks</strike></span>
                   </li>
                   <li>
                     <span
@@ -144,7 +144,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">CSSL Research Colloquium</span>
+                    <span className="text"><strike>CSSL Research Colloquium</strike></span>
                   </li>
                   <li>
                     <span
@@ -196,7 +196,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Keynote Speech</span>
+                    <span className="text"><strike>Keynote Speech</strike></span>
                   </li>
                   <li>
                     <span
@@ -222,7 +222,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">CSSL National ICT Awards</span>
+                    <span className="text"><strike>CSSL National ICT Awards</strike></span>
                   </li>
                   <li>
                     <span
@@ -248,7 +248,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Investment Summit</span>
+                    <span className="text"><strike>Investment Summit</strike></span>
                   </li>
                   <li>
                     <span
@@ -287,7 +287,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">CSSL Research Colloquium</span>
+                    <span className="text"><strike>CSSL Research Colloquium</strike></span>
                   </li>
                   <li>
                     <span
@@ -300,7 +300,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Gala Dinner</span>
+                    <span className="text"><strike>Gala Dinner</strike></span>
                   </li>
                 </ul>
               </div>
@@ -319,7 +319,7 @@ function Ticket_pricing() {
                 <h5>NITC Conference Day 02</h5>
               </div>
               <div className="price">
-                <h2>Rs.20000.00</h2>
+                <h2>Rs.15000.00</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -339,7 +339,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Keynote Speech</span>
+                    <span className="text"><strike>Keynote Speech</strike></span>
                   </li>
                   <li>
                     <span
@@ -365,7 +365,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">CSSL National ICT Awards</span>
+                    <span className="text"><strike>CSSL National ICT Awards</strike></span>
                   </li>
                   <li>
                     <span
@@ -378,7 +378,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Panel Discussion and Q&A</span>
+                    <span className="text"><strike>Panel Discussion and Q&A</strike></span>
                   </li>
                   <li>
                     <span
@@ -443,7 +443,7 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text">Gala Dinner</span>
+                    <span className="text"><strike>Gala Dinner</strike></span>
                   </li>
                 </ul>
               </div>
@@ -541,7 +541,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Lunch - 3 Days</span>
+                    <span className="text">Lunch - Day 1, Day 2</span>
                   </li>
                   <li>
                     <span
