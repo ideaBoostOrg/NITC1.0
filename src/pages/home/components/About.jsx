@@ -59,12 +59,12 @@ function About() {
             <div className="about-content">
               <div>
                 <div className="about-text">
-                  <h2>About The Conference</h2>
+                  <h2>About the Conference</h2>
                   <p>
                     <b>NITC 2023 Conference</b> will feature 6 tracks and will
                     have 30+ local and foreign high-profile Speakers and a
                     series of prior events. This year, NITC 2023 will be held in
-                    conjunction with DIGIECON 2023, which was initiated by HE
+                    conjunction with DIGI-ECON 2023, which was initiated by HE
                     President Ranil Wickremesinghe and symbolizes a new chapter
                     in Sri Lanka’s quest to create an inclusive digital economy.
                   </p>
@@ -80,7 +80,7 @@ function About() {
                     >
                       <CheckCircle />
                     </span>
-                    FinTech - Finantial Technology
+                    FinTech - Financial Technology
                   </li>
                   <li>
                     <span

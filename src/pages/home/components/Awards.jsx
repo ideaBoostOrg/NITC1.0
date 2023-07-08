@@ -10,11 +10,11 @@ function Awards() {
           <div className="col-12">
             <div className="section-title-header text-center mb-4">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                NITC awards 2022
+                NITC Awards 2022
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 Join us as we commemorate the extraordinary accomplishments of
-                the industry&apso;s brightest stars <br />
+                the industry's brightest stars <br />
                 at the NITC Awards 2022.
               </p>
             </div>

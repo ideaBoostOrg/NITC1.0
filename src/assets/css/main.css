@@ -3484,3 +3484,16 @@ footer {
     flex-direction: column-reverse;
   }
 }
+
+
+/*CSSL Awards*/
+#cssl-awards .award_section_button{
+  display:flex;
+  gap:20px;
+  justify-content: center;
+}
+
+#cssl-awards .award_section_button #view_more_btn{
+  background-color: white;
+  color: var(--primary-blue);
+}

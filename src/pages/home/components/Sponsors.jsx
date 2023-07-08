@@ -38,7 +38,7 @@ function Sponsors(){
           >
             <div className="col-lg-12">
               <div className="sponsors-logo text-center">
-                <a href="" className="sponsor-logo">
+                {/* <a href="" className="sponsor-logo">
                   <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
                 </a>
                 <a href="" className="sponsor-logo">
@@ -52,11 +52,9 @@ function Sponsors(){
                 </a>
                 <a href="" className="sponsor-logo">
                   <img src={logo_5} style={{ width: 100, height: 60 }} alt="" />
-                </a>
-                {/* <a href=""><img src={logo_6} alt="" /></a>
-                    <a href=""><img src={logo_7} alt="" /></a>
-                    <a href=""><img src={logo_8} alt="" /></a>
-                    <a href=""><img src={logo_9} alt="" /></a> */}
+                </a> */}
+
+               <p>===content will be provided===</p>
               </div>
             </div>
           </div>

@@ -16,6 +16,8 @@ import About_CSSL from "./components/About_CSSL";
 import Gallery from "./components/Gallery";
 import Ticket_pricing from "./components/Ticket_pricing";
 import Sponsors from "./components/Sponsors";
+import Partners from "./components/Partners";
+import Afflicants from "./components/Afflicants";
 import Map from "./components/Map";
 import Footer from "./components/Footer";
 
@@ -40,6 +42,8 @@ function index() {
       <Gallery />
       <Ticket_pricing />
       <Sponsors />
+      <Partners />
+      <Afflicants />
       <Map />
       <Footer />
     </>
