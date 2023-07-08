@@ -19,28 +19,28 @@ const RegisterForm = () => {
     Inauguration: {
       key: "Inauguration",
       name: "Inauguration Ceremony",
-      price: "15000.00",
+      price: "20000.00",
       currency: "LKR",
       features: ["Keynote Speech", "CSSL National ICT Awards", "Gala Dinner"],
     },
     Day_01: {
       key: "Day 01",
       name: "NITC Conference Day 01",
-      price: "14000.00",
+      price: "15000.00",
       currency: "LKR",
       features: ["Keynote Presentations", "Panel Discussion and Q&A", "Lunch", "Conference Tracks"]
     },
     Day_02: {
       key: "Day 02",
       name: "NITC Conference Day 02",
-      price: "20000.00",
+      price: "15000.00",
       currency: "LKR",
       features: ["Keynote Presentations", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium"]
     },
     Full_package: {
       key: "Full Package",
       name: "Full Conference With Inauguration",
-      price: "35000.00",
+      price: "50000.00",
       currency: "LKR",
       features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium", "Gala Dinner"]
     }
