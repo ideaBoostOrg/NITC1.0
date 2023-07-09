@@ -1,4 +1,4 @@
-import img1 from "../../../assets/img/about/img1.jpg";
+import img1 from "../../../assets/img/about/img1.webp";
 
 import { CheckCircle } from "react-bootstrap-icons";
 

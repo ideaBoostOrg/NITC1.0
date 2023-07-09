@@ -2824,7 +2824,7 @@ footer {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/hero-area.jpg) no-repeat;
+  background: url(../img/hero-area.webp) no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
@@ -2930,7 +2930,7 @@ footer {
 /* vedio section */
 
 .vedio-area-bg {
-  background: url(../img/vedio_image.jpg) no-repeat;
+  background: url(../img/vedio_image.webp) no-repeat;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
   background-size: cover;

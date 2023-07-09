@@ -1,8 +1,8 @@
-import logo_1 from '../../../assets/img/sponsors/logo-1.png'
-import logo_2 from '../../../assets/img/sponsors/logo-2.jpg'
-import logo_3 from '../../../assets/img/sponsors/logo-3.png'
-import logo_4 from '../../../assets/img/sponsors/logo-4.png'
-import logo_5 from '../../../assets/img/sponsors/logo-5.gif'
+import logo_1 from '../../../assets/img/sponsors/logo-1.webp'
+import logo_2 from '../../../assets/img/sponsors/logo-2.webp'
+import logo_3 from '../../../assets/img/sponsors/logo-3.webp'
+import logo_4 from "../../../assets/img/sponsors/logo-4.webp";
+import logo_5 from "../../../assets/img/sponsors/logo-5.webp";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'

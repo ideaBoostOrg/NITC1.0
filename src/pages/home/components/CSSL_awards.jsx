@@ -1,4 +1,4 @@
-import Awards from "../../../assets/img/Awards-2.png";
+import Awards from "../../../assets/img/Awards-2.webp";
 
 
 function CSSL_awards() {
