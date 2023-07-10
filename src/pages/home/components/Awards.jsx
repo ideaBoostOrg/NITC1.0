@@ -4,7 +4,11 @@ import { Award } from "react-bootstrap-icons";
 
 function Awards() {
   return (
-    <section id="award" className="" style={{ paddingBottom: "50px", paddingTop: "50px" }}>
+    <section
+      id="award"
+      className=""
+      style={{ paddingBottom: "50px", paddingTop: "50px" }}
+    >
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -13,9 +17,8 @@ function Awards() {
                 NITC Awards 2022
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Join us as we commemorate the extraordinary accomplishments of
-                the industry's brightest stars <br />
-                at the NITC Awards 2022.
+                At the NITC Awards 2022, come celebrate the outstanding
+                achievements of the industry's shining stars.
               </p>
             </div>
           </div>

@@ -62,9 +62,9 @@ function About() {
                   <h2>About the Conference</h2>
                   <p>
                     <b>NITC 2023 Conference</b> will feature 6 tracks and will
-                    have 30+ local and foreign high-profile Speakers and a
+                    have 30+ local and foreign high-profile speakers and a
                     series of prior events. This year, NITC 2023 will be held in
-                    conjunction with DIGI-ECON 2023, which was initiated by HE
+                    conjunction with DIGI-ECON 2023, which was initiated by H.E.
                     President Ranil Wickremesinghe and symbolizes a new chapter
                     in Sri Lanka’s quest to create an inclusive digital economy.
                   </p>
@@ -129,7 +129,7 @@ function About() {
                     >
                       <CheckCircle />
                     </span>
-                    AgriTech - Agriculture Technology
+                    AgriTech - Agricultural Technology
                   </li>
                   <li>
                     <span

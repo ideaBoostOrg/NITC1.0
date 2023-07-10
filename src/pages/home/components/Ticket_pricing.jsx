@@ -6,7 +6,11 @@ import { XCircle } from "react-bootstrap-icons";
 
 function Ticket_pricing() {
   return (
-    <section id="pricing" className="" style={{ paddingBottom: "50px", paddingTop: "50px" }}>
+    <section
+      id="pricing"
+      className=""
+      style={{ paddingBottom: "50px", paddingTop: "50px" }}
+    >
       <div className="container">
         <div className="row mb-5">
           <div className="col-12">
@@ -33,7 +37,7 @@ function Ticket_pricing() {
                 <h5>Inauguration Ceremony</h5>
               </div>
               <div className="price">
-                <h2>Rs.20000.00</h2>
+                <h2>LKR 20000</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -66,7 +70,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Keynote Presentations</strike></span>
+                    <span className="text">
+                      <strike>Keynote Presentations</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -92,7 +98,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Panel Discussion and Q&A</strike></span>
+                    <span className="text">
+                      <strike>Panel Discussion and Q&A</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -105,7 +113,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Investment Summit</strike></span>
+                    <span className="text">
+                      <strike>Investment Summit</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -118,7 +128,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Lunch</strike></span>
+                    <span className="text">
+                      <strike>Lunch</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -131,7 +143,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Conference Tracks</strike></span>
+                    <span className="text">
+                      <strike>Conference Tracks</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -144,7 +158,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>CSSL Research Colloquium</strike></span>
+                    <span className="text">
+                      <strike>CSSL Research Colloquium</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -173,10 +189,10 @@ function Ticket_pricing() {
               data-wow-delay="0.2s"
             >
               <div className="colmun-title">
-                <h5>NITC Conference Day 01  </h5>
+                <h5>NITC Conference Day 01 </h5>
               </div>
               <div className="price">
-                <h2>Rs.15000.00</h2>
+                <h2>LKR 15000</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -196,7 +212,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Keynote Speech</strike></span>
+                    <span className="text">
+                      <strike>Keynote Speech</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -222,7 +240,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>CSSL National ICT Awards</strike></span>
+                    <span className="text">
+                      <strike>CSSL National ICT Awards</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -248,7 +268,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Investment Summit</strike></span>
+                    <span className="text">
+                      <strike>Investment Summit</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -287,7 +309,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>CSSL Research Colloquium</strike></span>
+                    <span className="text">
+                      <strike>CSSL Research Colloquium</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -300,7 +324,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Gala Dinner</strike></span>
+                    <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -319,7 +345,7 @@ function Ticket_pricing() {
                 <h5>NITC Conference Day 02</h5>
               </div>
               <div className="price">
-                <h2>Rs.15000.00</h2>
+                <h2>LKR 15000</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -339,7 +365,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Keynote Speech</strike></span>
+                    <span className="text">
+                      <strike>Keynote Speech</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -365,7 +393,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>CSSL National ICT Awards</strike></span>
+                    <span className="text">
+                      <strike>CSSL National ICT Awards</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -378,7 +408,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Panel Discussion and Q&A</strike></span>
+                    <span className="text">
+                      <strike>Panel Discussion and Q&A</strike>
+                    </span>
                   </li>
                   <li>
                     <span
@@ -443,7 +475,9 @@ function Ticket_pricing() {
                     >
                       <XCircle />
                     </span>
-                    <span className="text"><strike>Gala Dinner</strike></span>
+                    <span className="text">
+                      <strike>Gala Dinner</strike>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -462,7 +496,7 @@ function Ticket_pricing() {
                 <h5>Full Conference with Inauguration</h5>
               </div>
               <div className="price">
-                <h2>Rs.50000.00</h2>
+                <h2>LKR 50000</h2>
                 {/* <span>Per Day</span> */}
               </div>
               <div className="pricing-list">
@@ -577,7 +611,7 @@ function Ticket_pricing() {
                     >
                       <CheckCircleFill />
                     </span>
-                    <span className="text">Gala Dinner - Day 1</span>
+                    <span className="text">Gala Dinner - Inauguration</span>
                   </li>
                 </ul>
               </div>

@@ -1,8 +1,8 @@
 import logo_1 from "../../../assets/img/sponsors/logo-1.webp";
 import logo_2 from "../../../assets/img/sponsors/logo-2.webp";
-import logo_3 from "../../../assets/img/sponsors/logo-3.webp";
-import logo_4 from "../../../assets/img/sponsors/logo-4.webp";
-import logo_5 from "../../../assets/img/sponsors/logo-5.webp";
+import logo_3 from "../../../assets/img/sponsors/logo-4.webp";
+import logo_4 from "../../../assets/img/sponsors/logo-5.webp";
+import logo_5 from "../../../assets/img/sponsors/logo-3.webp";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
@@ -24,9 +24,9 @@ function Afflicants() {
                 Our Affiliations
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                A special thank you to our valued sponsors, whose support has
-                <br />
-                been instrumental in driving our success.
+                We extend a special thank you to our esteemed affiliations,
+                whose partnership and support <br />
+                have played a pivotal role in our collective achievements
               </p>
             </div>
           </div>
@@ -44,10 +44,10 @@ function Afflicants() {
                 <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
               </a>
               <a href="" className="sponsor-logo">
-                <img src={logo_3} style={{ width: 100, height: 80 }} alt="" />
+                <img src={logo_3} style={{ width: 150, height: 120 }} alt="" />
               </a>
               <a href="" className="sponsor-logo">
-                <img src={logo_4} style={{ width: 150, height: 120 }} alt="" />
+                <img src={logo_4} style={{ width: 100, height: 80 }} alt="" />
               </a>
               <a href="" className="sponsor-logo">
                 <img src={logo_5} style={{ width: 100, height: 60 }} alt="" />

@@ -55,7 +55,7 @@ function About_CSSL() {
           ranging from over 300 CXOs, ICT practitioners, academics and policy
           makers to other professionals in diverse fields and members of the
           business community. Today, the CSSL is widely regarded as both the
-          “voice” of this influential industry segment and a “key player in ICT
+          "voice" of this influential industry segment and a "key player" in ICT
           development, nationally.
         </p>
         <p style={{ marginTop: "20px", marginBottom: "20px" }}>

@@ -24,9 +24,9 @@ function Partners() {
                 Partners
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                A special thank you to our valued sponsors, whose support has
-                <br />
-                been instrumental in driving our success.
+                A heartfelt appreciation to our esteemed
+                partners, whose collaboration <br/>has been paramount in fueling our
+                accomplishments
               </p>
             </div>
           </div>

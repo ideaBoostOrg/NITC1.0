@@ -1385,6 +1385,7 @@ h1 {
   border-color: transparent;
   position: relative;
   background: var(--primary-blue);
+  cursor:pointer;
   /* background-image: linear-gradient(65deg, #141466 0, #2929cc 100%); */
 }
 
@@ -3491,11 +3492,14 @@ footer {
   display: flex;
   gap: 20px;
   justify-content: center;
+  cursor:pointer;
 }
 
 #cssl-awards .award_section_button #view_more_btn {
   background-color: white;
   color: var(--primary-blue);
+  border:1px solid var(--primary-blue);
+  cursor:pointer;
 }
 
 .form-footer {

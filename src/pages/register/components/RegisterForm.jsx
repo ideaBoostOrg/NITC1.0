@@ -356,9 +356,9 @@ const RegisterForm = () => {
                 </div>
 
                 <div className="form-footer">
-                  <p>For members of professional bodies (BCS, ISACA, IESL, IET,
+                  <p>*<i>For members of professional bodies (BCS, ISACA, IESL, IET,
                     IEEE, ACM, ACS, SLASSCOM, and FITTIS), an exclusive discount awaits! Contact
-                    your secretariat to claim this benefit.</p>
+                    your secretariat to claim this benefit.</i></p>
                 </div>
               </form>
             </div>
