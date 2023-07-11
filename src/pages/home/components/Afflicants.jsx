@@ -37,21 +37,21 @@ function Afflicants() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              <a href="" className="sponsor-logo">
+              <span className="sponsor-logo">
                 <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
-              </a>
-              <a href="" className="sponsor-logo">
+              </span>
+              <span href="" className="sponsor-logo">
                 <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
-              </a>
-              <a href="" className="sponsor-logo">
+              </span>
+              <span href="" className="sponsor-logo">
                 <img src={logo_3} style={{ width: 150, height: 120 }} alt="" />
-              </a>
-              <a href="" className="sponsor-logo">
+              </span>
+              <span href="" className="sponsor-logo">
                 <img src={logo_4} style={{ width: 100, height: 80 }} alt="" />
-              </a>
-              <a href="" className="sponsor-logo">
+              </span>
+              <span href="" className="sponsor-logo">
                 <img src={logo_5} style={{ width: 100, height: 60 }} alt="" />
-              </a>
+              </span>
               {/* <a href=""><img src={logo_6} alt="" /></a>
                     <a href=""><img src={logo_7} alt="" /></a>
                     <a href=""><img src={logo_8} alt="" /></a>

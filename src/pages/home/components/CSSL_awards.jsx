@@ -1,7 +1,15 @@
+import { useState, useEffect } from "react";
 import Awards from "../../../assets/img/Awards-2.webp";
+import View_more from "./View_more";
 
+// const [viewMoreOpen, setViewMoreOpen] = useState(false);
 
 function CSSL_awards() {
+  const [viewMoreOpen, setviewMoreOpen] = useState(false);
+  // const clickfun = () => {
+  //   console.log("click");
+  // };
+
   return (
     <section id="cssl-awards" style={{ paddingTop: "10px" }}>
       <div className="container">
@@ -11,7 +19,7 @@ function CSSL_awards() {
               <img className="img-fluid" src={Awards} alt="" />
             </div>
           </div>
-
+          <View_more isOpen={viewMoreOpen} onClose={setviewMoreOpen} />
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header mt-4 text-left">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
@@ -31,19 +39,19 @@ function CSSL_awards() {
             </p>
 
             <div className="award_section_button">
-              <a
-                href=""
+              <span
                 className="btn btn-common"
                 id="view_more_btn"
+                onClick={() => setviewMoreOpen(true)}
+                // onClick={clickfun()}
               >
                 View more
-              </a>
+              </span>
 
               <a href="" className="btn btn-common">
                 Apply Now
               </a>
             </div>
-            
           </div>
         </div>
       </div>
