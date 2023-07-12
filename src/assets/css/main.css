@@ -3595,3 +3595,14 @@ footer {
   border-radius: 10px;
   /* border-right: 1px solid #ccc; */
 }
+
+/*CSSL awards view more*/
+.nominationDeadline{
+  font-weight:bold;
+  color: var(--primary-blue);
+}
+
+.heldDate p{
+  font-weight: bold;
+  color: var(--primary-blue);
+}
