@@ -3,42 +3,10 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from 'react-router-dom';
 import TermsModal from "./TermsModal";
 import { loadPaycorpPayment } from '../../../pay';
-
+import { packages } from "../packages";
 
 
 const RegisterForm = () => {
-
-  const packages = [
-    {
-      key: "Full_package",
-      name: "Full Conference With Inauguration",
-      price: "50000.00",
-      currency: "LKR",
-      features: ["Keynote Speech", "Keynote Presentations", "CSSL National ICT Awards", "Panel Discussion and Q&A", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium", "Gala Dinner"]
-    },
-    {
-      key: "Inauguration",
-      name: "Inauguration Ceremony",
-      price: "20000.00",
-      currency: "LKR",
-      features: ["Keynote Speech", "CSSL National ICT Awards", "Gala Dinner"],
-    },
-    {
-      key: "Day_01",
-      name: "NITC Conference Day 01",
-      price: "15000.00",
-      currency: "LKR",
-      features: ["Keynote Presentations", "Panel Discussion and Q&A", "Lunch", "Conference Tracks"]
-    },
-    {
-      key: "Day_02",
-      name: "NITC Conference Day 02",
-      price: "15000.00",
-      currency: "LKR",
-      features: ["Keynote Presentations", "Investment Summit", "Lunch", "Conference Tracks", "CSSL Research Colloquium"]
-    },
-  ];
-
 
   const events = {
     Full_package: false,
@@ -50,7 +18,6 @@ const RegisterForm = () => {
   const [searchParams] = useSearchParams();
   const type = searchParams.get('type');
   const pack = packages[0];
-
 
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(false);
@@ -105,11 +72,7 @@ const RegisterForm = () => {
     }
     console.log(total)
     setAmount(total)
-  }, [packages, selectedEvents])
-
-
-
-
+  }, [selectedEvents])
 
   // console.log("netTotal : ", netTotal);
 
@@ -138,7 +101,6 @@ const RegisterForm = () => {
   //   }
 
   // }
-
 
 
   return (
