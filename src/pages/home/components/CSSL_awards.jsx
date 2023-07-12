@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Awards from "../../../assets/img/Awards-2.webp";
 import View_more from "./View_more";
 
+
 // const [viewMoreOpen, setViewMoreOpen] = useState(false);
 
 function CSSL_awards() {
