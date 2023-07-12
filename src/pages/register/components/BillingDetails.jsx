@@ -233,7 +233,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-lg-4 col-sm-12 form-group">
+                            <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="email">Email</label>
                                 <input required
                                     className="form-control form-control-sm f-input"
@@ -244,7 +244,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc !important" }}
                                 />
                             </div>
-                            <div className="col-lg-4 col-sm-12 form-group">
+                            <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="nic">NIC</label>
                                 <input required
                                     className="form-control form-control-sm f-input"
@@ -255,7 +255,20 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
                                 />
                             </div>
-                            <div className="col-lg-4 col-sm-12 form-group">
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-6 col-sm-12 form-group">
+                                <label className="required-label" htmlFor="address">Address</label>
+                                <input required
+                                    className="form-control form-control-sm f-input"
+                                    type="text"
+                                    id="address"
+                                    value={address}
+                                    onChange={(e) => setAddress(e.target.value)}
+                                    style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
+                                />
+                            </div>
+                            <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="optional-label" htmlFor="organization">Organization</label>
                                 <input required
                                     className="form-control form-control-sm f-input"
@@ -266,17 +279,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                                     style={{ borderColor: "#ccc" }}
                                 />
                             </div>
-                        </div>
-                        <div className="form-group">
-                            <label className="required-label" htmlFor="address">Address</label>
-                            <input required
-                                className="form-control form-control-sm f-input"
-                                type="text"
-                                id="address"
-                                value={address}
-                                onChange={(e) => setAddress(e.target.value)}
-                                style={{ borderColor: inputError ? "#f27474" : "#ccc" }}
-                            />
                         </div>
 
                         <div className="form-footer">
