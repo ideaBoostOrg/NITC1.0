@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Awards from "../../../assets/img/Awards-2.webp";
+import Awards from "../../../assets/img/Awards-2.svg";
 import View_more from "./View_more";
 
 
