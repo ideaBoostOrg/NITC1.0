@@ -1,15 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useSearchParams } from 'react-router-dom';
-import { firestore } from "../../../firebase";
-import { collection, getDocs, query, where, getDoc, doc } from "firebase/firestore";
-import { CheckCircleFill } from "react-bootstrap-icons";
-import { XCircleFill } from "react-bootstrap-icons";
-import Modal from "./Modal";
-import logo from "../../../assets/img/logo-crop.png";
-
-import { loadPaycorpPayment } from '../../../pay';
 import TermsModal from "./TermsModal";
+import { loadPaycorpPayment } from '../../../pay';
 
 
 
@@ -46,38 +39,36 @@ const RegisterForm = () => {
     },
   ];
 
+
+  const events = {
+    Full_package: false,
+    Inauguration: false,
+    Day_01: false,
+    Day_02: false,
+  }
+
   const [searchParams] = useSearchParams();
   const type = searchParams.get('type');
   const pack = packages[0];
 
-  const [memberId, setMemberId] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [btnState, setBtnState] = useState("verify");
 
-  const [errorMsg, setErrorMsg] = useState("");
-  const [inputError, setInputError] = useState(false);
-
-  // const [modalOpen, setModalOpen] = useState(false);
   const [termsModalOpen, setTermsModalOpen] = useState(false);
-  const [isMember, setisMember] = useState(false);
   const [acceptTerm, setAcceptTerm] = useState(false);
+  const [amount, setAmount] = useState(parseFloat(pack.price));
   const [discount, setDiscount] = useState(0);
-  const [netTotal, setNetTotal] = useState(parseFloat(pack.price));
+  const [netTotal, setNetTotal] = useState(0);
 
-  const handleCheckbox = (e) => {
-    const value = e.target.checked;
-    if (value === true) {
-      setisMember(true);
-    } else {
-      setisMember(false);
-      setBtnState("verify");
-      setMemberId("");
-      setDiscount(0);
-      setNetTotal(parseFloat(pack.price))
-    }
-  }
+  const [eligbleForEarlyBird, setEligbleForEarlyBird] = useState(true);
+  const [selectedEvents, setSelectedEvents] = useState(events)
+  const [isFullPackage, setIsFullPackage] = useState(false);
+
+  useEffect(() => {
+    setSelectedEvents({
+      ...events,
+      [type]: true
+    })
+  }, [])
+
 
   const handleAcceptTerms = (e) => {
     const value = e.target.checked;
@@ -88,82 +79,36 @@ const RegisterForm = () => {
     }
   }
 
-  const handleVerify = async () => {
-    setBtnState("verifing");
-
-    const q = query(collection(firestore, "members"), where("Mem_No", "==", memberId));
-    const querySnapshot = await getDocs(q);
-
-    if (querySnapshot.docs.length > 0) {
-      const member = querySnapshot.docs[0].data();
-
-      const tq = query(collection(firestore, "tickets"), where("Mem_No", "==", memberId));
-      const ticketQuerySnapshot = await getDocs(tq);
-
-      if (ticketQuerySnapshot.docs.length > 0) {
-        setErrorMsg("You have already registered for the conference");
-        setBtnState("not-verified");
-        return;
-      }
-
-      setBtnState("verified");
-      const discount = 0.1 * parseFloat(pack.price);
-      setDiscount(discount);
-      setNetTotal(parseFloat(pack.price) - discount);
+  const handleInputCheck = (e) => {
+    if (e.target.name === "Full_package") {
+      setIsFullPackage(e.target.checked);
+      setSelectedEvents({
+        ...events,
+        Full_package: true
+      })
     } else {
-      setBtnState("not-verified");
-      setErrorMsg("Invalid member ID, Try again!");
-      setDiscount(0);
-      setNetTotal(parseFloat(pack.price));
-    }
-
-  }
-  const showBtn = () => {
-    if (btnState === "verify") {
-      return (
-        <button
-          className="verify-btn"
-          onClick={(e) => {
-            if (memberId === "") {
-              setErrorMsg("Please enter your member ID");
-              setBtnState("not-verified");
-            } else {
-              e.preventDefault();
-              handleVerify();
-            }
-          }}
-        >
-          Verify
-        </button>
-      )
-    } else if (btnState === "verifing") {
-      return (
-        <Checking />
-      )
-    } else if (btnState === "verified") {
-      return (
-        <Verified />
-      )
-    }
-    else if (btnState === "not-verified") {
-      return (
-        <NotVerified />
-      )
+      setIsFullPackage(false);
+      setSelectedEvents({
+        ...selectedEvents,
+        Full_package: false,
+        [e.target.name]: e.target.checked
+      })
     }
   }
 
-  const inputBorderColor = () => {
-    if (btnState === "verify") {
-      return "gray";
-    } else if (btnState === "verifing") {
-      return "gray";
-    } else if (btnState === "verified") {
-      return "#15b046";
+  useEffect(() => {
+    let total = 0
+    for (const key in selectedEvents) {
+      if (selectedEvents[key] === true) {
+        total += parseFloat(packages.find(p => p.key === key).price)
+      }
     }
-    else if (btnState === "not-verified") {
-      return "#db1e1e";
-    }
-  }
+    console.log(total)
+    setAmount(total)
+  }, [packages, selectedEvents])
+
+
+
 
 
   // console.log("netTotal : ", netTotal);
@@ -198,214 +143,59 @@ const RegisterForm = () => {
 
   return (
     <>
-      <section>
-        <nav className="navbar navbar-expand-lg bg-inverse scrolling-navbar top-nav-collapse">
-          <div className="container">
-            <a href="/" className="navbar-brand">
-              <img src={logo} alt="" />
-            </a>
-          </div>
-        </nav>
-      </section>
-      {/* <Modal isOpen={modalOpen} onClose={setModalOpen} /> */}
       <TermsModal isOpen={termsModalOpen} onClose={setTermsModalOpen} setAcceptTerm={setAcceptTerm} />
       <section id="register-form" className="section-padding">
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-sm-12 col-lg-6 pdt-50 pdr-50">
-              <h5 style={{ fontSize: "22px", marginBottom: "20px" }}>
-                Billing details
-              </h5>
-              <div className="cssl-member-box">
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    onChange={handleCheckbox}
-                    value=""
-                    id="csslMemberCheck"
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor="csslMemberCheck"
-                  >
-                    I&apos;m a CSSL member.
-                  </label>
-                </div>
-                <span className="" style={{ color: "gray" }}>
-                  If you are a CSSL member, you will receive a 20% discount.
-                </span>
-                <br></br>
-                {isMember && (
-                  <>
-                    <br></br>
-                    <div className="memberid">
-                      <label htmlFor="memberId">CSSL Member ID</label>
-                      <div className="" style={{ display: "flex" }}>
-                        <input
-                          autoFocus={isMember}
-                          className="form-control form-control-sm memberId-input"
-                          type="text"
-                          id="memberId"
-                          value={memberId}
-                          onChange={(e) => {
-                            setMemberId(e.target.value)
-                            setBtnState("verify")
-                            setDiscount(0);
-                            setNetTotal(parseFloat(pack.price))
-                          }
-                          }
-
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter') {
-                              if (memberId === "") {
-                                setErrorMsg("Please enter your member ID");
-                                setBtnState("not-verified");
-                              } else {
-                                handleVerify()
-                                e.preventDefault();
-                                e.target.blur();
-                              }
-                            }
-                          }}
-                          style={{ borderColor: inputBorderColor() }}
-                        />
-
-                        {showBtn()}
-
-                      </div>
-                    </div>
-                    {btnState === 'not-verified' && <p style={{ color: '#db1e1e', marginTop: "5px" }}>{errorMsg}</p>}
-                  </>
-                )}
-              </div>
-              <br></br>
-
-              <form>
-                <div className="form-group">
-                  <label htmlFor="firstName">First Name</label>
-                  <input required
-                    className="form-control form-control-sm f-input"
-                    type="text"
-                    id="firstName"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="lastName">Last Name</label>
-                  <input required
-                    className="form-control form-control-sm f-input"
-                    type="text"
-                    id="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <input required
-                    className="form-control form-control-sm f-input"
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc !important" }}
-
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="lastName">NIC</label>
-                  <input required
-                    className="form-control form-control-sm f-input"
-                    type="text"
-                    id="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="lastName">Address</label>
-                  <input required
-                    className="form-control form-control-sm f-input"
-                    type="text"
-                    id="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="lastName">Organization</label>
-                  <input required
-                    className="form-control form-control-sm f-input"
-                    type="text"
-                    id="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    style={{ borderColor: inputError ? "#db1e1e" : "#ccc" }}
-                  />
-                </div>
-
-                <div className="form-footer">
-                  <p>For members of professional bodies (BCS, ISACA, IESL, IET,
-                    IEEE, ACM, ACS, SLASSCOM, and FITTIS), an exclusive discount awaits! Contact
-                    your secretariat to claim this benefit.</p>
-                </div>
-              </form>
-            </div>
-            <div className="col-lg-6 col-md-12">
               <div className="package-container">
                 {
                   packages.map((pack, index) => {
                     return (
-                      <label htmlFor={pack.key} key={index} className={pack.key === type ? "package selected" : "package"}>
-                        <div className="package-heading">
-                          <div className="package-select">
-                            <input id={pack.key} type="checkbox" className=""></input>
+                      <div key={index} className="package-box">
+                        <input id={pack.key} type="checkbox" name={pack.key} value={pack.key} onChange={handleInputCheck} checked={selectedEvents[pack.key]}></input>
+                        <label htmlFor={pack.key}
+                          className="package"
+                        >
+                          <div className="package-heading">
+                            <h4 >{pack.name}</h4>
+                            <div className="package-price">
+                              <p><span className="lkr">{pack.currency}</span>  {pack.price}</p>
+                            </div>
                           </div>
-                          <h4 >{pack.name}</h4>
-                          <div className="package-price">
-                            <p>{pack.price} <span className="lkr">{pack.currency}</span></p>
+                          <div className="package-features">
+                            {pack.features.map((feature, index) => {
+                              return (
+                                <span key={index}>{feature}</span>
+                              )
+                            })}
                           </div>
-                        </div>
-                        <div className="package-features">
-                          {pack.features.map((feature, index) => {
-                            return (
-                              <span key={index}>{feature}</span>
-                            )
-                          })}
-                        </div>
-                      </label>
+                        </label>
+                      </div>
                     )
                   })
                 }
               </div>
+            </div>
+            <div className="col-lg-6 col-md-12">
+
               <div className="content">
                 <div className="content-row">
                   <span className="label">
                     Amount
                   </span>
                   <span className="value">
-                    {pack.price} <span className="lkr">{pack.currency}</span>
+                    <span className="lkr">{pack.currency}</span> {amount.toFixed(2)}
                   </span>
                 </div>
 
-                {btnState === 'verified' &&
+                {/* {btnState === 'verified' &&
                   <div className="content-row">
                     <span className="label">Discount (20%)</span>
                     <span className="value">
                       - {discount.toFixed(2)} <span className="lkr">{pack.currency}</span>
                     </span>
-                  </div>}
+                  </div>} */}
 
                 <hr />
                 <div className="content-row net-total">
@@ -413,7 +203,7 @@ const RegisterForm = () => {
                     Net Amount
                   </span>
                   <span className="value">
-                    {netTotal.toFixed(2)} <span className="lkr">{pack.currency}</span>
+                    <span className="lkr">{pack.currency}</span> {netTotal.toFixed(2)}
                   </span>
                 </div>
               </div>
@@ -443,7 +233,6 @@ const RegisterForm = () => {
                     Accept all terms & conditions.
                   </label>
                 </div>
-                {inputError && <p style={{ color: '#db1e1e' }}>All Fields are required</p>}
               </div>
               <div className="form-group">
                 <button
@@ -475,8 +264,6 @@ const RegisterForm = () => {
                 </p>
               </div>
             </div>
-            {/* <hr /> */}
-
           </div>
         </div >
       </section >
@@ -486,41 +273,3 @@ const RegisterForm = () => {
 
 export default RegisterForm;
 
-
-
-const Checking = () => {
-  const [dots, setDots] = useState("..");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDots((prev) => (prev === "..." ? "" : prev + "."));
-    }, 500);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [])
-
-  return (
-    <div className=" checking">
-      <div className="loading-spinner-container">
-        <div className="spinner"></div>
-      </div>
-    </div>
-  )
-}
-
-const Verified = () => {
-  return (
-    <div className="verified">
-      <CheckCircleFill />
-    </div>
-  )
-}
-
-const NotVerified = () => {
-  return (
-    <div className="not-verified">
-      <XCircleFill />
-    </div>
-  )
-}

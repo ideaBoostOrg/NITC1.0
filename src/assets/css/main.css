@@ -2998,7 +2998,17 @@ footer {
 }
 
 .cssl-member-box {
+  /* gap: 1rem; */
+  min-height: 100px;
   margin-top: 30px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1024px) {
+  .cssl-member-box .memberid {
+    margin-top: 1rem;
+  }
 }
 
 .cssl-member-box .form-check label {
@@ -3141,11 +3151,15 @@ footer {
   }
 }
 
+.memberid label {
+
+  margin-bottom: 0.2rem;
+}
+
 .memberId-input {
   height: 36px;
   border-radius: 5px;
   border: 1px solid #f2eeee;
-  flex: 1;
   margin-right: 10px;
 }
 
@@ -3516,63 +3530,44 @@ footer {
   gap: 0.5rem;
 }
 
+.package-container .package-box {
+  margin: 0;
+  padding: 0;
+}
+
+
 .package-container .package {
-  min-height: 100px;
   border: 1px solid #ccc;
+  min-height: 100px;
+  width: 100%;
   padding: 0.8rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.07);
   user-select: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  filter: opacity(0.9) grayscale(0.2);
 }
 
 .package-container .package:hover {
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.17);
 }
 
-.package-container .package.selected {
-  border: 1px solid var(--primary-blue);
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.17);
-}
-
-.package-container .package.selected .package-heading h4 {
-  color: var(--primary-blue);
-}
-
-
-.package-select input[type="checkbox"]:checked~.package {
-  border: 1px solid var(--primary-blue) !important;
-  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.17) !important;
-}
-
-
 .package-container .package .package-heading {
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
-  gap: 1rem;
+  /* gap: 1rem; */
   margin-bottom: 0.75rem;
 }
 
+
 .package-container .package .package-heading h4 {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #161616;
   flex-grow: 1;
 }
 
-.package-container .package .package-heading .package-price p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #161616;
-}
-
-.package-container .package .package-heading .package-price p span {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: #383838;
-}
 
 .package-container .package .package-features {
   display: flex;
@@ -3589,5 +3584,100 @@ footer {
   background-color: #0055ff41;
   color: #1c1c1c;
   border-radius: 10px;
-  /* border-right: 1px solid #ccc; */
+  border: 1px solid #0055ff41;
+}
+
+.package-container input[type=checkbox] {
+  display: none;
+}
+
+.package-container input[type=checkbox]:checked+.package {
+  background-color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  color: #fff;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.27);
+  filter: opacity(1) grayscale(0);
+
+}
+
+.package-container input[type=checkbox]:checked+.package .package-heading h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  flex-grow: 1;
+  color: #fff;
+}
+
+.package-container input[type=checkbox]:checked+.package .package-heading .package-price p {
+  color: #fff;
+}
+
+.package-container input[type=checkbox]:checked+.package .package-heading .package-price p span {
+  color: #fff;
+}
+
+.package-container input[type=checkbox]:checked+.package .package-features span {
+  font-size: 0.5rem;
+  font-weight: 400;
+  padding: 0px 10px;
+  margin: 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+/* 
+
+
+
+
+
+.package-container .package .package-heading .package-price p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161616;
+}
+
+.package-container .package .package-heading .package-price p span {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #383838;
+}
+
+.package-container :has(input:checked) {
+  background-color: var(--primary-blue);
+}
+
+.package-container :has(input:checked) .package-heading h4 {
+  color: #fff;
+}
+
+.package-container :has(input:checked) .package-heading .package-price p {
+  color: #fff;
+}
+
+.package-container :has(input:checked) .package-features span {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+
+.package-container .package .package-heading .package-price p span :has(input:checked) {
+  color: #fff;
+} */
+
+.required-label::after {
+  margin-left: 0.5rem;
+  content: "*";
+  color: red;
+}
+
+.optional-label::after {
+  content: "(optional)";
+  margin-left: 0.5rem;
+  color: #676767;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
