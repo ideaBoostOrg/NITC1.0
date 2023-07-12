@@ -25,7 +25,12 @@ function Register() {
       </section>
       {
         isCheckout ?
-          <RegisterForm />
+          <RegisterForm
+            isMember={isMember}
+            setisMember={setisMember}
+            memberId={memberId}
+            setMemberId={setMemberId}
+          />
           :
           <BillingDetails
             isMember={isMember}

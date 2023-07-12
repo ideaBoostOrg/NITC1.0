@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { useSearchParams } from 'react-router-dom';
@@ -6,7 +7,10 @@ import { loadPaycorpPayment } from '../../../pay';
 import { packages } from "../packages";
 
 
-const RegisterForm = () => {
+const RegisterForm = ({ isMember, setisMember, memberId, setMemberId }) => {
+
+  console.log("isMember : ", isMember);
+  console.log("memberId : ", memberId);
 
   const events = {
     Full_package: false,
@@ -72,6 +76,19 @@ const RegisterForm = () => {
     }
     console.log(total)
     setAmount(total)
+
+    let d = 0
+    if (isMember) {
+      d = total * 0.2
+    } else if (eligbleForEarlyBird) {
+      d = total * 0.1
+    } else {
+      d = 0
+    }
+    setDiscount(d)
+    setNetTotal(total - d)
+
+
   }, [selectedEvents])
 
   // console.log("netTotal : ", netTotal);
@@ -158,6 +175,27 @@ const RegisterForm = () => {
                       - {discount.toFixed(2)} <span className="lkr">{pack.currency}</span>
                     </span>
                   </div>} */}
+
+                {
+                  isMember ?
+                    <div className="content-row">
+                      <span className="label">CSSL membership discount (20%)</span>
+                      <span className="value">
+                        - <span className="lkr">{pack.currency}</span> {discount.toFixed(2)}
+                      </span>
+                    </div>
+                    : eligbleForEarlyBird ?
+                      <div className="content-row">
+                        <span className="label">Early bird discount (10%)</span>
+                        <span className="value">
+                          - <span className="lkr">{pack.currency}</span> {discount.toFixed(2)}
+                        </span>
+                      </div>
+                      :
+                      ""
+                }
+
+
 
                 <hr />
                 <div className="content-row net-total">
