@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react";
 import Awards from "../../../assets/img/Awards-2.svg";
-import View_more from "./View_more";
+import CSSL_Awards_Flyer from "../../../assets/img/CSSL_Awards_Flyer.jpg";
 
-
-// const [viewMoreOpen, setViewMoreOpen] = useState(false);
 
 function CSSL_awards() {
-  const [viewMoreOpen, setviewMoreOpen] = useState(false);
-  // const clickfun = () => {
-  //   console.log("click");
-  // };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openPopup = () => {
+    setIsOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsOpen(false);
+  };
+
 
   return (
     <section id="cssl-awards" style={{ paddingTop: "10px" }}>
@@ -20,7 +25,22 @@ function CSSL_awards() {
               <img className="img-fluid" src={Awards} alt="" />
             </div>
           </div>
-          <View_more isOpen={viewMoreOpen} onClose={setviewMoreOpen} />
+
+          {isOpen && (
+            <div className="popup-container">
+              <div className="popup-content">
+                <img
+                  src={CSSL_Awards_Flyer}
+                  alt="Popup Image"
+                  className="popup-image"
+                />
+                <button className="close-button" onClick={closePopup}>
+                  X
+                </button>
+              </div>
+            </div>
+          )}
+
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header mt-4 text-left">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
@@ -43,8 +63,7 @@ function CSSL_awards() {
               <span
                 className="btn btn-common"
                 id="view_more_btn"
-                onClick={() => setviewMoreOpen(true)}
-                // onClick={clickfun()}
+                onClick={openPopup}
               >
                 View more
               </span>

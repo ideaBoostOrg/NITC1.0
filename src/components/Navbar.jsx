@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar top-nav-collapse"
-      style={{ height: isOpen ? "fit-content" : "60px" }}
+      style={{ height: isOpen ? "fit-content" : "70px" }}
     >
       <div className="container">
         <a href="/" className="navbar-brand">
