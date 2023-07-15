@@ -65,9 +65,27 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId }) => {
         [e.target.name]: e.target.checked
       })
     }
+
+    console.log(selectedEvents);
+
   }
 
   useEffect(() => {
+
+    if (selectedEvents.Inauguration && selectedEvents.Day_01 && selectedEvents.Day_02) {
+      console.log('all ture');
+      setSelectedEvents({
+        ...events,
+        Full_package: true
+      })
+    }
+
+    if (!selectedEvents.Full_package && !selectedEvents.Inauguration && !selectedEvents.Day_01 && !selectedEvents.Day_02) {
+      setSelectedEvents({
+        ...events,
+        [type]: true
+      })
+    }
     let total = 0
     for (const key in selectedEvents) {
       if (selectedEvents[key] === true) {

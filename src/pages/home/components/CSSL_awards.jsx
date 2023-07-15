@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import Awards from "../../../assets/img/Awards-2.webp";
 import View_more from "./View_more";
 
@@ -44,7 +45,7 @@ function CSSL_awards() {
                 className="btn btn-common"
                 id="view_more_btn"
                 onClick={() => setviewMoreOpen(true)}
-                // onClick={clickfun()}
+              // onClick={clickfun()}
               >
                 View more
               </span>

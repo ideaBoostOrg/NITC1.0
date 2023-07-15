@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import logo_CSSL from "../../../assets/img/CSSL_logo.png";
 import { useState } from "react";
 

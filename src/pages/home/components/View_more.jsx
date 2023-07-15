@@ -1,11 +1,10 @@
 import { XLg } from "react-bootstrap-icons";
-import { useState } from "react";
 import CSSL_Awards_Flyer from "../../../assets/img/CSSL_Awards_Flyer.jpg";
 
 
 const View_more = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { isOpen, onClose} = props;
+  const { isOpen, onClose } = props;
 
   return (
     <div
@@ -13,16 +12,23 @@ const View_more = (props) => {
       style={{
         display: isOpen ? "block" : "none",
         backgroundColor: "transparent",
+
       }}
     >
+
+
       <div
-        className="modal"
+        className="modal view-more-modal"
         style={{
           display: isOpen ? "block" : "none",
-          height: "500px",
+          minHeight: "300px",
+          width: "450px",
+          paddingInline: "1rem",
+          height: "600px",
+          userSelect: "none",
         }}
       >
-        <div className="terms-heading">
+        <div className="view-more-heading">
           <h5></h5>
           {/* <h5></h5> */}
           <button
@@ -34,9 +40,9 @@ const View_more = (props) => {
           </button>
         </div>
 
-        <div className="terms-wrapper" style={{ border: "none" }}>
-          <img className="img-fluid" src={CSSL_Awards_Flyer} alt="" />
-        </div>
+        {/* <div className="terms-wrapper" style={{ border: "none" }}> */}
+        <img className="view-more-img" src={CSSL_Awards_Flyer} alt="" />
+        {/* </div> */}
       </div>
 
       {/* <div className="term-footer"></div> */}
