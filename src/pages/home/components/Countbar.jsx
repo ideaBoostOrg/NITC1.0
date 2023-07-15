@@ -12,7 +12,7 @@ function Countbar() {
 
     useEffect(() => {
         const countdownInterval = setInterval(() => {
-            const targetDate = moment("2023-10-11 00:00:00", "YYYY-MM-DD HH:mm:ss");
+            const targetDate = moment("2023-10-11 18:00:00", "YYYY-MM-DD HH:mm:ss");
             const now = moment();
             const countdown = moment.duration(targetDate.diff(now));
 
