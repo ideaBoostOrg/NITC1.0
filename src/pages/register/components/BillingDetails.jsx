@@ -2,13 +2,12 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { firestore } from "../../../firebase";
-import { collection, getDocs, query, where, getDoc, doc } from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 import { CheckCircleFill } from "react-bootstrap-icons";
 import { XCircleFill } from "react-bootstrap-icons";
 import logo from "../../../assets/img/logo-crop.png";
 
-
-function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout }) {
+function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsCheckout, clientRef, setClientRef, commet, setCommet, setFormData }) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -22,7 +21,8 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
     const [inputError, setInputError] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
-
+    const [isError, setIsError] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleVerify = async () => {
         setBtnState("verifing");
@@ -112,34 +112,36 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
             setisMember(false);
             setBtnState("verify");
             setMemberId("");
-            // setDiscount(0);
-            // setNetTotal(parseFloat(pack.price))
         }
     }
 
-    const handleNext = () => {
+
+
+    const handleNext = async () => {
         if (firstName && lastName && email && nic && address) {
             setInputError(false);
+
+            const data = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                nic: nic,
+                organization: organization ?? "",
+                address: address,
+            }
+
+            setFormData(data)
+
+
             setIsCheckout(true);
-            //   loadPaycorpPayment(buildPayment())
         } else {
             setInputError(true);
         }
 
     }
 
-
     return (
         <>
-            {/* <section>
-                <nav className="navbar navbar-expand-lg bg-inverse scrolling-navbar top-nav-collapse">
-                    <div className="container">
-                        <a href="/" className="navbar-brand">
-                            <img src={logo} alt="" />
-                        </a>
-                    </div>
-                </nav>
-            </section> */}
             <section className="section-padding">
                 <div className="container">
                     <h5 style={{ fontSize: "22px", marginBottom: "20px" }}>
@@ -211,6 +213,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="firstName">First Name</label>
+                                {inputError && <span className="input-error">This field is required</span>}
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="text"
@@ -222,6 +225,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                             </div>
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="lastName">Last Name</label>
+                                {inputError && <span className="input-error">This field is required</span>}
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="text"
@@ -235,6 +239,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="email">Email</label>
+                                {inputError && <span className="input-error">This field is required</span>}
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="email"
@@ -246,6 +251,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                             </div>
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="nic">NIC</label>
+                                {inputError && <span className="input-error">This field is required</span>}
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="text"
@@ -259,6 +265,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="address">Address</label>
+                                {inputError && <span className="input-error">This field is required</span>}
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="text"
@@ -282,7 +289,7 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         </div>
 
                         <div className="form-footer">
-                            <p>For members of professional bodies (BCS, ISACA, IESL, IET,
+                            <p className="star-before">For members of professional bodies (BCS, ISACA, IESL, IET,
                                 IEEE, ACM, ACS, SLASSCOM, and FITTIS), an exclusive discount awaits! Contact
                                 your secretariat to claim this benefit.</p>
                         </div>
@@ -303,27 +310,15 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                     </form>
                 </div>
             </section>
+
+
         </>
     )
 }
 
 export default BillingDetails
 
-
-
-
 const Checking = () => {
-    // const [dots, setDots] = useState("..");
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setDots((prev) => (prev === "..." ? "" : prev + "."));
-    //     }, 500);
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    // }, [])
-
     return (
         <div className=" checking">
             <div className="loading-spinner-container">

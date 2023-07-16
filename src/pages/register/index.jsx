@@ -9,8 +9,12 @@ function Register() {
 
   const [isMember, setisMember] = useState(false);
   const [memberId, setMemberId] = useState("");
-
+  const [clientRef, setClientRef] = useState("");
+  const [commet, setCommet] = useState("");
   const [isCheckout, setIsCheckout] = useState(false);
+
+  const [formData, setFormData] = useState({})
+
 
   return (
     <>
@@ -30,6 +34,9 @@ function Register() {
             setisMember={setisMember}
             memberId={memberId}
             setMemberId={setMemberId}
+            clientRef={clientRef}
+            setClientRef={setClientRef}
+            formData={formData}
           />
           :
           <BillingDetails
@@ -38,6 +45,11 @@ function Register() {
             memberId={memberId}
             setMemberId={setMemberId}
             setIsCheckout={setIsCheckout}
+            clientRef={clientRef}
+            setClientRef={setClientRef}
+            commet={commet}
+            setCommet={setCommet}
+            setFormData={setFormData}
           />}
     </>
   );

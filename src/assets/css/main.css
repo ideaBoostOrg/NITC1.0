@@ -3522,7 +3522,7 @@ footer {
 }
 
 .form-footer p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #5b5b5b;
   font-weight: 500;
 }
@@ -3686,7 +3686,7 @@ footer {
 } */
 
 .required-label::after {
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
   content: "*";
   color: red;
 }
@@ -3728,4 +3728,100 @@ footer {
   outline: none;
   cursor: pointer;
   font-weight: 600;
+}
+
+.input-error {
+  font-size: 0.8rem;
+  color: #f00;
+  margin-left: 0.5rem;
+}
+
+.star-before::before {
+  content: "*";
+  font-size: 1rem;
+  padding: auto 0;
+  color: red;
+  margin-right: 0.5rem;
+}
+
+
+.loading-page-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: #000;
+  backdrop-filter: blur(2px);
+  filter: opacity(0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999999;
+}
+
+.loading-page-spinner {
+  width: 150px;
+  height: 150px;
+  border: 6px solid transparent;
+  border-top-color: var(--primary-blue);
+  opacity: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  animation: spinnerAnimation 1s infinite linear;
+}
+
+.payment-confirmed-reference-box {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  cursor: grab;
+}
+
+.payment-confirmed-reference-box small {
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.payment-confirmed-reference-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161616;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.copied {
+  color: #00bfa6;
+}
+
+
+.payment-processing-spinner-container {
+  position: relative;
+  z-index: 1;
+}
+
+.payment-processing-spinner-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.payment-processing-spinner {
+  width: 120px;
+  height: 120px;
+  border: 6px solid transparent;
+  border-top-color: var(--primary-blue);
+  opacity: 1;
+  border-radius: 50%;
+  /* box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5); */
+  animation: spinnerAnimation 1s infinite linear;
 }

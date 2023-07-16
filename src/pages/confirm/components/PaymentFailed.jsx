@@ -1,20 +1,10 @@
-import logo from "../../../assets/img/logo-crop.png";
 import { XCircleFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
 const PaymentFailed = () => {
+
     return (
         <>
-            <section>
-                <nav className="navbar navbar-expand-lg bg-inverse scrolling-navbar top-nav-collapse">
-                    <div className="container">
-                        <div className="navbar-brand">
-                            <img src={logo} alt="" />
-                        </div>
-                    </div>
-                </nav>
-            </section>
-
             <section id="" className="section-padding">
                 <div className="confirm-container">
                     <XCircleFill className="icon" style={{
