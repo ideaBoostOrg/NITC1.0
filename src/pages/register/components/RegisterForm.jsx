@@ -152,7 +152,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     }
 
     const cRef = v4();
-    const comm = `email: ${formData.email}, firstName: ${formData.firstName}, nic: ${formData.nic}`
+    // const comm = `email: ${formData.email}, firstName: ${formData.firstName}, nic: ${formData.nic}`
+    const comm = `NITC Tickets(testing) - email:${formData.email}`
 
     const docRef = await addDoc(collection(firestore, "users"),
       {
