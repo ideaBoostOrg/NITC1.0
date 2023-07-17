@@ -3800,6 +3800,11 @@ footer {
 }
 
 
+.payment-processing {
+  padding: 0 1rem;
+  text-align: center;
+}
+
 .payment-processing-spinner-container {
   position: relative;
   z-index: 1;
