@@ -25,7 +25,7 @@ function ConfirmPage() {
 
     useEffect(() => {
         setIsLoading(true)
-        axios.post('http://localhost:3400/confirm', {
+        axios.post('https://precious-mandazi-34594e.netlify.app/.netlify/functions/api/confirm', {
             clientRef: clientRef,
             reqid: reqid
         })
