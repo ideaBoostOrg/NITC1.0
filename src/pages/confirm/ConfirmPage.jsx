@@ -83,7 +83,7 @@ function ConfirmPage() {
                 });
 
                 // change this to "Paid"
-                if (status === 'Payment Failed') {
+                if (status === 'Paid') {
                     sendEmail({
                         firstName: userData?.firstName,
                         lastName: userData?.lastName,
