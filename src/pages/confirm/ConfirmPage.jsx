@@ -9,7 +9,7 @@ import PaymentConfirmed from "./components/PaymentConfirmed";
 import PaymentFailed from "./components/PaymentFailed";
 
 import { firestore } from "../../firebase";
-import { collection, doc, query, getDocs, where, updateDoc } from "firebase/firestore";
+import { collection, doc, query, getDocs, where, updateDoc, arrayUnion } from "firebase/firestore";
 import PaymentProcessing from "./components/PaymentProcessing";
 
 
@@ -20,30 +20,29 @@ function ConfirmPage() {
     const reqid = searchParams.get('reqid')
 
     const [data, setData] = useState()
-    const [isResponceLoaded, setIsResponceLoaded] = useState(false)
     const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
-    const [isError, setError] = useState(false)
-    console.log("before", isLoading);
+
     useEffect(() => {
         setIsLoading(true)
-        axios.post('http://localhost:3400/confirm', {
+        axios.post('https://precious-mandazi-34594e.netlify.app/.netlify/functions/api/confirm', {
             clientRef: clientRef,
             reqid: reqid
         })
             .then(Response => {
-                console.log("response", isLoading);
                 setData(Response.data)
+                console.table(Response.data);
                 if (Response.data?.responseCode) {
                     if (Response.data?.responseCode === "00" && Response.data?.clientRef === clientRef) {
-                        setIsPaymentConfirmed(true)
+                        updatePaymentStatus("Paid", Response.data);
                         setIsLoading(false)
+                        setIsPaymentConfirmed(true)
                     }
                     else {
+                        updatePaymentStatus("Payment Failed", Response.data);
                         setIsLoading(false)
-                        return setIsPaymentConfirmed(false)
+                        setIsPaymentConfirmed(false)
                     }
-                    console.log("responceCode", isLoading);
 
                 } else {
                     setIsPaymentConfirmed(false)
@@ -55,13 +54,20 @@ function ConfirmPage() {
 
             })
 
-        console.log("end", isLoading);
-
 
     }, [reqid, clientRef])
 
+    const sendEmail = (data) => {
+        axios.post('https://api.imanage.services/api/api/nitc', data)
+            .then(Response => {
+                console.table(Response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
 
-    const updatePaymentStatus = async (status, additionalFields) => {
+    const updatePaymentStatus = async (status, additionalData) => {
         try {
             const usersCollectionRef = collection(firestore, "users");
             const querySnapshot = await getDocs(
@@ -69,49 +75,33 @@ function ConfirmPage() {
             );
             if (!querySnapshot.empty) {
                 const userDoc = doc(firestore, "users", querySnapshot.docs[0].id);
+                const userData = querySnapshot.docs[0].data();
+
                 await updateDoc(userDoc, {
                     paymentStatus: status,
-                    ...additionalFields,
+                    transactionDetails: additionalData
                 });
+
+                // change this to "Paid"
+                if (status === 'Paid') {
+                    sendEmail({
+                        firstName: userData?.firstName,
+                        lastName: userData?.lastName,
+                        email: userData?.email,
+                        nic: userData?.nic,
+                        paymentRef: userData?.clientRef,
+                        amount: additionalData?.paymentAmount,
+                        inaguration: userData?.reg_sessions[0].isRegistered,
+                        day1: userData?.reg_sessions[1].isRegistered,
+                        day2: userData?.reg_sessions[2].isRegistered,
+                        organization: userData?.organization,
+                    })
+                }
             }
         } catch (error) {
             console.log("Error updating payment status:", error);
         }
     };
-
-    useEffect(() => {
-        setIsLoading(true)
-        if (isPaymentConfirmed) {
-            updatePaymentStatus("Paid", {
-                transactionNumber: data?.transactionNumber,
-                paymentAmount: data?.PaymentAmount,
-                cardType: data?.cardType,
-                cardHolderName: data?.CardHolderName,
-                responseText: data?.ResponseText,
-                responseCode: data?.ResponseCode,
-                currency: data?.currency,
-            });
-        } else {
-            updatePaymentStatus("Payment Failed", {
-                transactionNumber: data?.transactionNumber,
-                paymentAmount: data?.PaymentAmount,
-                cardType: data?.cardType,
-                cardHolderName: data?.CardHolderName,
-                responseText: data?.ResponseText,
-                responseCode: data?.ResponseCode,
-                currency: data?.currency,
-            });
-        }
-        setIsLoading(false)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isPaymentConfirmed, data])
-
-
-
-
-    console.log("isResponseLoaded: ", isResponceLoaded);
-    console.log("isPaymentConfirmed: ", isPaymentConfirmed);
-    console.table(data);
 
     return (
         <>

@@ -152,7 +152,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     }
 
     const cRef = v4();
-    const comm = `email: ${formData.email}, firstName: ${formData.firstName}, nic: ${formData.nic}`
+    // const comm = `email: ${formData.email}, firstName: ${formData.firstName}, nic: ${formData.nic}`
+    const comm = `NITC Tickets(testing) - email:${formData.email}`
 
     const docRef = await addDoc(collection(firestore, "users"),
       {
@@ -167,7 +168,7 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
         conf_kit: 'not issued',
         clientRef: cRef,
         comment: comm,
-        payment: 'Pending',
+        paymentStatus: 'Pending',
         reg_sessions: registeredEvents,
         securityStatus: "active"
       });
@@ -180,8 +181,8 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
           clientId: 14002485,
           paymentAmount: parseInt(netTotal.toFixed(2) * 100),
           currency: 'LKR',
-          // returnUrl: `https://${window.location.hostname}/payment-confirm`,
-          returnUrl: `http://127.0.0.1:5173/payment-confirm`,
+          returnUrl: `https://${window.location.hostname}/payment-confirm`,
+          // returnUrl: `http://127.0.0.1:5173/payment-confirm`,
           clientRef: cRef,
           comment: comm,
         }
