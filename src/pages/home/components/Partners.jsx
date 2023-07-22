@@ -5,7 +5,7 @@ import logo_4 from "../../../assets/img/partners/FITTIS.png";
 import logo_5 from "../../../assets/img/partners/IESL.png";
 import logo_6 from "../../../assets/img/partners/IET.png";
 import logo_7 from "../../../assets/img/partners/ISACA.png";
-import logo_8 from '../../../assets/img/partners/SLASSCOM.png'
+// import logo_8 from '../../../assets/img/partners/SLASSCOM.png'
 // import logo_9 from '../../../assets/img/sponsors/logo-9.png'
 
 function Partners() {
@@ -38,29 +38,29 @@ function Partners() {
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
               <a href="" className="partner-logo">
-                <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
+                <img src={logo_1} style={{ width: 80, height: 60 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
+                <img src={logo_2} style={{ width: 70, height: 60 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_3} style={{ width: 100, height: 80 }} alt="" />
+                <img src={logo_3} style={{ width: 80, height: 80 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_4} style={{ width: 100, height: 60 }} alt="" />
+                <img src={logo_4} style={{ width: 90, height: 60 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_5} style={{ width: 100, height: 60 }} alt="" />
+                <img src={logo_5} style={{ width: 100, height: 50 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_6} style={{ width: 100, height: 80 }} alt="" />
+                <img src={logo_6} style={{ width: 100, height: 40 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_7} style={{ width: 100, height: 40 }} alt="" />
+                <img src={logo_7} style={{ width: 80, height: 40 }} alt="" />
               </a>
-              <a href="" className="partner-logo">
-                <img src={logo_8} style={{ width: 100, height: 70 }} alt="" />
-              </a>
+              {/* <a href="" className="partner-logo">
+                <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />
+              </a> */}
             </div>
           </div>
         </div>
