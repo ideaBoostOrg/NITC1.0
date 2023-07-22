@@ -3517,6 +3517,20 @@ footer {
   cursor: pointer;
 }
 
+#award .award_section_button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#award .award_section_button #view_more_btn {
+  background-color: white;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  cursor: pointer;
+}
+
 .form-footer {
   margin: 2rem 0;
 }
@@ -3838,4 +3852,26 @@ footer {
 
 .sponsor-logo{
   margin:30px;
+}
+
+/*CSSl Digital Investment Summit*/
+#dis .award_section_button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#dis .award_section_button #view_more_btn {
+  background-color: white;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  cursor: pointer;
+}
+
+#digital-economy .digi_econ_section_button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  cursor: pointer;
 }
