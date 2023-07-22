@@ -56,10 +56,10 @@ function Partners() {
                 <img src={logo_6} style={{ width: 100, height: 80 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_7} style={{ width: 100, height: 60 }} alt="" />
+                <img src={logo_7} style={{ width: 100, height: 40 }} alt="" />
               </a>
               <a href="" className="partner-logo">
-                <img src={logo_8} style={{ width: 100, height: 60 }} alt="" />
+                <img src={logo_8} style={{ width: 100, height: 70 }} alt="" />
               </a>
             </div>
           </div>

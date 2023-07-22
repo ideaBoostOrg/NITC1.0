@@ -1,4 +1,4 @@
-import Digital_investment_summit from "../../../assets/img/DIGI_ECON.jpg";
+import Digital_investment_summit from "../../../assets/img/CSSL_Investment_Summit.jpg";
 function CSSL_digital_investment_summit() {
   return (
     <section id="cssl-colloquium" style={{ paddingTop: "10px" }}>
