@@ -38,8 +38,6 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
 
         if (querySnapshot.docs.length > 0) {
             const member = querySnapshot.docs[0].data();
-            console.log(member);
-
             setFirstName(member.First_Name ?? "");
             setLastName(member.Last_Name ?? "");
             setEmail(member.Email_Address ?? "");
@@ -286,7 +284,15 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="email">Email</label>
-                                {/* {inputError && <span className="input-error">This field is required</span>} */}
+                                {
+
+                                    // isEmailValidating === null ? "" :
+                                    //     isEmailValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                    //         isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+
+                                    isEmailValidating === null ? inputError && <span className="input-error">This field is required</span> :
+                                        isEmailValidating ? "" : isEmailValid ? "" : <span className="input-error">Email already in use.</span>
+                                }
                                 <div className="input-validate">
                                     <input required
                                         className="form-control form-control-sm f-input"
@@ -315,7 +321,10 @@ function BillingDetails({ isMember, setisMember, memberId, setMemberId, setIsChe
                             </div>
                             <div className="col-lg-6 col-sm-12 form-group">
                                 <label className="required-label" htmlFor="nic">NIC</label>
-                                {inputError && <span className="input-error">This field is required</span>}
+                                {
+                                    isNicValid === null ? inputError && <span className="input-error">This field is required</span> :
+                                        isNicValid ? "" : <span className="input-error">Invalid NIC</span>
+                                }
                                 <input required
                                     className="form-control form-control-sm f-input"
                                     type="text"
