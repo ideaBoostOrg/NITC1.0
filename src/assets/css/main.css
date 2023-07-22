@@ -3846,12 +3846,12 @@ footer {
 }
 
 /*partners*/
-.partner-logo{
-  margin:30px 30px 30px 30px;
+.partner-logo {
+  margin: 30px 30px 30px 30px;
 }
 
-.sponsor-logo{
-  margin:30px;
+.sponsor-logo {
+  margin: 30px;
 }
 
 /*CSSl Digital Investment Summit*/
@@ -3874,4 +3874,17 @@ footer {
   gap: 20px;
   justify-content: center;
   cursor: pointer;
+}
+
+.input-validate {
+  position: relative;
+}
+
+.input-validate-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 55%;
+
+  transform: translateY(-50%);
+
 }
