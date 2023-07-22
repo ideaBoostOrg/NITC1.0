@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import Awards from "../../../assets/img/Awards-2.webp";
+import Awards from "../../../assets/img/CSSL_Awards.jpg";
 import View_more from "./View_more";
 
 
