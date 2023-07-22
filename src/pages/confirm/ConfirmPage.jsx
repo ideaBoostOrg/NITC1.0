@@ -30,7 +30,12 @@ function ConfirmPage() {
         axios.post(url, {
             clientRef: clientRef,
             reqid: reqid
-        })
+        }, {
+            headers: {
+                'access-control-allow-origin': '*'
+            }
+        }
+        )
             .then(Response => {
                 setData(Response.data)
                 // console.log(Response.data);
