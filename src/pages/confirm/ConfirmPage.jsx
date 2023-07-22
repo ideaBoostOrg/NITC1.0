@@ -31,7 +31,7 @@ function ConfirmPage() {
         })
             .then(Response => {
                 setData(Response.data)
-                console.table(Response.data);
+                console.log(Response.data);
                 if (Response.data?.responseCode) {
                     if (Response.data?.responseCode === "00" && Response.data?.clientRef === clientRef) {
                         updatePaymentStatus("Paid", Response.data);
