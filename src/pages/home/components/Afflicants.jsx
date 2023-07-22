@@ -1,12 +1,9 @@
-import logo_1 from "../../../assets/img/sponsors/logo-1.webp";
-import logo_2 from "../../../assets/img/sponsors/logo-2.webp";
-import logo_3 from "../../../assets/img/sponsors/logo-4.webp";
-import logo_4 from "../../../assets/img/sponsors/logo-5.webp";
-import logo_5 from "../../../assets/img/sponsors/logo-3.webp";
-// import logo_6 from '../../../assets/img/sponsors/logo-6.png'
-// import logo_7 from '../../../assets/img/sponsors/logo-7.png'
-// import logo_8 from '../../../assets/img/sponsors/logo-8.png'
-// import logo_9 from '../../../assets/img/sponsors/logo-9.png'
+// import logo_1 from "../../../assets/img/afflicants/logo-1.webp";
+// import logo_2 from "../../../assets/img/afflicants/logo-2.webp";
+import logo_3 from "../../../assets/img/afflicants/logo-4.webp";
+import logo_4 from "../../../assets/img/afflicants/logo-5.webp";
+import logo_5 from "../../../assets/img/afflicants/logo-3.webp";
+
 
 function Afflicants() {
   return (
@@ -37,12 +34,12 @@ function Afflicants() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              <span className="sponsor-logo">
+              {/* <span className="sponsor-logo">
                 <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
               </span>
               <span href="" className="sponsor-logo">
                 <img src={logo_2} style={{ width: 100, height: 60 }} alt="" />
-              </span>
+              </span> */}
               <span href="" className="sponsor-logo">
                 <img src={logo_3} style={{ width: 150, height: 120 }} alt="" />
               </span>
