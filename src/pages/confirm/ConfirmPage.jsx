@@ -25,7 +25,9 @@ function ConfirmPage() {
 
     useEffect(() => {
         setIsLoading(true)
-        axios.post('https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm', {
+        const url = 'https://7kw2pe2bd8.execute-api.us-east-1.amazonaws.com/dev/confirm'
+        // const url = 'http://localhost:3400/confirm'
+        axios.post(url, {
             clientRef: clientRef,
             reqid: reqid
         })

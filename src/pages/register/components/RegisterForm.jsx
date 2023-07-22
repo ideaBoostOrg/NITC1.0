@@ -197,7 +197,6 @@ const RegisterForm = ({ isMember, setisMember, memberId, setMemberId, clientRef,
     setIsLoading(false);
   }
 
-
   return (
     <>
       {
