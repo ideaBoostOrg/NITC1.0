@@ -17,10 +17,10 @@ function CSSL_digital_investment_submit() {
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="section-title-header mt-4 text-left">
               <h2 className="section-title wow fadeInUp" data-wow-delay="0.2s">
-                DIGI-ECON Inauguration
+                DIGIECON Inauguration
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
-                Witness the transformative launch of DIGI-ECON, the esteemed
+                Witness the transformative launch of DIGIECON, the esteemed
                 NITC IT conference that fuels revolutionary discussions,
                 insights, and innovations in the digital economy.
               </p>

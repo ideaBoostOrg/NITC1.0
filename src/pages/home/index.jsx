@@ -18,6 +18,7 @@ import Digital_economy from "./components/Digital_Economy";
 import Gallery from "./components/Gallery";
 import Ticket_pricing from "./components/Ticket_pricing";
 import Sponsors from "./components/Sponsors";
+import National_partners from "./components/National_partners";
 import Partners from "./components/Partners";
 import Afflicants from "./components/Afflicants";
 import Map from "./components/Map";
@@ -47,6 +48,7 @@ function index() {
       <Ticket_pricing />
       <About_CSSL />
       <Sponsors />
+      <National_partners/>
       <Partners />
       <Afflicants />
       <Map />
