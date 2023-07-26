@@ -25,9 +25,12 @@ function Sponsors(){
                   Sponsors
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  A special thank you to our valued sponsors, whose support has
+                  {/* A special thank you to our valued sponsors, whose support has
                   <br />
-                  been instrumental in driving our success.
+                  been instrumental in driving our success. */}
+                  Date:11,12 & 13<sup>th</sup> October 2023.
+                  <br/>
+                  Venue:Shnagri-La Hotel,Colombo
                 </p>
               </div>
             </div>
