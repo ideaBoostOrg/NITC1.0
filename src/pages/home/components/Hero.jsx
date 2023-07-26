@@ -38,9 +38,9 @@ function Hero() {
               <div className="icon">
                 <i className="lni-mic"></i>
               </div>
-              <p className="banner-info">
+              <span className="banner-info" style={{textAlign:"cetnter"}}>
                 11<sup>th</sup> - 13<sup>th</sup> of Oct 2023, Shangri-La Hotel, Colombo, Sri-Lanka
-              </p>
+              </span>
               <h2 className="head-title">National IT Conference</h2>
               <p className="banner-desc">
                 Unlock the Early Bird Discount and save 10% until the 25<sup>th</sup> of

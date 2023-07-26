@@ -1,7 +1,7 @@
-// import logo_1 from "../../../assets/img/sponsors/logo-1.png";
-// import logo_2 from "../../../assets/img/sponsors/logo-2.png";
-// import logo_3 from "../../../assets/img/sponsors/logo-3.png";
-// import logo_4 from "../../../assets/img/sponsors/logo-4.png";
+import logo_1 from "../../../assets/img/national_partners/ICTA.png";
+import logo_2 from "../../../assets/img/national_partners/MinistryOfTechnology1.png";
+// import logo_1 from "../../../assets/img/sponsors/logo-3.png";
+// import logo_2 from "../../../assets/img/sponsors/logo-4.png";
 // import logo_5 from "../../../assets/img/sponsors/logo-5.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
@@ -25,8 +25,8 @@ function National_partners() {
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 A heartfelt appreciation goes out to our esteemed National
-                Partners, whose unwavering support and collaboration <br/>have been
-                pivotal in propelling our achievements to new heights.
+                Partners, whose unwavering support and collaboration <br />
+                have been pivotal in propelling our achievements to new heights.
               </p>
             </div>
           </div>
@@ -37,7 +37,13 @@ function National_partners() {
         >
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
-              <p>====content====</p>
+              <span className="sponsor-logo">
+                <img src={logo_1} style={{ width: 120, height: 70 }} alt="" />
+              </span>
+
+              <span className="sponsor-logo">
+                <img src={logo_2} style={{ width: 70, height: 80 }} alt="" />
+              </span>
             </div>
           </div>
         </div>

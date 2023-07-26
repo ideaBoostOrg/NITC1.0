@@ -47,8 +47,8 @@ function index() {
       <Gallery />
       <Ticket_pricing />
       <About_CSSL />
+      <National_partners />
       <Sponsors />
-      <National_partners/>
       <Partners />
       <Afflicants />
       <Map />
