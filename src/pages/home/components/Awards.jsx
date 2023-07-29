@@ -33,7 +33,7 @@ function Awards_section() {
           </div>
         </div>
 
-        <div className="row" style={{paddingBottom:"30px"}}>
+        <div className="row" style={{ paddingBottom: "30px" }}>
           <div className="col-lg-6 col-md-12 col-xs-12">
             <div className="img-thumb">
               <img className="img-fluid" src={Awards} alt="" />
@@ -68,7 +68,10 @@ function Awards_section() {
                 View more
               </span>
 
-              <a href="http://digitalcssl.lk" className="btn btn-common">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfatgdOhVgiEsBF5-fHhHAdq7U0D1LF8CEUL4RCeM_ozAzT8g/viewform?fbclid=IwAR2wK3mp-nFBQC0NZy_aoqRAV-7Mvkl4oYmMcc_bfHLzNz0T6Auv6MPobUc"
+                className="btn btn-common"
+              >
                 Apply Now
               </a>
             </div>

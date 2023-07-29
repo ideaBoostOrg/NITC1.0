@@ -24,7 +24,9 @@ function Shedule_day_01() {
                           <h4>Chief Guest & Guest of Hounour</h4>
                         </div>
                         <div className="schedule-card-body">
-                          <span>Addressed by Guest of honor</span>
+                          <span>
+                            Addressed by Guest of honor - State Minister of IT
+                          </span>
                           <br />
                           {/* <span>
                             Address by the Chief Guest - State Minister of IT
@@ -35,7 +37,7 @@ function Shedule_day_01() {
 
                     <div className="schedule-card">
                       <div className="schedule-slot-time">
-                        <span> 6 PM Onwards</span>
+                        <span> 5 PM Onwards</span>
                       </div>
                       <div className="schedule-card-content">
                         <div className="schedule-card-header">

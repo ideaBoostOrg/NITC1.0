@@ -3,6 +3,7 @@ import logo_2 from "../../../assets/img/sponsors/logo-2.png";
 import logo_3 from "../../../assets/img/sponsors/logo-3.png";
 import logo_4 from "../../../assets/img/sponsors/logo-4.png";
 import logo_5 from "../../../assets/img/sponsors/logo-5.png";
+import TBA from "../../../assets/img/TBA.png";
 // import logo_6 from '../../../assets/img/sponsors/logo-6.png'
 // import logo_7 from '../../../assets/img/sponsors/logo-7.png'
 // import logo_8 from '../../../assets/img/sponsors/logo-8.png'
@@ -41,6 +42,47 @@ function Sponsors(){
           >
             <div className="col-lg-12">
               <div className="sponsors-logo text-center">
+                <p
+                  style={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    marginTop: "30px",
+                  }}
+                >
+                  Diamond sponsors
+                </p>
+                <span className="sponsor-logo">
+                  <img
+                    src={logo_3}
+                    style={{ width: 275, height: 175 }}
+                    alt=""
+                  />
+                </span>
+                <br />
+
+                <p
+                  style={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    marginTop: "30px",
+                  }}
+                >
+                  Platinum sponsors
+                </p>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <br />
+
+                <p
+                  style={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    marginTop: "30px",
+                  }}
+                >
+                  Gold sponsors
+                </p>
                 <span className="sponsor-logo">
                   <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
                 </span>
@@ -48,14 +90,46 @@ function Sponsors(){
                   <img src={logo_2} style={{ width: 90, height: 40 }} alt="" />
                 </span>
                 <span className="sponsor-logo">
-                  <img src={logo_3} style={{ width: 150, height: 90 }} alt="" />
-                </span>
-                <span className="sponsor-logo">
                   <img src={logo_4} style={{ width: 120, height: 20 }} alt="" />
                 </span>
+                <br />
+
                 <span className="sponsor-logo">
                   <img src={logo_5} style={{ width: 80, height: 50 }} alt="" />
                 </span>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <br />
+
+                <p
+                  style={{
+                    fontWeight: "600",
+                    textAlign: "center",
+                    marginTop: "30px",
+                  }}
+                >
+                  Partners sponsors
+                </p>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <span className="sponsor-logo">
+                  <img src={TBA} style={{ width: 95, height: 80 }} alt="" />
+                </span>
+                <br />
               </div>
             </div>
           </div>

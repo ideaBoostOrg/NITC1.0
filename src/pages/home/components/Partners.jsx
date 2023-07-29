@@ -21,7 +21,7 @@ function Partners() {
                 style={{ color: "#212121" }}
                 data-wow-delay="0.2s"
               >
-                Partners
+                Supported by
               </h2>
               <p className="wow fadeInDown" data-wow-delay="0.2s">
                 A heartfelt appreciation to our esteemed partners, whose
