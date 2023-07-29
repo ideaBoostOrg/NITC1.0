@@ -38,11 +38,11 @@ function National_partners() {
           <div className="col-lg-12">
             <div className="sponsors-logo text-center">
               <span className="sponsor-logo">
-                <img src={logo_1} style={{ width: 120, height: 70 }} alt="" />
+                <img src={logo_1} style={{ width: 100, height: 60 }} alt="" />
               </span>
 
               <span className="sponsor-logo">
-                <img src={logo_2} style={{ width: 70, height: 80 }} alt="" />
+                <img src={logo_2} style={{ width: 60, height: 70 }} alt="" />
               </span>
             </div>
           </div>

@@ -41,10 +41,10 @@ function Partners() {
                 <img src={logo_1} style={{ width: 80, height: 60 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_2} style={{ width: 70, height: 60 }} alt="" />
+                <img src={logo_2} style={{ width: 90, height: 60 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_3} style={{ width: 50, height: 50 }} alt="" />
+                <img src={logo_3} style={{ width: 60, height: 60 }} alt="" />
               </span>
               <span className="partner-logo">
                 <img src={logo_4} style={{ width: 70, height: 50 }} alt="" />
@@ -56,7 +56,7 @@ function Partners() {
                 <img src={logo_6} style={{ width: 80, height: 30 }} alt="" />
               </span>
               <span className="partner-logo">
-                <img src={logo_7} style={{ width: 80, height: 40 }} alt="" />
+                <img src={logo_7} style={{ width: 100, height: 60 }} alt="" />
               </span>
               {/* <span className="partner-logo">
                 <img src={logo_8} style={{ width: 60, height: 70 }} alt="" />

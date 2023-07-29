@@ -25,12 +25,12 @@ function Sponsors(){
                   Sponsors
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  {/* A special thank you to our valued sponsors, whose support has
+                  A special thank you to our valued sponsors, whose support has
                   <br />
-                  been instrumental in driving our success. */}
-                  Date:11,12 & 13<sup>th</sup> October 2023.
+                  been instrumental in driving our success.
+                  {/* Date:11,12 & 13<sup>th</sup> October 2023.
                   <br/>
-                  Venue:Shnagri-La Hotel,Colombo
+                  Venue:Shnagri-La Hotel,Colombo */}
                 </p>
               </div>
             </div>
@@ -48,7 +48,7 @@ function Sponsors(){
                   <img src={logo_2} style={{ width: 90, height: 40 }} alt="" />
                 </span>
                 <span className="sponsor-logo">
-                  <img src={logo_3} style={{ width: 300, height: 180 }} alt="" />
+                  <img src={logo_3} style={{ width: 150, height: 90 }} alt="" />
                 </span>
                 <span className="sponsor-logo">
                   <img src={logo_4} style={{ width: 120, height: 20 }} alt="" />
